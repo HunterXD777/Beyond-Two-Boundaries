@@ -3,7 +3,9 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Decoy
+  - GhostWall
   layers:
   - Default
   - TransparentFX
@@ -12,9 +14,9 @@ TagManager:
   - Water
   - UI
   - 
-  - 
-  - 
-  - 
+  - Player
+  - Ground
+  - Wall
   - 
   - 
   - 
@@ -40,4 +42,22 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 3942593451
+    locked: 0
+  - name: Middle
+    uniqueID: 2871669091
+    locked: 0
+  - name: Interactable
+    uniqueID: 4183587771
+    locked: 0
+  - name: Foreground
+    uniqueID: 661294741
+    locked: 0
+  - name: Camera
+    uniqueID: 821781465
+    locked: 0
+  - name: Ui
+    uniqueID: 3808796695
     locked: 0
