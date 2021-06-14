@@ -62,6 +62,8 @@ public class DimensionShift : MonoBehaviour
 
                 //Reveal Ghost Walls
                 ghostWalls[0].SetActive(false);
+                ghostWalls[1].SetActive(false);
+                ghostWalls[2].SetActive(true);// change later (this is filter)
 
             }
             if(ghostState && ghostMove.isTouchingDecoy)
@@ -80,6 +82,8 @@ public class DimensionShift : MonoBehaviour
 
                 //Hide ghost walls
                 ghostWalls[0].SetActive(true);
+                ghostWalls[1].SetActive(true);
+                ghostWalls[2].SetActive(false); 
 
                 //Enable main player
                 MainPlayer.SetActive(true);
