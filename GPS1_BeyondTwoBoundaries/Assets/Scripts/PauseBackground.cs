@@ -14,8 +14,8 @@ public class PauseBackground : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        PauseMenuControll pmc = FindObjectOfType<PauseMenuControll>();
-        if (pmc.isPaused == true)
+        PauseMenu pmc = FindObjectOfType<PauseMenu>();
+        if (pmc.gameispaused == true)
         {
             PauseBackGround.SetActive(true);
         }

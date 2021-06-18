@@ -19,7 +19,7 @@ public class MainMenu : MonoBehaviour
 
     public void Options()
     {
-        SceneManager.LoadScene("OptionMenu"); //load to OptionMenu
+        SceneManager.LoadScene("OptionMenu"); //load to OptionMenu       
     }
 
     public void Controls()

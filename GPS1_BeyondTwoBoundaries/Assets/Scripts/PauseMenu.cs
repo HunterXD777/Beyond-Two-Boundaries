@@ -5,31 +5,55 @@ using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
-    public GameObject Player;
    
-    public bool fromPause;
+    public bool gameispaused = false;
 
-    
+    public GameObject PauseMenuUi;
+
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (gameispaused)
+            {
+                Resume();
+            }
+            else
+            {
+                Pause();
+            }
+        }
+    }
     public void Resume()
-    {    
-        
-        PauseMenuControll pmc = FindObjectOfType<PauseMenuControll>();
-        pmc.isPaused = false;
-        SceneManager.UnloadSceneAsync("PauseMenu");
-        //SceneManager.LoadScene("Alyf's Scene");
-
+    {
+        PauseMenuUi.SetActive(false);
+        Time.timeScale = 1f;
+        gameispaused = false;
+    }
+    public void Pause()
+    {
+        PauseMenuUi.SetActive(true);
+        Time.timeScale = 0f;
+        gameispaused = true;
+    }
+    public void control()
+    {
+        SceneManager.LoadScene("ControlsMenu");
+    }
+    public void LoadMenu()
+    {
+       
+        SceneManager.LoadScene("MainMenu");
     }
     public void Option()
     {
-        Debug.Log("Option");
-        SceneManager.LoadScene("OptionMenu",LoadSceneMode.Additive);
-        SceneManager.UnloadSceneAsync("PauseMenu");
-        //fromPause = true;
+       
+        SceneManager.LoadScene("OptionMenu");
     }
-    public void Quit()
+    public void QuitGame()
     {
         Debug.Log("Quitgame");
         Application.Quit();
     }
-
+   
 }

@@ -6,16 +6,20 @@ using UnityEngine.SceneManagement;
 
 public class OptionMenu : MonoBehaviour
 {
-    public GameObject PauseMenu;
-    //public GameObject MainMenu;
+ 
+   
    public void back()
     {
-        //if(PauseMenu.GetComponent<PauseMenu>().fromPause == true)
-        
-            Debug.Log("Back");
-            //SceneManager.LoadScene("PauseMenu");
-        SceneManager.UnloadSceneAsync("OptionMenu");
-        SceneManager.LoadScene("PauseMenu", LoadSceneMode.Additive);
-
+        SceneManager.LoadScene("MainMenu");
+        //if (PauseMenu.GetComponent<PauseMenu>().fromPause == true)
+        //{
+        //    SceneManager.LoadScene("Alyf's Scene");
+        //}
+        //else
+        //{
+        //    SceneManager.LoadScene("MainMenu");
+        //}
     }
+
+    
 }
