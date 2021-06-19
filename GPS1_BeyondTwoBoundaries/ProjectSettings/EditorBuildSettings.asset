@@ -12,8 +12,8 @@ EditorBuildSettings:
     path: Assets/Scenes/Alyf's Scene.unity
     guid: 5af65646dc16d994ea5c13b2069586ab
   - enabled: 0
-    path: Assets/Scenes/PauseMenu.unity
-    guid: 419b80450b8f91e4cb1f3b16977e8114
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/OptionMenu.unity
     guid: ccf527d1e6c39ef43a17fdfd0cee9f9a

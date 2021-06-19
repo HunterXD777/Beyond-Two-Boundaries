@@ -5,8 +5,15 @@ using UnityEngine.SceneManagement;
 
 public class ControlsMenu : MonoBehaviour
 {
-    public void Back()
+    public GameObject PauseMenuUi;
+    public GameObject ControlsMenuUi;
+    public void BackForMain()
     {
         SceneManager.LoadScene("MainMenu"); //load to MainMenu scene
+    }
+    public void BackForPause()
+    {
+        PauseMenuUi.SetActive(true);
+        ControlsMenuUi.SetActive(false);
     }
 }

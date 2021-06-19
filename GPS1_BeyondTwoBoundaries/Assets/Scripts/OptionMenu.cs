@@ -6,20 +6,20 @@ using UnityEngine.SceneManagement;
 
 public class OptionMenu : MonoBehaviour
 {
- 
-   
-   public void back()
-    {
-        SceneManager.LoadScene("MainMenu");
-        //if (PauseMenu.GetComponent<PauseMenu>().fromPause == true)
-        //{
-        //    SceneManager.LoadScene("Alyf's Scene");
-        //}
-        //else
-        //{
-        //    SceneManager.LoadScene("MainMenu");
-        //}
-    }
+    public GameObject PauseMenuUi;
+    public GameObject OptionMenuUi;
 
+
+    public void backForMain()
+    {
+        
+        SceneManager.LoadScene("MainMenu");
+    }
+    public void backForPause()
+    {
+        PauseMenuUi.SetActive(true);
+        OptionMenuUi.SetActive(false);
+    }
+    
     
 }

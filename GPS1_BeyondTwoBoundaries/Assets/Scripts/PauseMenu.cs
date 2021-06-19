@@ -7,8 +7,10 @@ public class PauseMenu : MonoBehaviour
 {
    
     public bool gameispaused = false;
-
+    public bool frompaused = false;
     public GameObject PauseMenuUi;
+    public GameObject OptionMenuUi;
+    public GameObject ControlsMenuUi;
 
     void Update()
     {
@@ -38,17 +40,19 @@ public class PauseMenu : MonoBehaviour
     }
     public void control()
     {
-        SceneManager.LoadScene("ControlsMenu");
+        ControlsMenuUi.SetActive(true);
+        PauseMenuUi.SetActive(false);
+        //SceneManager.LoadScene("ControlsMenu");
     }
     public void LoadMenu()
     {
-       
         SceneManager.LoadScene("MainMenu");
     }
     public void Option()
     {
-       
-        SceneManager.LoadScene("OptionMenu");
+        OptionMenuUi.SetActive(true);
+        PauseMenuUi.SetActive(false);
+        //SceneManager.LoadScene("OptionMenu");
     }
     public void QuitGame()
     {

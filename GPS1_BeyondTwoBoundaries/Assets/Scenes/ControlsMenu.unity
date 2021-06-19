@@ -819,6 +819,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa15369c5056e104880878a45251e005, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PauseMenuUi: {fileID: 0}
+  ControlsMenuUi: {fileID: 0}
 --- !u!1 &1440653540
 GameObject:
   m_ObjectHideFlags: 0
@@ -1147,7 +1149,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1416134840}
         m_TargetAssemblyTypeName: ControlsMenu, Assembly-CSharp
-        m_MethodName: Back
+        m_MethodName: BackForMain
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
