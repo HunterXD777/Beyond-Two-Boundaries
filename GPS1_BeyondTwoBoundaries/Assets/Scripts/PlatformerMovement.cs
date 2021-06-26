@@ -20,7 +20,7 @@ public class PlatformerMovement : MonoBehaviour
     public LayerMask groundLayer;
 
     //Jane's codes
-    bool PlayerFacingRight = true;  // For determining which way the player is currently facing.
+    public bool PlayerFacingRight = true;  // For determining which way the player is currently facing.
 
     void Start()
     {

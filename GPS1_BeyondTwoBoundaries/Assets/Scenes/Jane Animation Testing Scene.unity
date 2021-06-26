@@ -3817,6 +3817,7 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 256
+  PlayerFacingRight: 1
 --- !u!212 &970460845
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7172,8 +7173,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6d5693bd78bfa0458c3b00c3b57fb56, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ManualShift: 1
-  AutoShfit: 0
+  playerMovement: {fileID: 970460844}
+  ManualShift: 0
+  AutoShfit: 1
   ghostState: 0
   MainPlayer: {fileID: 970460841}
   GhostPlayer: {fileID: 535837862}

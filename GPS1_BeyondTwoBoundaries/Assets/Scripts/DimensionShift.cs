@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class DimensionShift : MonoBehaviour
 {
     
-    PlatformerMovement playerMovement;
+    public PlatformerMovement playerMovement;
 
     public bool ManualShift;
     public bool AutoShfit;
@@ -38,6 +38,8 @@ public class DimensionShift : MonoBehaviour
     void Awake()
     {
         textBox.text = timeStart.ToString("F2");
+
+
         
         //textBox.text = timeStart.ToString();
     }
@@ -71,6 +73,7 @@ public class DimensionShift : MonoBehaviour
         ghostMove = GhostPlayer.GetComponent<GhostMovement>();
         playerTracking = GameObject.FindWithTag("Player");
         decoyTracking = GameObject.FindWithTag("Decoy");
+ 
 
 
         if (Input.GetKeyDown(KeyCode.LeftShift))
@@ -129,8 +132,14 @@ public class DimensionShift : MonoBehaviour
         //Set ghost player position at main player position 
         GhostPlayer.transform.position = new Vector2(playerTracking.transform.position.x, playerTracking.transform.position.y);
 
+        //Flipping Decoy if needed
+        if (playerMovement.PlayerFacingRight == false)
+        {
+            Decoy.transform.Rotate(0f, 180f, 0f);
+        }
+
         //Disable main player
-        MainPlayer.SetActive(false);
+        MainPlayer.SetActive(false);  
 
         //Enable decoy
         Decoy.SetActive(true);
@@ -159,6 +168,12 @@ public class DimensionShift : MonoBehaviour
 
         //Disable decoy
         Decoy.SetActive(false);
+
+        //Flip back decoy if needed
+        if (playerMovement.PlayerFacingRight == false)
+        {
+            Decoy.transform.Rotate(0f, 180f, 0f);
+        }
 
         //Hide ghost walls
         ghostWalls[0].SetActive(true);
@@ -189,6 +204,12 @@ public class DimensionShift : MonoBehaviour
 
         //Disable decoy
         Decoy.SetActive(false);
+
+        //Flip back decoy if needed
+        if (playerMovement.PlayerFacingRight == false)
+        {
+            Decoy.transform.Rotate(0f, 180f, 0f);
+        }
 
         //Hide ghost walls
         ghostWalls[0].SetActive(true);
