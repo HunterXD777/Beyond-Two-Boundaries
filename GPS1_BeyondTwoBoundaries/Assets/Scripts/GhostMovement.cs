@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class GhostMovement : MonoBehaviour
 {
+    public Animator animator;
 
     Rigidbody2D rb;
 
@@ -22,15 +23,17 @@ public class GhostMovement : MonoBehaviour
     public float checkGroundRadius;
     public LayerMask groundLayer;
 
-   
+    //Jane's codes
+    bool PlayerFacingRight = true;  // For determining which way the player is currently facing.
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         rb.gravityScale = defaultGravity;
-        
+
     }
 
-    
+
     void Update()
     {
         Move();
@@ -46,7 +49,26 @@ public class GhostMovement : MonoBehaviour
     {
         float x = Input.GetAxisRaw("Horizontal");
         float moveBy = x * speed;
-        rb.velocity = new Vector2(moveBy, rb.velocity.y);
+
+        //Jane's codes
+        //Debug.Log("moveBy is " + moveBy); //testing
+
+        rb.velocity = new Vector2(moveBy, rb.velocity.y);        
+
+        //Jane's codes
+        animator.SetFloat("Speed", Mathf.Abs(moveBy)); //set animator's speed as the speed of the player, use math absolute so its always positive and is not affected when player move to the left that creates a negative value
+
+        if (moveBy > 0 && !PlayerFacingRight)
+        {
+            // ... flip the player.
+            Flip();
+        }
+        // Otherwise if the input is moving the player left and the player is facing right...
+        else if (moveBy < 0 && PlayerFacingRight)
+        {
+            // ... flip the player.
+            Flip();
+        }
     }
 
     void Jump()
@@ -73,12 +95,12 @@ public class GhostMovement : MonoBehaviour
 
     void Fly()
     {
-        
+
         if (Input.GetKey(KeyCode.Space))
         {
             rb.AddForce(new Vector2(0f, flySpeed) * Time.deltaTime);
         }
-        
+
     }
 
     void BetterJump()
@@ -93,13 +115,17 @@ public class GhostMovement : MonoBehaviour
     {
         Collider2D collider = Physics2D.OverlapCircle(isGroundedChecker.position, checkGroundRadius, groundLayer);
 
-        if(collider != null)
+        if (collider != null)
         {
             isGrounded = true;
+
+            animator.SetBool("IsJumping", false); //when player is grounded meaning player is not jumping yet therefore set animator's isjumping to false
         }
         else
         {
             isGrounded = false;
+
+            animator.SetBool("IsJumping", true); //when player is not grounded meaning the player is jumping therefore animator's isjumping is set to true
         }
     }
 
@@ -117,5 +143,11 @@ public class GhostMovement : MonoBehaviour
         {
             isTouchingDecoy = false;
         }
+    }
+
+    void Flip() //Jane's codes
+    {
+        PlayerFacingRight = !PlayerFacingRight; //switch the way the player is labelled as facing
+        transform.Rotate(0f, 180f, 0f);
     }
 }

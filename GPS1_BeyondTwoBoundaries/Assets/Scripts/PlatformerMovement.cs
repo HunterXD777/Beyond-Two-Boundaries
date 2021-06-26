@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlatformerMovement : MonoBehaviour
 {
+    public Animator animator;
 
     Rigidbody2D rb;
 
@@ -11,26 +12,28 @@ public class PlatformerMovement : MonoBehaviour
     public float jumpForce;
 
     public float fallMultiplier = 2.5f;
-    
+
 
     public bool isGrounded = false;
     public Transform isGroundedChecker;
     public float checkGroundRadius;
     public LayerMask groundLayer;
 
-   
+    //Jane's codes
+    bool PlayerFacingRight = true;  // For determining which way the player is currently facing.
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        
+
     }
 
-    
+
     void Update()
     {
         Move();
         BetterJump();
-        Jump();  
+        Jump();
         CheckIfGrounded();
     }
 
@@ -39,7 +42,26 @@ public class PlatformerMovement : MonoBehaviour
     {
         float x = Input.GetAxisRaw("Horizontal");
         float moveBy = x * speed;
+
+        //Jane's codes
+        //Debug.Log("moveBy is " + moveBy); //testing
+
         rb.velocity = new Vector2(moveBy, rb.velocity.y);
+
+        //Jane's codes
+        animator.SetFloat("Speed", Mathf.Abs(moveBy)); //set animator's speed as the speed of the player, use math absolute so its always positive and is not affected when player move to the left that creates a negative value
+
+        if (moveBy > 0 && !PlayerFacingRight)
+        {
+            // ... flip the player.
+            Flip();
+        }
+        // Otherwise if the input is moving the player left and the player is facing right...
+        else if (moveBy < 0 && PlayerFacingRight)
+        {
+            // ... flip the player.
+            Flip();
+        }
     }
 
     void Jump()
@@ -64,13 +86,23 @@ public class PlatformerMovement : MonoBehaviour
     {
         Collider2D collider = Physics2D.OverlapCircle(isGroundedChecker.position, checkGroundRadius, groundLayer);
 
-        if(collider != null)
+        if (collider != null)
         {
             isGrounded = true;
+
+            animator.SetBool("IsJumping", false); //when player is grounded meaning player is not jumping yet therefore set animator's isjumping to false
         }
         else
         {
             isGrounded = false;
+
+            animator.SetBool("IsJumping", true); //when player is not grounded meaning the player is jumping therefore animator's isjumping is set to true
         }
+    }
+
+    void Flip() //Jane's codes
+    {
+        PlayerFacingRight = !PlayerFacingRight; //switch the way the player is labelled as facing
+        transform.Rotate(0f, 180f, 0f);
     }
 }
