@@ -38,7 +38,7 @@ public class DimensionShift : MonoBehaviour
     void Awake()
     {
         textBox.text = timeStart.ToString("F2");
-
+        ResetFilter();
 
         
         //textBox.text = timeStart.ToString();
@@ -152,8 +152,16 @@ public class DimensionShift : MonoBehaviour
         ghostWalls[1].SetActive(false);
         ghostWalls[2].SetActive(true);// change later (this is filter)
 
+        //Play Sound Effect
+        FindObjectOfType<SoundManager>().Play("HeartBeat");
+
+        //Start Filter Fade
+        FilterFade();
+
         //Start Timer
         SetTimer();
+
+        
     }
 
     public void ManualShiftToBody()
@@ -184,10 +192,16 @@ public class DimensionShift : MonoBehaviour
         MainPlayer.SetActive(true);
 
         //Reset Filter
-        filter.canvasRenderer.SetAlpha(0);
+        ResetFilter();
 
         //Stop Timer
         SetTimer();
+
+        //Stop Heartbeat sound effect
+        FindObjectOfType<SoundManager>().Pause("HeartBeat");
+
+        //Play Sound Effect
+        FindObjectOfType<SoundManager>().Play("BreathIn");
     }
 
     public void AutoShiftToBody()
@@ -220,10 +234,16 @@ public class DimensionShift : MonoBehaviour
         MainPlayer.SetActive(true);
 
         //Reset Filter
-        filter.canvasRenderer.SetAlpha(0);
+        ResetFilter();
 
         //Stop Timer
         SetTimer();
+
+        //Stop Heartbeat sound effect
+        //FindObjectOfType<SoundManager>().Pause("HeartBeat");
+
+        //Play Sound Effect
+        FindObjectOfType<SoundManager>().Play("BreathIn");
 
     }
 
@@ -236,8 +256,12 @@ public class DimensionShift : MonoBehaviour
 
     public void FilterFade()
     {
-        filter.canvasRenderer.SetAlpha(timeStart / TimerDuration);
+        filter.CrossFadeAlpha(1,TimerDuration,false);
+    }
 
+    public void ResetFilter()
+    {
+        filter.CrossFadeAlpha(0, 0.5f, false);
     }
 
     
