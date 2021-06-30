@@ -151,7 +151,7 @@ public class DimensionShift : MonoBehaviour
         ghostWalls[0].SetActive(false);
         ghostWalls[1].SetActive(false);
         ghostWalls[2].SetActive(true);// change later (this is filter)
-
+       
         //Play Sound Effect
         FindObjectOfType<SoundManager>().Play("HeartBeat");
 
@@ -187,7 +187,7 @@ public class DimensionShift : MonoBehaviour
         ghostWalls[0].SetActive(true);
         ghostWalls[1].SetActive(true);
         ghostWalls[2].SetActive(false);
-
+        
         //Enable main player
         MainPlayer.SetActive(true);
 
@@ -229,6 +229,7 @@ public class DimensionShift : MonoBehaviour
         ghostWalls[0].SetActive(true);
         ghostWalls[1].SetActive(true);
         ghostWalls[2].SetActive(false);
+       
 
         //Enable main player
         MainPlayer.SetActive(true);

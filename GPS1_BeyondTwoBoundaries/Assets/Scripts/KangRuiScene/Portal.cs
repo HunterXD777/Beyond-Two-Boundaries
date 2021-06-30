@@ -17,10 +17,8 @@ public class Portal : MonoBehaviour
     {
         if (isToushcing == true)
         {
-            if (Input.GetKeyDown(KeyCode.E))
-            {
-                player.transform.position = portal.transform.position;
-            }
+            player.transform.position = portal.transform.position;
+
         }
     }
 
@@ -39,5 +37,9 @@ public class Portal : MonoBehaviour
             isToushcing = false;
         }
     }
-
+    //IEnumerator Teleport()
+    //{
+    //    yield return new WaitForSeconds(0f);
+    //    player.transform.position = portal.transform.position;
+    //}
 }

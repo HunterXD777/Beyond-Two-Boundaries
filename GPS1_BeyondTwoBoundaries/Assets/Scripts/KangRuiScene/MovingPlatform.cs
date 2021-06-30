@@ -6,7 +6,7 @@ public class MovingPlatform : MonoBehaviour
 {
    
     public float speed;
-    public float controltimer;
+    public float controltimer,cd;
     public Transform startPos;
     public Transform pos1, pos2, pos3;
    
@@ -46,9 +46,9 @@ public class MovingPlatform : MonoBehaviour
 
        
 
-        if (controltimer > 0f)
+        if (cd > 0f)
         {
-            controltimer -= Time.deltaTime;
+            cd -= Time.deltaTime;
         }
 
        
@@ -56,11 +56,11 @@ public class MovingPlatform : MonoBehaviour
    
     public void checkPosition()
     {
-    if (controltimer <= 0f)
+    if (cd <= 0f)
         {
        if (Input.GetKeyDown(KeyCode.E))
         {
-                controltimer = 10f;
+                cd = controltimer;
                 if (transform.position == pos3.position)
                 {
                     fromStart = false;
@@ -93,7 +93,6 @@ public class MovingPlatform : MonoBehaviour
         if (ghostOnPlatform == true)
         {
             ghost.transform.parent = gameObject.transform;
-            Debug.Log("fuck");
         }
         else
         {
@@ -106,7 +105,7 @@ public class MovingPlatform : MonoBehaviour
         if (playerOnPlatform == true)
         {
             player.transform.parent = gameObject.transform;
-            Debug.Log("fuck");
+  
         }
         else
         {

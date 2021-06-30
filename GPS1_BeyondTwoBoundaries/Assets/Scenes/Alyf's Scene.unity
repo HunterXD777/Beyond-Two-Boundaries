@@ -2284,6 +2284,10 @@ PrefabInstance:
       propertyPath: ghostWalls.Array.data[1]
       value: 
       objectReference: {fileID: 324360885}
+    - target: {fileID: 3724031996272515939, guid: 3a922acb56845774ebf1f4bc2f723a74, type: 3}
+      propertyPath: ghostWalls.Array.data[2]
+      value: 
+      objectReference: {fileID: 1694586025}
     - target: {fileID: 4992254234814450134, guid: 3a922acb56845774ebf1f4bc2f723a74, type: 3}
       propertyPath: m_RootOrder
       value: 1
