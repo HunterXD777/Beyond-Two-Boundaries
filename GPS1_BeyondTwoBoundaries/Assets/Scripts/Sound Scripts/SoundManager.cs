@@ -1,12 +1,14 @@
 using UnityEngine.Audio;
 using UnityEngine;
+using UnityEngine.UI;
 using System;
 
 public class SoundManager : MonoBehaviour
 {
-    public Sound[] sounds;
-
+    public Sound[] sounds; 
     public static SoundManager instance;
+
+  
 
 
     void Awake()
@@ -29,6 +31,8 @@ public class SoundManager : MonoBehaviour
             s.source.volume = s.volume;
             s.source.pitch = s.pitch;
             s.source.loop = s.loop;
+
+            
         }
     }
 
@@ -37,7 +41,7 @@ public class SoundManager : MonoBehaviour
         Play("ThemeSong");
     }
 
-
+    
     // 200 IQ audio finder: finds the name of the specific sound from 
     // sound library and plays it.
     // Use this code anywhere to call : FindObjectOfType<SoundManager>().Play("AudioName");
@@ -53,5 +57,7 @@ public class SoundManager : MonoBehaviour
         Sound s = Array.Find(sounds, sound => sound.name == name);
         s.source.Pause();
     }
+
+    
 }
 
