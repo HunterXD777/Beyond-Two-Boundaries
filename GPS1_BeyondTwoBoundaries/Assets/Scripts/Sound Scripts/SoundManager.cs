@@ -10,7 +10,7 @@ public class SoundManager : MonoBehaviour
 
     public Slider slider;
 
-
+    private float musicVolume;
     void Awake()
     {
         if (instance == null)
@@ -32,7 +32,6 @@ public class SoundManager : MonoBehaviour
             s.source.pitch = s.pitch;
             s.source.loop = s.loop;
 
-            
         }
     }
 
@@ -44,8 +43,8 @@ public class SoundManager : MonoBehaviour
    void Update()
     {
         foreach (Sound s in sounds)
-        {         
-            s.source.volume = slider.value;
+        {
+           s.source.volume = slider.value;
         }
     }
 
