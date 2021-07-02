@@ -8,7 +8,7 @@ public class SoundManager : MonoBehaviour
     public Sound[] sounds; 
     public static SoundManager instance;
 
-  
+    public Slider slider;
 
 
     void Awake()
@@ -41,7 +41,14 @@ public class SoundManager : MonoBehaviour
         Play("ThemeSong");
     }
 
-    
+   void Update()
+    {
+        foreach (Sound s in sounds)
+        {         
+            s.source.volume = slider.value;
+        }
+    }
+
     // 200 IQ audio finder: finds the name of the specific sound from 
     // sound library and plays it.
     // Use this code anywhere to call : FindObjectOfType<SoundManager>().Play("AudioName");

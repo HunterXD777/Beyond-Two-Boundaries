@@ -9,11 +9,8 @@ public class OptionMenu : MonoBehaviour
     public GameObject PauseMenuUi;
     public GameObject OptionMenuUi;
 
-   
   
-
-    public float musicVolume = 1f;
-
+   
     void Update()
     {
         
@@ -30,5 +27,8 @@ public class OptionMenu : MonoBehaviour
         OptionMenuUi.SetActive(false);
     }
     
-   
+   public void setFullsceen(bool isFullsceen)
+    {
+        Screen.fullScreen = isFullsceen;
+    }
 }
