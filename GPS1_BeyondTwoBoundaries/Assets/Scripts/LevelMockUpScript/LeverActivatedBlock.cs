@@ -36,8 +36,12 @@ public class LeverActivatedBlock : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.E))
             {
                 move = true;
+
+                //Jane's Codes
+                FindObjectOfType<SoundManager>().Play("Lever"); //play lever sound effect
+                FindObjectOfType<SoundManager>().Play("GateOpen"); //play gate open sound effect
             }
-            
+
         }
 
         

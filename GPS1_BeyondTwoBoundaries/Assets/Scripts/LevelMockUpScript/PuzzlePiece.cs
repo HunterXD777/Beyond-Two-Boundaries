@@ -22,5 +22,8 @@ public class PuzzlePiece : MonoBehaviour
     {     
         Destroy(this.gameObject);
         puzzlePiece.SetActive(true);
+
+        //Jane's Codes
+        FindObjectOfType<SoundManager>().Play("Collected"); //play collected sound effect
     }
 }

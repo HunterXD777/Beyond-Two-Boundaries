@@ -19,6 +19,8 @@ public class Portal : MonoBehaviour
         {
             player.transform.position = portal.transform.position;
 
+            //Jane's Codes
+            FindObjectOfType<SoundManager>().Play("Portal"); //play portal sound effect
         }
     }
 

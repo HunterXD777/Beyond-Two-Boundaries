@@ -19,6 +19,10 @@ public class LoadNextLevel : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        SceneManager.LoadScene("MileStoneLevelMockUP");
+        //SceneManager.LoadScene("MileStoneLevelMockUP"); //load according to scene name
+
+        //Jane's Codes
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1); //load next scene
+        FindObjectOfType<SoundManager>().Play("Checkpoint"); //play checkpoint sound effect
     }
 }

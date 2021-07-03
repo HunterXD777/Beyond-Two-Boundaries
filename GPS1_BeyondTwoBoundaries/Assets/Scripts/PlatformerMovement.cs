@@ -48,6 +48,8 @@ public class PlatformerMovement : MonoBehaviour
 
         rb.velocity = new Vector2(moveBy, rb.velocity.y);
 
+
+
         //Jane's codes
         animator.SetFloat("Speed", Mathf.Abs(moveBy)); //set animator's speed as the speed of the player, use math absolute so its always positive and is not affected when player move to the left that creates a negative value
 
@@ -62,6 +64,11 @@ public class PlatformerMovement : MonoBehaviour
             // ... flip the player.
             Flip();
         }
+
+        //if (Mathf.Abs(moveBy) > 0)
+        //{
+        //    FindObjectOfType<SoundManager>().Play("PlayerFootsteps"); //play footsteps sound effect
+        //}
     }
 
     void Jump()
