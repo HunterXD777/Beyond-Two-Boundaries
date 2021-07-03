@@ -3218,6 +3218,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PauseMenuUi: {fileID: 147487489}
   OptionMenuUi: {fileID: 1173891924}
+  PauseMenuSystem: {fileID: 4056640099300530203}
 --- !u!114 &1173891926
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5169,6 +5170,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PauseMenuUi: {fileID: 147487489}
   ControlsMenuUi: {fileID: 47835468}
+  PauseMenuSystem: {fileID: 4056640099300530203}
 --- !u!1 &2080805409
 GameObject:
   m_ObjectHideFlags: 0
@@ -6103,7 +6105,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameispaused: 0
-  frompaused: 0
+  inpausedMenu: 1
   PauseMenuUi: {fileID: 147487489}
   OptionMenuUi: {fileID: 1173891924}
   ControlsMenuUi: {fileID: 47835468}

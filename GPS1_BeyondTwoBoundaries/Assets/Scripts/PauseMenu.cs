@@ -7,22 +7,27 @@ public class PauseMenu : MonoBehaviour
 {
    
     public bool gameispaused = false;
-    public bool frompaused = false;
+    public bool inpausedMenu = true;
     public GameObject PauseMenuUi;
     public GameObject OptionMenuUi;
     public GameObject ControlsMenuUi;
 
+
+
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (inpausedMenu == true)
         {
-            if (gameispaused)
+            if (Input.GetKeyDown(KeyCode.Escape))
             {
-                Resume();
-            }
-            else
-            {
-                Pause();
+                if (gameispaused)
+                {
+                    Resume();
+                }
+                else
+                {
+                    Pause();
+                }
             }
         }
     }
@@ -43,6 +48,7 @@ public class PauseMenu : MonoBehaviour
         ControlsMenuUi.SetActive(true);
         PauseMenuUi.SetActive(false);
         //SceneManager.LoadScene("ControlsMenu");
+        inpausedMenu = false;
     }
     public void LoadMenu()
     {
@@ -53,6 +59,7 @@ public class PauseMenu : MonoBehaviour
         OptionMenuUi.SetActive(true);
         PauseMenuUi.SetActive(false);
         //SceneManager.LoadScene("OptionMenu");
+        inpausedMenu = false;
     }
     public void QuitGame()
     {

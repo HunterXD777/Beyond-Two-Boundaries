@@ -9,11 +9,11 @@ public class OptionMenu : MonoBehaviour
     public GameObject PauseMenuUi;
     public GameObject OptionMenuUi;
 
-  
+    public GameObject PauseMenuSystem;
    
     void Update()
     {
-        
+      
         
     }
     public void backForMain()
@@ -25,6 +25,8 @@ public class OptionMenu : MonoBehaviour
     {
         PauseMenuUi.SetActive(true);
         OptionMenuUi.SetActive(false);
+
+        PauseMenuSystem.GetComponent<PauseMenu>().inpausedMenu = true;
     }
     
    public void setFullsceen(bool isFullsceen)

@@ -44,7 +44,7 @@ public class SoundManager : MonoBehaviour
     {
         foreach (Sound s in sounds)
         {
-           s.source.volume = slider.value;
+           s.source.volume = PlayerPrefs.GetFloat("volume");
         }
     }
 

@@ -816,6 +816,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PauseMenuUi: {fileID: 1666729787}
   OptionMenuUi: {fileID: 196167260}
+  PauseMenuSystem: {fileID: 1946259820}
 --- !u!114 &196167262
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6439,6 +6440,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PauseMenuUi: {fileID: 1666729787}
   ControlsMenuUi: {fileID: 1965158961}
+  PauseMenuSystem: {fileID: 1946259820}
 --- !u!1 &1561557609
 GameObject:
   m_ObjectHideFlags: 0
@@ -7905,7 +7907,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameispaused: 0
-  frompaused: 0
+  inpausedMenu: 1
   PauseMenuUi: {fileID: 1666729787}
   OptionMenuUi: {fileID: 196167260}
   ControlsMenuUi: {fileID: 1965158961}
@@ -7966,7 +7968,7 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_AdditionalShaderChannelsFlag: 0
+  m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
