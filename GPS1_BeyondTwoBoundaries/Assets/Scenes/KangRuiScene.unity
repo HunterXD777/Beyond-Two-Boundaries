@@ -1457,7 +1457,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'SPACE - Jump (Hold to jump higher in after life state)
+  m_Text: 'SPACE - Jump (Hold to glide in soul state)
 
 '
 --- !u!222 &431125387
@@ -3227,7 +3227,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameispaused: 0
-  frompaused: 0
+  inpausedMenu: 1
   PauseMenuUi: {fileID: 1272394818}
   OptionMenuUi: {fileID: 1225065088}
   ControlsMenuUi: {fileID: 2114687646}
@@ -4078,6 +4078,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PauseMenuUi: {fileID: 1272394818}
   OptionMenuUi: {fileID: 1225065088}
+  PauseMenuSystem: {fileID: 0}
 --- !u!114 &1225065090
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5284,6 +5285,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PauseMenuUi: {fileID: 1272394818}
   ControlsMenuUi: {fileID: 2114687646}
+  PauseMenuSystem: {fileID: 0}
 --- !u!1 &1586869369
 GameObject:
   m_ObjectHideFlags: 0

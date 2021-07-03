@@ -850,7 +850,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'SPACE - Jump (Hold to jump higher in after life state)
+  m_Text: 'SPACE - Jump (Hold to glide in soul state)
 
 '
 --- !u!222 &71937718
@@ -2814,7 +2814,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1.5
-  m_Text: '  Shift   to use Dimention Shift'
+  m_Text: '  Shift   to use Dimension Shift'
 --- !u!222 &394793312
 CanvasRenderer:
   m_ObjectHideFlags: 0
