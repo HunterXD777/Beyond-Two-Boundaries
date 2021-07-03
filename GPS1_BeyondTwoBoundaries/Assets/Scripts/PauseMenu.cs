@@ -31,6 +31,12 @@ public class PauseMenu : MonoBehaviour
             }
         }
     }
+    public void ResetButton()
+    {
+        Scene scene = SceneManager.GetActiveScene(); 
+        SceneManager.LoadScene(scene.name);
+        Time.timeScale = 1f;
+    }
     public void Resume()
     {
         PauseMenuUi.SetActive(false);
