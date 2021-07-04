@@ -14,7 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MileStoneLevelMockUP.unity
     guid: 5df2589125e88324c8045cff2fdcc39f
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Alyf's Scene.unity
     guid: 5af65646dc16d994ea5c13b2069586ab
   - enabled: 0

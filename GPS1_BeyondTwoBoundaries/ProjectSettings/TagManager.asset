@@ -6,6 +6,13 @@ TagManager:
   tags:
   - Decoy
   - GhostWall
+  - LeftRightTrigger
+  - JumpTrigger
+  - ShiftTrigger
+  - LevitateTrigger
+  - InteractTrigger
+  - ShiftBackTrigger
+  - CheckPoint
   layers:
   - Default
   - TransparentFX

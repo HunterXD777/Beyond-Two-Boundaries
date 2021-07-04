@@ -6,10 +6,15 @@ public class PuzzlePiece : MonoBehaviour
 {
     bool touch;
     public GameObject puzzlePiece;
+
+    private GameObject CheckPoint;
+
+    LoadNextLevel pieceCheck;
     // Start is called before the first frame update
     void Start()
     {
-        
+        CheckPoint = GameObject.FindWithTag("CheckPoint");
+        pieceCheck = CheckPoint.GetComponent<LoadNextLevel>();
     }
 
     // Update is called once per frame
@@ -19,7 +24,8 @@ public class PuzzlePiece : MonoBehaviour
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
-    {     
+    {
+        pieceCheck.collectedPieces++;
         Destroy(this.gameObject);
         puzzlePiece.SetActive(true);
 

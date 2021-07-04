@@ -5,24 +5,34 @@ using UnityEngine.SceneManagement;
 
 public class LoadNextLevel : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public int nextSceneLoad;
+    public int requiredPieces;
+    public int collectedPieces;
+
+    private void Awake()
+    {
+        collectedPieces = 0;
+    }
+
+    void Update()
     {
         
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-       
-    }
+
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         //SceneManager.LoadScene("MileStoneLevelMockUP"); //load according to scene name
 
-        //Jane's Codes
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1); //load next scene
-        FindObjectOfType<SoundManager>().Play("Checkpoint"); //play checkpoint sound effect
+        if(collectedPieces == requiredPieces)
+        {
+            //Jane's Codes
+            //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1); //load next scene
+            SceneManager.LoadScene(nextSceneLoad);
+            FindObjectOfType<SoundManager>().Play("Checkpoint"); //play checkpoint sound effect
+        }
+
+        
     }
 }

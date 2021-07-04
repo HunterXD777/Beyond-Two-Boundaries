@@ -64,6 +64,12 @@ public class SoundManager : MonoBehaviour
         s.source.Pause();
     }
 
+    public void Stop(string name)
+    {
+        Sound s = Array.Find(sounds, sound => sound.name == name);
+        s.source.Stop();
+    }
+
     
 }
 

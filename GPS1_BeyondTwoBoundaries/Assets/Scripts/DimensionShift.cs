@@ -11,6 +11,7 @@ public class DimensionShift : MonoBehaviour
 
     public bool ManualShift;
     public bool AutoShfit;
+    public bool shiftReady = true;
     
 
     public bool ghostState = false;  
@@ -31,6 +32,7 @@ public class DimensionShift : MonoBehaviour
     public float timeStart;
     public Text textBox;
     public bool timerActive = false;
+
 
     public Image SoulBar;
     public Image filter;
@@ -78,7 +80,7 @@ public class DimensionShift : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.LeftShift))
         {
-            if (!ghostState && (AutoShfit || ManualShift))
+            if (!ghostState && (AutoShfit || ManualShift) && shiftReady)
             {
                 ShiftToSoul();
 
@@ -151,6 +153,7 @@ public class DimensionShift : MonoBehaviour
         ghostWalls[0].SetActive(false);
         ghostWalls[1].SetActive(false);
         ghostWalls[2].SetActive(true);// change later (this is filter)
+        ghostWalls[3].SetActive(true);
        
         //Play Sound Effect
         FindObjectOfType<SoundManager>().Play("HeartBeat");
@@ -160,6 +163,10 @@ public class DimensionShift : MonoBehaviour
 
         //Start Timer
         SetTimer();
+
+        //Disable shift ready
+        shiftReady = false;
+
 
         
     }
@@ -187,7 +194,8 @@ public class DimensionShift : MonoBehaviour
         ghostWalls[0].SetActive(true);
         ghostWalls[1].SetActive(true);
         ghostWalls[2].SetActive(false);
-        
+        ghostWalls[3].SetActive(false);
+
         //Enable main player
         MainPlayer.SetActive(true);
 
@@ -241,7 +249,7 @@ public class DimensionShift : MonoBehaviour
         SetTimer();
 
         //Stop Heartbeat sound effect
-        //FindObjectOfType<SoundManager>().Pause("HeartBeat");
+        FindObjectOfType<SoundManager>().Stop("HeartBeat");
 
         //Play Sound Effect
         FindObjectOfType<SoundManager>().Play("BreathIn");

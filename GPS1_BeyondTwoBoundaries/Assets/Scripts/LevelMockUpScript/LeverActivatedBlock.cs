@@ -10,10 +10,12 @@ public class LeverActivatedBlock : MonoBehaviour
     public GameObject leverOn;
     public float speed;
     public bool move = false;
+    public SignBoardController signBoardController;
     Vector3 nextPos;
     void Start()
     {
         nextPos = Pos.transform.position;
+       
     }
 
     // Update is called once per frame
@@ -25,6 +27,7 @@ public class LeverActivatedBlock : MonoBehaviour
             transform.position = Vector3.MoveTowards(transform.position, nextPos, speed * Time.deltaTime);
             leverOff.SetActive(false);
             leverOn.SetActive(true);
+
         }
     }
 
@@ -36,6 +39,9 @@ public class LeverActivatedBlock : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.E))
             {
                 move = true;
+
+                //Alyf's Code
+                signBoardController.InteractLever(); 
 
                 //Jane's Codes
                 FindObjectOfType<SoundManager>().Play("Lever"); //play lever sound effect
