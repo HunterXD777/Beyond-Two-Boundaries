@@ -40,12 +40,12 @@ public class LeverActivatedBlock : MonoBehaviour
             {
                 move = true;
 
-                //Alyf's Code
-                signBoardController.InteractLever(); 
-
                 //Jane's Codes
                 FindObjectOfType<SoundManager>().Play("Lever"); //play lever sound effect
                 FindObjectOfType<SoundManager>().Play("GateOpen"); //play gate open sound effect
+
+                //Alyf's Code
+                signBoardController.InteractLever(); 
             }
 
         }
