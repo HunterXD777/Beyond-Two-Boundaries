@@ -5,91 +5,168 @@ using UnityEngine;
 public class LeverElevator : MonoBehaviour
 {
     public float speed;
-    public float controltimer, cd;
+   
     public Transform startPos;
     public Transform pos1, pos2;
 
     Vector3 nextPos;
-    public GameObject platformControls;//the control button
 
-    public GameObject floor2leverOn;
-    public GameObject floor2leverOff;
-    public GameObject floor1leverOff;
-    public GameObject floor1leverOn;
-    public GameObject ElevatorLeverOn;
-    public GameObject ElevatorLeverOff;
+    public GameObject player;
+    public GameObject ghost;
+    public GameObject Decoy;
 
-    public bool OnStartFloor;
-    public bool fromStart = true;
+    public GameObject block;
+    
+
+
+    public bool playerOnPlatform;
+    public bool ghostOnPlatform;
+    public bool decoyOnPlatform;
+
+
+    public GameObject[] ElevatorLeverOn;
+    public GameObject[] ElevatorLeverOff;
+
+  
     // Start is called before the first frame update
     void Start()
     {
         nextPos = startPos.position;
+
     }
 
     // Update is called once per frame
     void Update()
     {
-
-        if (platformControls.GetComponent<PlatformControl>().OnTouching == true)
+        //elevatorlever[0] is the one on the platform
+        foreach (GameObject elevatorLever in ElevatorLeverOff)
         {
-            checkPosition();//control the platform
-
+            if (elevatorLever.GetComponent<PlatformControl>().OnTouching == true)
+            {
+                checkPosition();//control the platform
+            }
         }
-        transform.position = Vector3.MoveTowards(transform.position, nextPos, speed * Time.deltaTime);
-        //floorleverActivated();
-
-
-        if (cd > 0f)
-        {
-            cd -= Time.deltaTime;
-        }
+        playeronplatform();
+        ghostonplatform();
+        decoyonplatform();
+        transform.position = Vector3.MoveTowards(transform.position, nextPos, speed * Time.deltaTime);       
+        Leverelevator();
+        
 
 
     }
 
     public void checkPosition()
     {
-        if (cd <= 0f)
-        {
+       
             if (Input.GetKeyDown(KeyCode.E))
             {
-                cd = controltimer;
+               
                 if (transform.position == pos2.position)
                 {
                     nextPos = pos1.position;
-                    OnStartFloor = true;
+                    
                 }
                 if (transform.position == pos1.position)
                 {
                     nextPos = pos2.position;
-                    OnStartFloor = false;
-                }
-            }
+                                   
+           }
         }
     }
    
 
     public void Leverelevator()
     {
-        if(transform.position != pos1.position || transform.position != pos2.position)
+        if(transform.position == pos1.position || transform.position == pos2.position)
         {
+            foreach (GameObject lever in ElevatorLeverOn)
+            {
+                lever.SetActive(false);
+            }
+            foreach (GameObject lever in ElevatorLeverOff)
+            {
+                lever.SetActive(true);
+            }
+            block.SetActive(false);
 
+        }
+        else
+        {
+            foreach (GameObject lever in ElevatorLeverOn)
+            {
+                lever.SetActive(true);
+            }
+            foreach (GameObject lever in ElevatorLeverOff)
+            {
+                lever.SetActive(false);
+            }
+             block.SetActive(true);
+        }
+    }
+    void playeronplatform()
+    {
+        if (playerOnPlatform == true)
+        {
+            player.transform.parent = gameObject.transform;
+
+        }
+        else
+        {
+            player.transform.parent = null;
+        }
+    }
+    void ghostonplatform()
+    {
+        if (ghostOnPlatform == true)
+        {
+            ghost.transform.parent = gameObject.transform;
+        }
+        else
+        {
+            ghost.transform.parent = null;
+        }
+    }
+    void decoyonplatform()
+    {
+        if (decoyOnPlatform == true)
+        {
+            Decoy.transform.parent = gameObject.transform;
+        }
+        else
+        {
+            Decoy.transform.parent = null;
         }
     }
     public void OnCollisionEnter2D(Collision2D other)
     {
-        if(other.collider.CompareTag ("Player"))
+        if (other.gameObject.name==("Player"))
         {
-            other.transform.parent = gameObject.transform;
+            playerOnPlatform = true;
+        }
+        if (other.gameObject.name == ("GhostPlayer"))
+        {
+            ghostOnPlatform = true;
+        }
+        if (other.gameObject.name == ("Decoy"))
+        {
+            decoyOnPlatform = true;
         }
     }
 
     public void OnCollisionExit2D(Collision2D other)
     {
-        if (other.collider.CompareTag("Player"))
+        if (other.gameObject.name == ("Player"))
         {
-            other.transform.parent = null;
+            playerOnPlatform = false;
+        }
+        if (other.gameObject.name == ("GhostPlayer"))
+        {
+            ghostOnPlatform = false;
+        }
+        if (other.gameObject.name == ("Decoy"))
+        {
+            decoyOnPlatform = false;
         }
     }
 
