@@ -8658,9 +8658,21 @@ PrefabInstance:
       propertyPath: ghostWalls.Array.data[3]
       value: 
       objectReference: {fileID: 1860176722}
+    - target: {fileID: 3526188705048121605, guid: e2d4658da57880b458f4130e0ed60e1f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4498403742738876232, guid: e2d4658da57880b458f4130e0ed60e1f, type: 3}
       propertyPath: m_Name
       value: 'Alyf''s Player '
+      objectReference: {fileID: 0}
+    - target: {fileID: 4883842921830278895, guid: e2d4658da57880b458f4130e0ed60e1f, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5774440431903787428, guid: e2d4658da57880b458f4130e0ed60e1f, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6777804664293505168, guid: e2d4658da57880b458f4130e0ed60e1f, type: 3}
       propertyPath: m_RootOrder
@@ -8705,6 +8717,10 @@ PrefabInstance:
     - target: {fileID: 6777804664293505168, guid: e2d4658da57880b458f4130e0ed60e1f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9192976946280858365, guid: e2d4658da57880b458f4130e0ed60e1f, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e2d4658da57880b458f4130e0ed60e1f, type: 3}
