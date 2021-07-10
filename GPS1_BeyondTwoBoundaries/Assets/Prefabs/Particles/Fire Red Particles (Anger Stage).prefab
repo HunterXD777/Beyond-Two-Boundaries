@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4339079835616816301}
   - component: {fileID: 4339079835616816300}
   m_Layer: 0
-  m_Name: Fire Red Particle (Anger Stage)
+  m_Name: Fire Red Particles (Anger Stage)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

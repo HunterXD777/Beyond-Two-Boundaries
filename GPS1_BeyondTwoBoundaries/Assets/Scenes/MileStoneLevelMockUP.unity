@@ -18329,7 +18329,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3129410914358768002, guid: 7740ff70c616d834ca6a91ab8ca7bae1, type: 3}
       propertyPath: m_Name
-      value: Rain Particle (Depression Stage)
+      value: Rain Particles (Depression Stage)
       objectReference: {fileID: 0}
     - target: {fileID: 3129410914358768002, guid: 7740ff70c616d834ca6a91ab8ca7bae1, type: 3}
       propertyPath: m_IsActive
@@ -18346,7 +18346,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4339079835616816299, guid: 2e2f7b43e064979468d6ebee1b572e94, type: 3}
       propertyPath: m_Name
-      value: Fire Red Particle (Anger Stage)
+      value: Fire Red Particles (Anger Stage)
       objectReference: {fileID: 0}
     - target: {fileID: 4339079835616816299, guid: 2e2f7b43e064979468d6ebee1b572e94, type: 3}
       propertyPath: m_IsActive
@@ -18634,7 +18634,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8517966455042987493, guid: ae4cfea47bfec8740a1c23e36ce15ac3, type: 3}
       propertyPath: m_Name
-      value: Fire Orange Particle (Denial Stage)
+      value: Fire Orange Particles (Denial Stage)
       objectReference: {fileID: 0}
     - target: {fileID: 8517966455042987493, guid: ae4cfea47bfec8740a1c23e36ce15ac3, type: 3}
       propertyPath: m_IsActive
