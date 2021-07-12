@@ -13,6 +13,8 @@ TagManager:
   - InteractTrigger
   - ShiftBackTrigger
   - CheckPoint
+  - ElectricalDoor
+  - Button
   layers:
   - Default
   - TransparentFX

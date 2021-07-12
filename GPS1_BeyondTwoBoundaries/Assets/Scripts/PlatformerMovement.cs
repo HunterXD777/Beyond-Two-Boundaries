@@ -13,7 +13,6 @@ public class PlatformerMovement : MonoBehaviour
 
     public float fallMultiplier = 2.5f;
 
-
     public bool isGrounded = false;
     public Transform isGroundedChecker;
     public float checkGroundRadius;
@@ -31,10 +30,12 @@ public class PlatformerMovement : MonoBehaviour
 
     void Update()
     {
+
         Move();
         BetterJump();
         Jump();
         CheckIfGrounded();
+
     }
 
 
@@ -75,7 +76,7 @@ public class PlatformerMovement : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
-            Debug.Log("Jumping");
+            
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
             //rb.AddForce(new Vector2(0f, jumpForce));
         }

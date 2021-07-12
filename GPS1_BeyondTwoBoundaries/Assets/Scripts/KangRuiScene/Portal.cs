@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Portal : MonoBehaviour
 {
-    public GameObject player;
+    private GameObject player;
     public GameObject portal;
     public bool isToushcing;
     public bool onWorking;
@@ -14,11 +14,14 @@ public class Portal : MonoBehaviour
     void Start()
     {
         onWorking = true;
+        
     }
 
     // Update is called once per frame
     void Update()
     {
+        player = GameObject.FindWithTag("Player");
+
         if (isToushcing == true)
         {
             player.transform.position = portal.transform.position;
