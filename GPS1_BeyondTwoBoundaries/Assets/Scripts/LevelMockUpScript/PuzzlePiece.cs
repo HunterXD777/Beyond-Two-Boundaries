@@ -11,6 +11,7 @@ public class PuzzlePiece : MonoBehaviour
 
     LoadNextLevel pieceCheck;
 
+    public GameObject puzzleParticleEffect;
     // Start is called before the first frame update
     void Start()
     {
@@ -45,7 +46,8 @@ public class PuzzlePiece : MonoBehaviour
 
             GetComponent<ParticleSystem>().Play(); //play collected particle effect
 
-            Destroy(this.gameObject, 0.3f); //added 0.3 seconds delay time before puzzlepiece got destroyed in order to let particle effect play first
+            Instantiate(puzzleParticleEffect, transform.position, Quaternion.identity);
+            Destroy(this.gameObject); //added 0.3 seconds delay time before puzzlepiece got destroyed in order to let particle effect play first
             puzzlePiece.SetActive(true);
 
             //Jane's Codes
