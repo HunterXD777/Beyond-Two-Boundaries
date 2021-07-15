@@ -24,16 +24,32 @@ public class PuzzlePiece : MonoBehaviour
         
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        pieceCheck.collectedPieces++;
+    //private void OnCollisionEnter2D(Collision2D collision)
+    //{
+    //    pieceCheck.collectedPieces++;
        
-        GetComponent<ParticleSystem>().Play(); //play collected particle effect
+    //    GetComponent<ParticleSystem>().Play(); //play collected particle effect
         
-        Destroy(this.gameObject, 0.3f); //added 0.3 seconds delay time before puzzlepiece got destroyed in order to let particle effect play first
-        puzzlePiece.SetActive(true);
+    //    Destroy(this.gameObject, 0.3f); //added 0.3 seconds delay time before puzzlepiece got destroyed in order to let particle effect play first
+    //    puzzlePiece.SetActive(true);
 
-        //Jane's Codes
-        FindObjectOfType<SoundManager>().Play("Collected"); //play collected sound effect
-    } 
+    //    //Jane's Codes
+    //    FindObjectOfType<SoundManager>().Play("Collected"); //play collected sound effect
+    //}
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player") || collision.CompareTag("Decoy"))
+        {
+            pieceCheck.collectedPieces++;
+
+            GetComponent<ParticleSystem>().Play(); //play collected particle effect
+
+            Destroy(this.gameObject, 0.3f); //added 0.3 seconds delay time before puzzlepiece got destroyed in order to let particle effect play first
+            puzzlePiece.SetActive(true);
+
+            //Jane's Codes
+            FindObjectOfType<SoundManager>().Play("Collected"); //play collected sound effect
+        }
+    }
 }

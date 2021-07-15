@@ -7,17 +7,24 @@ public class DialogueTrigger : MonoBehaviour
     public Dialogue dialogue;
     // Start is called before the first frame update
     public GameObject dialogueManagement;
+    
+
     public bool isTrigger = false;
-   
+
+    public bool forCutScene;
+    public float timer;
     void Start()
     {
-       
+        if (forCutScene == true)
+        {
+            TriggerDialogue(dialogue);
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+       
     }
 
     public void TriggerDialogue(Dialogue dialogue)

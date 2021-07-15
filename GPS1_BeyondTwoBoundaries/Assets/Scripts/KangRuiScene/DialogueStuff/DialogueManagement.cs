@@ -29,11 +29,14 @@ public class DialogueManagement : MonoBehaviour
     {
         if (stopTrigger == false)
         {
-            if (dialogueTrigger.GetComponent<DialogueTrigger>().isTrigger == true)
+            if (dialogueTrigger.GetComponent<DialogueTrigger>().forCutScene == false)//determine for cutscene or not
             {
-                if (Input.GetKeyDown(KeyCode.E))
+                if (dialogueTrigger.GetComponent<DialogueTrigger>().isTrigger == true)//determine had trigger dialogue or not
                 {
-                    DisplayNextSentence();
+                    if (Input.GetKeyDown(KeyCode.E))
+                    {
+                        DisplayNextSentence();
+                    }
                 }
             }
         }
@@ -41,16 +44,17 @@ public class DialogueManagement : MonoBehaviour
 
     public void StartDialogue(Dialogue dialogue)
     {
-       
+
         //sentences.Clear();
         prompttext.text = dialogue.prompt;
-        
-        playerControl.GetComponent<Animator>().SetFloat("Speed",0);//set to player_idle animation when trigger the dialogue box
-        playerControl.GetComponent<PlatformerMovement>().enabled = false; //can't move during dialogue pop out
-
+       
+        //for non cutscene used
+        playerControl.GetComponent<Animator>().SetFloat("Speed", 0);//set to player_idle animation when trigger the dialogue box
+        playerControl.GetComponent<PlatformerMovement>().enabled = false; //can't move during dialogue pop out        
         playerControl.GetComponent<Rigidbody2D>().velocity = new Vector2(0,0); //can't move during dialogue pop out
-
-        animator.SetBool("OpenDialogue", true);//dialogue box pop out
+        
+        //dialogue box in
+        animator.SetBool("OpenDialogue", true);
 
 
         foreach(string sentence in dialogue.sentences)
@@ -76,6 +80,7 @@ public class DialogueManagement : MonoBehaviour
     }
     IEnumerator Typesentence(string sentence)
     {
+        //animate the sentence 
         dialogue.text = "";
         foreach(char letter in sentence.ToCharArray())
         {
@@ -88,9 +93,10 @@ public class DialogueManagement : MonoBehaviour
         Debug.Log("End");
         stopTrigger = true;
 
-        //dimensionS.GetComponent<DimensionShift>().enabled = true;  //can't use dimension shift during dialogue pop out
-        playerControl.GetComponent<PlatformerMovement>().enabled = true;   //can't move during dialogue pop out
-      
+        //dimensionS.GetComponent<DimensionShift>().enabled = true;  //can't use dimension shift during dialogue pop out        
+       playerControl.GetComponent<PlatformerMovement>().enabled = true;   //can move after dialogue pop out
+        
+        //dialogue box out
         animator.SetBool("OpenDialogue", false);
     }
 }

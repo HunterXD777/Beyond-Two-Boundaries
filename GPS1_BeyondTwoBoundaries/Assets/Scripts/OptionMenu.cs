@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 
 public class OptionMenu : MonoBehaviour
@@ -10,10 +11,11 @@ public class OptionMenu : MonoBehaviour
     public GameObject OptionMenuUi;
 
     public GameObject PauseMenuSystem;
+  
    
     void Update()
     {
-      
+       
         
     }
     public void backForMain()
@@ -32,5 +34,9 @@ public class OptionMenu : MonoBehaviour
    public void setFullsceen(bool isFullsceen)
     {
         Screen.fullScreen = isFullsceen;
+        
+        
     }
+
+    
 }

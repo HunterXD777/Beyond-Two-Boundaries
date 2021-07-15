@@ -42,9 +42,10 @@ public class SoundManager : MonoBehaviour
 
    void Update()
     {
+        //KangRui code
         foreach (Sound s in sounds)
         {
-           s.source.volume = PlayerPrefs.GetFloat("volume");
+           s.source.volume = PlayerPrefs.GetFloat("volume");//used Prefs to make it not reset the volume. 
         }
     }
 

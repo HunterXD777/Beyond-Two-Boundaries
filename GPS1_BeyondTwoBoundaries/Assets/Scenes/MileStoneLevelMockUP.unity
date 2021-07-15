@@ -1332,6 +1332,7 @@ MonoBehaviour:
   PauseMenuUi: {fileID: 1619232534}
   OptionMenuUi: {fileID: 196167260}
   PauseMenuSystem: {fileID: 1946259820}
+  toggle: {fileID: 463564205}
 --- !u!114 &196167262
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7381,6 +7382,7 @@ GameObject:
   m_Component:
   - component: {fileID: 463564204}
   - component: {fileID: 463564205}
+  - component: {fileID: 463564206}
   m_Layer: 5
   m_Name: Toggle
   m_TagString: Untagged
@@ -7469,6 +7471,20 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   m_IsOn: 1
+--- !u!114 &463564206
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 463564203}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d268df5d49fca8d4d8b257515c4656d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  op: {fileID: 196167260}
+  toggle: {fileID: 463564205}
 --- !u!1 &470759229
 GameObject:
   m_ObjectHideFlags: 0

@@ -5,7 +5,7 @@ using UnityEngine;
 public class LeverElevator : MonoBehaviour
 {
     public float speed;
-   
+
     public Transform startPos;
     public Transform pos1, pos2;
 
@@ -16,18 +16,19 @@ public class LeverElevator : MonoBehaviour
     public GameObject Decoy;
 
     public GameObject block;
-    
+
 
 
     public bool playerOnPlatform;
     public bool ghostOnPlatform;
     public bool decoyOnPlatform;
-
+    public bool forModel3;
+    public bool fornormal;
 
     public GameObject[] ElevatorLeverOn;
     public GameObject[] ElevatorLeverOff;
 
-  
+
     // Start is called before the first frame update
     void Start()
     {
@@ -38,31 +39,51 @@ public class LeverElevator : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(forModel3 == true)
+        {
+            formodel3Platform();
+        }
+        if(fornormal == true)
+        {
+            fornormalPlatform();
+        }
+    }
+        
+
+
+    
+    public void fornormalPlatform()
+    {
         //elevatorlever[0] is the one on the platform
         foreach (GameObject elevatorLever in ElevatorLeverOff)
         {
             if (elevatorLever.GetComponent<PlatformControl>().OnTouching == true)
             {
-                checkPosition();//control the platform
+                checkPosition();//control the platform              
             }
         }
         playeronplatform();
         ghostonplatform();
         decoyonplatform();
-        transform.position = Vector3.MoveTowards(transform.position, nextPos, speed * Time.deltaTime);       
+        transform.position = Vector3.MoveTowards(transform.position, nextPos, speed * Time.deltaTime);
         Leverelevator();
-        
-
-
     }
-
+    public void formodel3Platform()
+    {                   
+        checkPositionV2();                               
+        playeronplatform();
+        ghostonplatform();
+        decoyonplatform();
+        transform.position = Vector3.MoveTowards(transform.position, nextPos, speed * Time.deltaTime);
+        LeverelevatorV2();
+    }
     public void checkPosition()
     {
        
             if (Input.GetKeyDown(KeyCode.E))
             {
-               
-                if (transform.position == pos2.position)
+            FindObjectOfType<SoundManager>().Play("Lever"); //play lever sound effect
+            if (transform.position == pos2.position)
                 {
                     nextPos = pos1.position;
                     
@@ -75,7 +96,30 @@ public class LeverElevator : MonoBehaviour
         }
     }
    
+    public void checkPositionV2()//for model 3 basic
+    {       
+        
+        if (transform.position == pos1.position)
+        {
+            foreach (GameObject elevatorLever in ElevatorLeverOff)
+            {
+                if (elevatorLever.GetComponent<PlatformControl>().OnTouching == true)
+                {
+                    if (Input.GetKeyDown(KeyCode.E))
+                    {
+                    FindObjectOfType<SoundManager>().Play("Lever"); //play lever sound effect
+                    nextPos = pos2.position;
 
+                    }
+                }
+            }
+        }
+        if (transform.position == pos2.position)
+        {
+            nextPos = pos1.position;
+
+        }
+    }
     public void Leverelevator()
     {
         if(transform.position == pos1.position || transform.position == pos2.position)
@@ -102,6 +146,34 @@ public class LeverElevator : MonoBehaviour
                 lever.SetActive(false);
             }
              block.SetActive(true);
+        }
+    }
+    public void LeverelevatorV2()//for model 3 basic
+    {
+        if (transform.position == pos1.position)
+        {
+            foreach (GameObject lever in ElevatorLeverOn)
+            {
+                lever.SetActive(false);
+            }
+            foreach (GameObject lever in ElevatorLeverOff)
+            {
+                lever.SetActive(true);
+            }
+            block.SetActive(false);
+
+        }
+        else
+        {
+            foreach (GameObject lever in ElevatorLeverOn)
+            {
+                lever.SetActive(true);
+            }
+            foreach (GameObject lever in ElevatorLeverOff)
+            {
+                lever.SetActive(false);
+            }
+            block.SetActive(true);
         }
     }
     void playeronplatform()
