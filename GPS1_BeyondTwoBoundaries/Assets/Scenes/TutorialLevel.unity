@@ -4331,6 +4331,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   puzzlePiece: {fileID: 223873829}
+  puzzleParticleEffect: {fileID: 0}
 --- !u!61 &685301970
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10401,6 +10402,18 @@ PrefabInstance:
       propertyPath: ShiftBackTrigger
       value: 
       objectReference: {fileID: 461531827}
+    - target: {fileID: 1287741388739229162, guid: dd141f6adc203c54786a14a326b5ffbf, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1287741388739229162, guid: dd141f6adc203c54786a14a326b5ffbf, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2599877711448651871, guid: dd141f6adc203c54786a14a326b5ffbf, type: 3}
+      propertyPath: m_RenderMode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7699920669393405492, guid: dd141f6adc203c54786a14a326b5ffbf, type: 3}
       propertyPath: m_Layer
       value: 7
@@ -10423,11 +10436,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7699920670415222059, guid: dd141f6adc203c54786a14a326b5ffbf, type: 3}
       propertyPath: m_Name
-      value: 'Alyf''s New Sprite Player '
+      value: Alyf's New Sprite Player (Tutorial)
       objectReference: {fileID: 0}
     - target: {fileID: 7699920670415222059, guid: dd141f6adc203c54786a14a326b5ffbf, type: 3}
       propertyPath: m_Layer
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7699920670415222059, guid: dd141f6adc203c54786a14a326b5ffbf, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7699920670415222060, guid: dd141f6adc203c54786a14a326b5ffbf, type: 3}
       propertyPath: m_RootOrder

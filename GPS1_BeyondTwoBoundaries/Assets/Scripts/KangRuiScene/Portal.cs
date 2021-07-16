@@ -8,9 +8,11 @@ public class Portal : MonoBehaviour
     public GameObject portal;
     public bool isToushcing;
     public bool onWorking;
-
    
     public bool twowayPortal;
+
+    public GameObject enterPortalParticleEffect;
+    public GameObject exitPortalParticleEffect;
     void Start()
     {
         onWorking = true;
@@ -30,6 +32,8 @@ public class Portal : MonoBehaviour
                 portal.GetComponent<Portal>().onWorking = false;
             }
             //Jane's Codes
+            Instantiate(exitPortalParticleEffect, portal.transform.position, Quaternion.identity);
+            Instantiate(enterPortalParticleEffect, transform.position, Quaternion.identity);
             FindObjectOfType<SoundManager>().Play("Portal"); //play portal sound effect
         }
     }

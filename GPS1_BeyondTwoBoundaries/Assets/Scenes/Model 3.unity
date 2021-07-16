@@ -797,6 +797,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6242601868783916165, guid: ea94072153d01c245b994370d58d0588, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6243189576839071427, guid: ea94072153d01c245b994370d58d0588, type: 3}
       propertyPath: filter
       value: 
@@ -12588,6 +12592,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   puzzlePiece: {fileID: 278000768}
+  puzzleParticleEffect: {fileID: 2503827344786788338, guid: b6939f4b14737b4449a0afe453b58801, type: 3}
 --- !u!61 &1755186886
 BoxCollider2D:
   m_ObjectHideFlags: 0
