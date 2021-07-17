@@ -778,6 +778,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1677442926}
     - target: {fileID: 5387185793855522374, guid: ea94072153d01c245b994370d58d0588, type: 3}
+      propertyPath: TimerDuration
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 5387185793855522374, guid: ea94072153d01c245b994370d58d0588, type: 3}
       propertyPath: ghostWalls.Array.data[0]
       value: 
       objectReference: {fileID: 1271297206}
@@ -4039,8 +4043,12 @@ PrefabInstance:
     m_TransformParent: {fileID: 10199128}
     m_Modifications:
     - target: {fileID: 7675637650464819674, guid: 802843e141ae8674ba85b608c01b3afb, type: 3}
+      propertyPath: nextSceneLoad
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7675637650464819674, guid: 802843e141ae8674ba85b608c01b3afb, type: 3}
       propertyPath: requiredPieces
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7675637650464819676, guid: 802843e141ae8674ba85b608c01b3afb, type: 3}
       propertyPath: m_Name
@@ -6201,7 +6209,7 @@ SpriteRenderer:
   m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.5647059, g: 0.5647059, b: 0.5647059, a: 0}
+  m_Color: {r: 0.9811321, g: 0.5127803, b: 0.88438416, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -14453,6 +14461,10 @@ PrefabInstance:
       propertyPath: ghost
       value: 
       objectReference: {fileID: 1026917224}
+    - target: {fileID: 2474589666520197563, guid: f234ab3709ac33c489a60e240a71a620, type: 3}
+      propertyPath: speed
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2474589666520197563, guid: f234ab3709ac33c489a60e240a71a620, type: 3}
       propertyPath: player
       value: 
