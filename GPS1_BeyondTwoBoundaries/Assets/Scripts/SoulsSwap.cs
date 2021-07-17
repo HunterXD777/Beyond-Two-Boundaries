@@ -114,11 +114,17 @@ public class SoulsSwap : MonoBehaviour
         //Set ghost player position at main player position 
         GhostPlayer.transform.position = new Vector2(MainPlayer.transform.position.x, MainPlayer.transform.position.y);
 
-        //Flipping Decoy if needed
-        //if (playerMovement.PlayerFacingRight == false)
-        //{
-        //    Decoy.transform.Rotate(0f, 180f, 0f);
-        //}
+        if (playerMovement.PlayerFacingRight == true && ghostMove.PlayerFacingRight == false)
+        {
+            ghostMove.transform.Rotate(0f, 180f, 0f);
+            ghostMove.PlayerFacingRight = true;
+        }
+        if (playerMovement.PlayerFacingRight == false && ghostMove.PlayerFacingRight == true)
+        {
+            ghostMove.transform.Rotate(0f, 180f, 0f);
+            ghostMove.PlayerFacingRight = false;
+        }
+
 
         //Disable main player
         MainPlayer.SetActive(false);
@@ -212,7 +218,7 @@ public class SoulsSwap : MonoBehaviour
             playerMovement.transform.Rotate(0f, 180f, 0f);
             playerMovement.PlayerFacingRight = true;
         }
-        else
+        if(ghostMove.PlayerFacingRight == false && playerMovement.PlayerFacingRight == true)
         {
             playerMovement.transform.Rotate(0f, 180f, 0f);
             playerMovement.PlayerFacingRight = false;
