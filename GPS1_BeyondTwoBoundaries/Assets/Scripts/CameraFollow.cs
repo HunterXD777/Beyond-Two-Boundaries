@@ -7,6 +7,7 @@ public class CameraFollow : MonoBehaviour
     private GameObject player;
     public float offsetY = 0;
     public float offsetX = 0;
+    public float smoothness;
 
 
     void Start()
@@ -18,6 +19,6 @@ public class CameraFollow : MonoBehaviour
     {
         player = GameObject.FindWithTag("Player");
         Vector3 moveTo = new Vector3(player.transform.position.x + offsetX, player.transform.position.y + offsetY, -10f);
-        transform.position = Vector3.Lerp(transform.position, moveTo, 10.0f * Time.deltaTime);
+        transform.position = Vector3.Lerp(transform.position, moveTo, smoothness * Time.deltaTime);
     }
 }
