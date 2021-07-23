@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Playables;
 
 public class PreviewCamera : MonoBehaviour
 {
@@ -19,13 +20,18 @@ public class PreviewCamera : MonoBehaviour
     public float camPauseDuration = 2;
     public bool moveCamera = false;
     public bool playerCam = false;
+    public bool playCutsceneAfterPreview;//kang rui code // play cutscene or not after preview
+    bool cutScenePlay = false;//kang rui code // check cutscene had play or not
+
 
     public float offsetX;
     public float offsetY;
 
+    public PlayableDirector cutScene;
     private GameObject player;
     private Camera mainCam;
 
+    
     void Start()
     {
         mainCam = GetComponent<Camera>();
@@ -34,6 +40,8 @@ public class PreviewCamera : MonoBehaviour
         transform.position = startPos.transform.position;
         StartCoroutine(PauseCountDown());
         StartCoroutine(PreviewDuration());
+        
+       
     }
 
 
@@ -51,9 +59,20 @@ public class PreviewCamera : MonoBehaviour
             player = GameObject.FindWithTag("Player");
             Vector3 moveTo = new Vector3(player.transform.position.x + offsetX, player.transform.position.y + offsetY, -10f);
             transform.position = Vector3.Lerp(transform.position, moveTo, smoothness * Time.deltaTime);
+
+            //kang rui code
+            if (playCutsceneAfterPreview)
+            {
+                if (!cutScenePlay)
+                {
+                    cutScene.Play();
+                    cutScenePlay = true;
+                }
+            }
         }
         
-        
+
+
     }
 
 
@@ -71,7 +90,7 @@ public class PreviewCamera : MonoBehaviour
         moveCamera = false;
         playerCam = true;
     }
-
+    
     
 
 }

@@ -31,12 +31,7 @@ public class OptionMenu : MonoBehaviour
         PauseMenuSystem.GetComponent<PauseMenu>().inpausedMenu = true;
     }
     
-   public void setFullsceen(bool isFullsceen)
-    {
-        Screen.fullScreen = isFullsceen;
-        
-        
-    }
+   
 
     
 }

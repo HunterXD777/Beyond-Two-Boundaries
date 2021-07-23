@@ -21,7 +21,7 @@ public class LoadNextLevel : MonoBehaviour
 
 
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collider2D)
     {
         //SceneManager.LoadScene("MileStoneLevelMockUP"); //load according to scene name
 
@@ -35,4 +35,5 @@ public class LoadNextLevel : MonoBehaviour
 
         
     }
+    
 }

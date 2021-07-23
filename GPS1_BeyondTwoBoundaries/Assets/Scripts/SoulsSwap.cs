@@ -18,6 +18,8 @@ public class SoulsSwap : MonoBehaviour
 
     public GameObject MainPlayer;
     public GameObject GhostPlayer;
+    public GameObject SoulPiece1;
+    public GameObject SoulPiece2;
     //public GameObject Decoy;
 
     GhostMovement ghostMove;
@@ -154,7 +156,7 @@ public class SoulsSwap : MonoBehaviour
         //shiftReady = false;
         shiftCharge--;
 
-
+        chargeUI();
 
     }
 
@@ -247,6 +249,17 @@ public class SoulsSwap : MonoBehaviour
 
     }
 
+    public void chargeUI()//for charge ui
+    {
+        if (shiftCharge == 1)
+        {
+            SoulPiece2.SetActive(false);
+        }
+        if (shiftCharge == 0)
+        {
+            SoulPiece1.SetActive(false);
+        }
+    }
     public void SetTimer()
     {
         timerActive = !timerActive;

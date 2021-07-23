@@ -3972,6 +3972,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 830483215}
   m_CullTransparentMesh: 1
+--- !u!1 &839778560 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1944452996288963154, guid: 54e2a7dab8f98d34eaff181c6d8a95d2, type: 3}
+  m_PrefabInstance: {fileID: 4621141080806011369}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &860553231
 GameObject:
   m_ObjectHideFlags: 0
@@ -4654,7 +4659,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &955126897
 Transform:
   m_ObjectHideFlags: 0
@@ -4917,7 +4922,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1032504798}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -417.44998, y: -256.63, z: -10}
+  m_LocalPosition: {x: -398.69, y: -256.63, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1955595176}
@@ -4957,6 +4962,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   offsetY: 0
   offsetX: 0
+  smoothness: 5
 --- !u!81 &1032504802
 AudioListener:
   m_ObjectHideFlags: 0
@@ -4992,7 +4998,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 6.803989
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -5037,16 +5043,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ee0c2812bace014584c19ec8ab68409, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dimensionShift: {fileID: 0}
-  playerControl: {fileID: 0}
+  dimensionShift: {fileID: 839778560}
+  playerControl: {fileID: 6079720176482846198}
   dialogue: {fileID: 1244659644}
   prompttext: {fileID: 1920639675}
   animator: {fileID: 1595639456}
   dialogueTrigger: {fileID: 934374552}
   stopTrigger: 0
-  lockSoulSwap: 1
+  lockSoulSwap: 0
   lockDimensionShift: 0
-  lockDimensionBreath: 0
+  lockDimensionBreath: 1
 --- !u!4 &1037430820
 Transform:
   m_ObjectHideFlags: 0
@@ -6327,25 +6333,28 @@ MonoBehaviour:
   m_GameObject: {fileID: 1405103060}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e826488bdf8e89449c6df3ff6b833cd, type: 3}
+  m_Script: {fileID: 11500000, guid: 1be74c5e4d5372547980d5d26c87bc82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  controltimer: 10
-  cd: 0
-  startPos: {fileID: 99687921}
-  pos1: {fileID: 99687921}
+  startPos: {fileID: 415466534}
+  pos1: {fileID: 153311324}
   pos2: {fileID: 940850594}
-  pos3: {fileID: 415466534}
-  platformControls: {fileID: 1765553491}
-  player: {fileID: 6079720176482846198}
-  ghost: {fileID: 7316199989905980840}
-  Decoy: {fileID: 6803508838648238863}
+  player: {fileID: 3526188705525922310}
+  ghost: {fileID: 87914307796009560}
+  Decoy: {fileID: 4240952164308954367}
+  block: {fileID: 955584646}
   playerOnPlatform: 0
   ghostOnPlatform: 0
   decoyOnPlatform: 0
-  OnPlatform: 0
-  fromStart: 1
+  foroneway: 0
+  fornormal: 0
+  ElevatorLeverOn:
+  - {fileID: 1188391044}
+  - {fileID: 1597314022}
+  ElevatorLeverOff:
+  - {fileID: 354698366}
+  - {fileID: 905689708}
 --- !u!1 &1427091644
 GameObject:
   m_ObjectHideFlags: 0
@@ -8643,7 +8652,7 @@ MonoBehaviour:
   playerOnPlatform: 0
   ghostOnPlatform: 0
   decoyOnPlatform: 0
-  forModel3: 0
+  foroneway: 0
   fornormal: 0
   ElevatorLeverOn:
   - {fileID: 1188391044}
@@ -10051,19 +10060,28 @@ MonoBehaviour:
   m_GameObject: {fileID: 2084928429}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ee43679935cdf3e4d874fd69b214626b, type: 3}
+  m_Script: {fileID: 11500000, guid: 1be74c5e4d5372547980d5d26c87bc82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 5
+  startPos: {fileID: 1076405676}
   pos1: {fileID: 1076405676}
   pos2: {fileID: 171041987}
-  speed: 3
-  startPos: {fileID: 1076405676}
   player: {fileID: 3526188705525922310}
   ghost: {fileID: 87914307796009560}
   Decoy: {fileID: 4240952164308954367}
+  block: {fileID: 955584646}
   playerOnPlatform: 0
   ghostOnPlatform: 0
   decoyOnPlatform: 0
+  foroneway: 0
+  fornormal: 0
+  ElevatorLeverOn:
+  - {fileID: 1188391044}
+  - {fileID: 1597314022}
+  ElevatorLeverOff:
+  - {fileID: 354698366}
+  - {fileID: 905689708}
 --- !u!61 &2084928432
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11094,11 +11112,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &6803508838648238863 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2182975240235377382, guid: 54e2a7dab8f98d34eaff181c6d8a95d2, type: 3}
-  m_PrefabInstance: {fileID: 4621141080806011369}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &7151787382377512161
 GameObject:
   m_ObjectHideFlags: 0
@@ -11115,11 +11128,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &7316199989905980840 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2713922852220292161, guid: 54e2a7dab8f98d34eaff181c6d8a95d2, type: 3}
-  m_PrefabInstance: {fileID: 4621141080806011369}
-  m_PrefabAsset: {fileID: 0}
 --- !u!70 &7794870619267354326
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
