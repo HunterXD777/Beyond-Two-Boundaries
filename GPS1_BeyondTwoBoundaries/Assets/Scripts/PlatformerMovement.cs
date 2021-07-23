@@ -35,7 +35,7 @@ public class PlatformerMovement : MonoBehaviour
         BetterJump();
         Jump();
         CheckIfGrounded();
-
+        Interact(); //Jane's codes
     }
 
 
@@ -112,5 +112,18 @@ public class PlatformerMovement : MonoBehaviour
     {
         PlayerFacingRight = !PlayerFacingRight; //switch the way the player is labelled as facing
         transform.Rotate(0f, 180f, 0f);
+    }
+
+    void Interact() //Jane's codes
+    {
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+
+            animator.SetBool("IsInteracting", true);
+        }
+        else if (Input.GetKeyUp(KeyCode.E))
+        {
+            animator.SetBool("IsInteracting", false);
+        }
     }
 }

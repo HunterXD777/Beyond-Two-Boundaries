@@ -9061,6 +9061,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   offsetY: 3
   offsetX: 3
+  smoothness: 0
 --- !u!81 &1928993365
 AudioListener:
   m_ObjectHideFlags: 0
@@ -10434,6 +10435,14 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7699920669954967826, guid: dd141f6adc203c54786a14a326b5ffbf, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7699920669954967826, guid: dd141f6adc203c54786a14a326b5ffbf, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 9e3178be660b57d45a2610c21ac754a1, type: 2}
     - target: {fileID: 7699920669954967830, guid: dd141f6adc203c54786a14a326b5ffbf, type: 3}
       propertyPath: m_SortingOrder
       value: 2
