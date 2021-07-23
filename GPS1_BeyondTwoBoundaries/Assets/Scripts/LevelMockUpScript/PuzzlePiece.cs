@@ -47,7 +47,7 @@ public class PuzzlePiece : MonoBehaviour
             GetComponent<ParticleSystem>().Play(); //play collected particle effect
 
             Instantiate(puzzleParticleEffect, transform.position, Quaternion.identity);
-            Destroy(this.gameObject); //added 0.3 seconds delay time before puzzlepiece got destroyed in order to let particle effect play first
+            Destroy(this.gameObject); 
             puzzlePiece.SetActive(true);
 
             //Jane's Codes
