@@ -6093,6 +6093,107 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 800664978}
   m_CullTransparentMesh: 1
+--- !u!1001 &814110473
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4339079835616816299, guid: 2e2f7b43e064979468d6ebee1b572e94, type: 3}
+      propertyPath: m_Name
+      value: Fire Red Particles (Anger Stage)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4339079835616816299, guid: 2e2f7b43e064979468d6ebee1b572e94, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4339079835616816301, guid: 2e2f7b43e064979468d6ebee1b572e94, type: 3}
+      propertyPath: ColorModule.enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4339079835616816301, guid: 2e2f7b43e064979468d6ebee1b572e94, type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.ctime0
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4339079835616816301, guid: 2e2f7b43e064979468d6ebee1b572e94, type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.ctime1
+      value: 65535
+      objectReference: {fileID: 0}
+    - target: {fileID: 4339079835616816301, guid: 2e2f7b43e064979468d6ebee1b572e94, type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key0.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4339079835616816301, guid: 2e2f7b43e064979468d6ebee1b572e94, type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key0.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4339079835616816301, guid: 2e2f7b43e064979468d6ebee1b572e94, type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key0.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4339079835616816301, guid: 2e2f7b43e064979468d6ebee1b572e94, type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key1.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4339079835616816301, guid: 2e2f7b43e064979468d6ebee1b572e94, type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key1.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4339079835616816301, guid: 2e2f7b43e064979468d6ebee1b572e94, type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key1.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4339079835616816301, guid: 2e2f7b43e064979468d6ebee1b572e94, type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4339079835616816302, guid: 2e2f7b43e064979468d6ebee1b572e94, type: 3}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4339079835616816302, guid: 2e2f7b43e064979468d6ebee1b572e94, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -49.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4339079835616816302, guid: 2e2f7b43e064979468d6ebee1b572e94, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -90.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 4339079835616816302, guid: 2e2f7b43e064979468d6ebee1b572e94, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4339079835616816302, guid: 2e2f7b43e064979468d6ebee1b572e94, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4339079835616816302, guid: 2e2f7b43e064979468d6ebee1b572e94, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4339079835616816302, guid: 2e2f7b43e064979468d6ebee1b572e94, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4339079835616816302, guid: 2e2f7b43e064979468d6ebee1b572e94, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4339079835616816302, guid: 2e2f7b43e064979468d6ebee1b572e94, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4339079835616816302, guid: 2e2f7b43e064979468d6ebee1b572e94, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4339079835616816302, guid: 2e2f7b43e064979468d6ebee1b572e94, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 2e2f7b43e064979468d6ebee1b572e94, type: 3}
 --- !u!1 &814849191
 GameObject:
   m_ObjectHideFlags: 0
@@ -22413,67 +22514,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7740ff70c616d834ca6a91ab8ca7bae1, type: 3}
---- !u!1001 &4339079834818271152
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4339079835616816299, guid: 2e2f7b43e064979468d6ebee1b572e94, type: 3}
-      propertyPath: m_Name
-      value: Fire Red Particles (Anger Stage)
-      objectReference: {fileID: 0}
-    - target: {fileID: 4339079835616816299, guid: 2e2f7b43e064979468d6ebee1b572e94, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4339079835616816302, guid: 2e2f7b43e064979468d6ebee1b572e94, type: 3}
-      propertyPath: m_RootOrder
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 4339079835616816302, guid: 2e2f7b43e064979468d6ebee1b572e94, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -38.84
-      objectReference: {fileID: 0}
-    - target: {fileID: 4339079835616816302, guid: 2e2f7b43e064979468d6ebee1b572e94, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -22.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4339079835616816302, guid: 2e2f7b43e064979468d6ebee1b572e94, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4339079835616816302, guid: 2e2f7b43e064979468d6ebee1b572e94, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4339079835616816302, guid: 2e2f7b43e064979468d6ebee1b572e94, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4339079835616816302, guid: 2e2f7b43e064979468d6ebee1b572e94, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4339079835616816302, guid: 2e2f7b43e064979468d6ebee1b572e94, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4339079835616816302, guid: 2e2f7b43e064979468d6ebee1b572e94, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4339079835616816302, guid: 2e2f7b43e064979468d6ebee1b572e94, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4339079835616816302, guid: 2e2f7b43e064979468d6ebee1b572e94, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 2e2f7b43e064979468d6ebee1b572e94, type: 3}
 --- !u!1001 &5481888361709132093
 PrefabInstance:
   m_ObjectHideFlags: 0
