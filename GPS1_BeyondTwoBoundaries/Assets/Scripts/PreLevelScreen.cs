@@ -15,10 +15,13 @@ public class PreLevelScreen : MonoBehaviour
     public Transform endPos;
 
     
+    
     void Start()
     {
-        actText.CrossFadeAlpha(0, 0.2f, false);
-        levelText.CrossFadeAlpha(0, 0.2f, false);
+        
+        
+        actText.CrossFadeAlpha(0, 0.01f, false);
+        levelText.CrossFadeAlpha(0, 0.01f, false);
         StartCoroutine(PreLevelTimer());
     }
 

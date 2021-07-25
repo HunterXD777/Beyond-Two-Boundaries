@@ -11,6 +11,7 @@ public class PreviewCamera : MonoBehaviour
 
     
     private float smoothness;
+
     public float previewCamSmoothness;
     public float playerCamSmoothness;
     public float cameraPreviewSize;
@@ -27,6 +28,7 @@ public class PreviewCamera : MonoBehaviour
     public float offsetX;
     public float offsetY;
 
+   
     public PlayableDirector cutScene;
     private GameObject player;
     private Camera mainCam;
@@ -38,6 +40,8 @@ public class PreviewCamera : MonoBehaviour
         mainCam.orthographicSize = cameraPreviewSize;
         smoothness = previewCamSmoothness;
         transform.position = startPos.transform.position;
+        player = GameObject.FindWithTag("Player");
+        player.GetComponent<PlatformerMovement>().enableMove = false;
         StartCoroutine(PauseCountDown());
         StartCoroutine(PreviewDuration());
         
@@ -89,6 +93,7 @@ public class PreviewCamera : MonoBehaviour
         smoothness = playerCamSmoothness;
         moveCamera = false;
         playerCam = true;
+        player.GetComponent<PlatformerMovement>().enableMove = true;
     }
     
     

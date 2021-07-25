@@ -50,7 +50,11 @@ public class DimensionBreach : MonoBehaviour
 
     void Update()
     {
-        ShiftDimension();
+        if (playerMovement.enableMove)
+        {
+            ShiftDimension();
+        }
+        
 
 
 

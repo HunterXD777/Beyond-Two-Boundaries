@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CollisionDetect : MonoBehaviour
 {
-    public bool forPLace;
+    public bool forPlace;
     public bool forDecoy;
     public GameObject ghostPlayer;
     // Start is called before the first frame update
@@ -16,7 +16,7 @@ public class CollisionDetect : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (forPLace)
+        if (forPlace)
         {
             Physics2D.IgnoreCollision(ghostPlayer.GetComponent<Collider2D>(), GetComponent<Collider2D>());
         }

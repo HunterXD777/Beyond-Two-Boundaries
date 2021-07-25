@@ -21,7 +21,7 @@ EditorBuildSettings:
     path: Assets/Scenes/A2Tutorial.unity
     guid: 61f7b3f753f9f4f4c940bc82f7e2d560
   - enabled: 1
-    path: Assets/Scenes/A2L2.unity
+    path: Assets/Scenes/A2L1.unity
     guid: d21b8ec5717e1a14f94c979225de3252
   - enabled: 1
     path: Assets/Scenes/A3Tutorial.unity

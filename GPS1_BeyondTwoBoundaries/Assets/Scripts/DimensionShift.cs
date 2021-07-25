@@ -39,7 +39,7 @@ public class DimensionShift : MonoBehaviour
 
     void Awake()
     {
-        textBox.text = timeStart.ToString("F2");
+        //textBox.text = timeStart.ToString("F2");
         ResetFilter();
 
         

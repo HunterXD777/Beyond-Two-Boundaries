@@ -12,7 +12,7 @@ public class PlatformerMovement : MonoBehaviour
     public float jumpForce;
 
     public float fallMultiplier = 2.5f;
-
+    public bool enableMove = true;
     public bool isGrounded = false;
     public Transform isGroundedChecker;
     public float checkGroundRadius;
@@ -30,12 +30,15 @@ public class PlatformerMovement : MonoBehaviour
 
     void Update()
     {
-
-        Move();
-        BetterJump();
-        Jump();
-        CheckIfGrounded();
-        Interact(); //Jane's codes
+        if (enableMove)
+        {
+            Move();
+            BetterJump();
+            Jump();
+            CheckIfGrounded();
+            Interact(); //Jane's codes
+        }
+        
     }
 
 

@@ -159,7 +159,7 @@ public class MovingPlatform : MonoBehaviour
             {
                 lever.SetActive(true);
             }
-            block.SetActive(false);
+            block.SetActive(false);                                      
 
         }
         else
