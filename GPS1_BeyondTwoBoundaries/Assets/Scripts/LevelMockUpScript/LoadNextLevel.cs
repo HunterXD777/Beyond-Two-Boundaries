@@ -8,12 +8,20 @@ public class LoadNextLevel : MonoBehaviour
     public int nextSceneLoad;
     public int requiredPieces;
     public int collectedPieces;
+    public bool forPrologue;
 
     private void Awake()
     {
         collectedPieces = 0;
     }
-
+    public void Start()
+    {
+        //Kang Rui code
+        if(forPrologue == true)
+        {
+            SceneManager.LoadScene(nextSceneLoad);
+        }
+    }
     void Update()
     {
         

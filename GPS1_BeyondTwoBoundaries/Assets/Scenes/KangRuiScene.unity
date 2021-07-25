@@ -572,7 +572,7 @@ MonoBehaviour:
     - How are you?
     - I am a dialogue.
     - Bye Bye.
-    prompt: Press E To Continue
+    name: []
   dialogueManagement: {fileID: 1273128891}
   isTrigger: 0
   forCutScene: 0
@@ -1883,7 +1883,7 @@ MonoBehaviour:
     sentences:
     - That should be the door
     - I should get to there
-    prompt: Press E To Continue
+    name: []
   dialogueManagement: {fileID: 682016766}
   isTrigger: 0
   forCutScene: 1
@@ -3508,7 +3508,7 @@ MonoBehaviour:
   dimensionShift: {fileID: 0}
   playerControl: {fileID: 0}
   dialogue: {fileID: 1646344221}
-  prompttext: {fileID: 171012876}
+  nametext: {fileID: 0}
   animator: {fileID: 440258111}
   dialogueTrigger: {fileID: 329604785}
   stopTrigger: 0
@@ -4419,7 +4419,7 @@ MonoBehaviour:
     sentences:
     - Hello!
     - I am the second dialogue
-    prompt: Press E To Continue
+    name: []
   dialogueManagement: {fileID: 1037430818}
   isTrigger: 0
   forCutScene: 0
@@ -5046,7 +5046,7 @@ MonoBehaviour:
   dimensionShift: {fileID: 839778560}
   playerControl: {fileID: 6079720176482846198}
   dialogue: {fileID: 1244659644}
-  prompttext: {fileID: 1920639675}
+  nametext: {fileID: 0}
   animator: {fileID: 1595639456}
   dialogueTrigger: {fileID: 934374552}
   stopTrigger: 0
@@ -5685,7 +5685,7 @@ MonoBehaviour:
   dimensionShift: {fileID: 0}
   playerControl: {fileID: 0}
   dialogue: {fileID: 105788721}
-  prompttext: {fileID: 426165176}
+  nametext: {fileID: 0}
   animator: {fileID: 1624460512}
   dialogueTrigger: {fileID: 93426854}
   stopTrigger: 0
@@ -10364,6 +10364,10 @@ PlayableDirector:
     value: {fileID: 329604785}
   - key: {fileID: 5151759748893539513, guid: d6eed5b5e77902a4ba51644c7b736b06, type: 2}
     value: {fileID: 2147133901}
+  - key: {fileID: -216443994633459730, guid: d6eed5b5e77902a4ba51644c7b736b06, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: -8719677091169433669, guid: d6eed5b5e77902a4ba51644c7b736b06, type: 2}
+    value: {fileID: 0}
   m_ExposedReferences:
     m_References:
     - 2479027a986e860409da0ca2bbae822a: {fileID: 329604785}
@@ -10399,6 +10403,7 @@ MonoBehaviour:
   cutScene: {fileID: 2147133898}
   dialogueManagement: {fileID: 682016766}
   player: {fileID: 3800588579252538453}
+  text: {fileID: 0}
 --- !u!114 &2147133901
 MonoBehaviour:
   m_ObjectHideFlags: 0

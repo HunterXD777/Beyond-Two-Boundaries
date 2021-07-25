@@ -8,5 +8,7 @@ public class Dialogue
     // Start is called before the first frame update
     //public string names;
     public string[] sentences;
-    public string prompt;
+    public string[] rightname;
+    public string[] leftname;
+    public Color[] textColor;
 }

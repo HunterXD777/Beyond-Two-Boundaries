@@ -7,13 +7,18 @@ public class DialogueManagement : MonoBehaviour
 {
     // Start is called before the first frame update
     private Queue<string> sentences;
+    private Queue<string> rnames;
+    private Queue<string> lnames;
+    private Queue<Color> textColor;
 
     public GameObject dimensionShift;
 
     public GameObject playerControl;
 
     public Text dialogue;
-    public Text prompttext;
+    public Text rightnametext;
+    public Text leftnametext;
+    public Text prompt;
 
     public Animator animator;
 
@@ -24,35 +29,39 @@ public class DialogueManagement : MonoBehaviour
     public bool lockSoulSwap;
     public bool lockDimensionShift;
     public bool lockDimensionBreath;
+    public bool DialogueEnd;
+
     void Start()
     {
-        sentences = new Queue<string>(); 
+        sentences = new Queue<string>();
+        lnames = new Queue<string>();
+        rnames = new Queue<string>();
+        textColor = new Queue<Color>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (stopTrigger == false)
-        {
-            if (dialogueTrigger.GetComponent<DialogueTrigger>().forCutScene == false)//determine for cutscene or not
-            {
-                if (dialogueTrigger.GetComponent<DialogueTrigger>().isTrigger == true)//determine had trigger dialogue or not
-                {
-                    if (Input.GetKeyDown(KeyCode.E))
-                    {
-                        DisplayNextSentence();
-                    }
-                }
-            }
-        }
+        //if (stopTrigger == false)
+        //{
+        //    if (dialogueTrigger.GetComponent<DialogueTrigger>().forCutScene == false)//determine for cutscene or not
+        //    {
+        //        if (dialogueTrigger.GetComponent<DialogueTrigger>().isTrigger == true)//determine had trigger dialogue or not
+        //        {
+        //            if (Input.GetKeyDown(KeyCode.E))
+        //            {
+        //                DisplayNextSentence();
+        //            }
+        //        }
+        //    }
+        //}
     }
 
     public void StartDialogue(Dialogue dialogue)
     {
-
-        //sentences.Clear();
-        prompttext.text = dialogue.prompt;
-
+        DialogueEnd = false;
+        sentences.Clear();
+       
         //for non cutscene used
         lockAbility();
         playerControl.GetComponent<Animator>().SetFloat("Speed", 0);//set to player_idle animation when trigger the dialogue box
@@ -64,10 +73,21 @@ public class DialogueManagement : MonoBehaviour
         //dialogue box in
         animator.SetBool("OpenDialogue", true);
 
-
+        foreach(Color textColour in dialogue.textColor)
+        {
+            textColor.Enqueue(textColour);
+        }
         foreach(string sentence in dialogue.sentences)
         {
             sentences.Enqueue(sentence);
+        }
+        foreach (string rname in dialogue.rightname)
+        {
+            rnames.Enqueue(rname);
+        }
+        foreach(string lname in dialogue.leftname)
+        {
+            lnames.Enqueue(lname);
         }
         DisplayNextSentence();
     }
@@ -79,18 +99,27 @@ public class DialogueManagement : MonoBehaviour
             EndDialogue();
             return;
         }
-
-        string sentence = sentences.Dequeue();        
+        Color color = textColor.Dequeue();
+        
+        string sentence = sentences.Dequeue();
+        string rnamess = rnames.Dequeue();
+        string lnamess = lnames.Dequeue();
         //animate the sentence 
-        StartCoroutine(Typesentence(sentence));
+        prompt.color = color;
+        rightnametext.color = color;
+        leftnametext.color = color;
+        rightnametext.text = rnamess;
+        leftnametext.text = lnamess;
+        StartCoroutine(Typesentence(sentence,color));
 
         //dialogue.text = sentence;
     }
-    IEnumerator Typesentence(string sentence)
+    IEnumerator Typesentence(string sentence,Color color)
     {
         //animate the sentence 
+        dialogue.color = color;
         dialogue.text = "";
-        foreach(char letter in sentence.ToCharArray())
+        foreach (char letter in sentence.ToCharArray())
         {
             dialogue.text += letter;
             yield return null;
@@ -100,7 +129,7 @@ public class DialogueManagement : MonoBehaviour
     {
         Debug.Log("End");
         stopTrigger = true;
-
+        DialogueEnd = true;
         unlockAbility();
         playerControl.GetComponent<PlatformerMovement>().enabled = true;   //can move after dialogue pop out
         
