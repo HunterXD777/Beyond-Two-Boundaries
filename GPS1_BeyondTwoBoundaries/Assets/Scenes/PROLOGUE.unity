@@ -8242,7 +8242,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &513392956
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8586,12 +8586,19 @@ MonoBehaviour:
     sentences:
     - "Aunt Sally said that this was the only thing that she held near the end\u2026"
     - "Why\u2026 why did you do it! That night\u2026"
+    - (Ghostly shift in reality occurs (Dimension Shift), howling wind, change in
+      colour/environment)
+    - (Soul of parent appears)
     rightname:
+    - 
+    - 
     - 
     - 
     leftname:
     - PLAYER
     - PLAYER
+    - 
+    - 
     textColor:
     - {r: 1, g: 1, b: 1, a: 1}
     - {r: 1, g: 1, b: 1, a: 1}
@@ -9219,17 +9226,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 664106960}
-  m_LocalRotation: {x: -0, y: -1, z: -0, w: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.7203963, y: 0.7203963, z: 0.7203963}
   m_Children: []
   m_Father: {fileID: 1670965439}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: -180, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 481, y: -10.4058}
-  m_SizeDelta: {x: 425.8128, y: 252.5587}
+  m_AnchoredPosition: {x: 467, y: -0.999996}
+  m_SizeDelta: {x: 406.796, y: 360.32}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &664106962
 Animator:
@@ -9263,14 +9270,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.23921569, g: 1, b: 0.69411767, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: b97711f6951c24245aed6bfb9608d230, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3ddea696329f80c42a40b5e31b716be1, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -10109,11 +10116,19 @@ MonoBehaviour:
   dialogue:
     sentences:
     - "Right. There\u2019s also this. "
+    - (On screen display of stopwatch, closed > open)
+    - (Open stopwatch has memorable picture attached to cover)
     rightname:
+    - 
+    - 
     - 
     leftname:
     - PLAYER
+    - 
+    - 
     textColor:
+    - {r: 1, g: 1, b: 1, a: 1}
+    - {r: 1, g: 1, b: 1, a: 1}
     - {r: 1, g: 1, b: 1, a: 1}
   dialogueManagement: {fileID: 1297419109}
   isTrigger: 0
@@ -11107,7 +11122,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -332, y: -9.000003}
+  m_AnchoredPosition: {x: -332, y: -9.000005}
   m_SizeDelta: {x: 425.8128, y: 425.8128}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &1064188882
@@ -12180,18 +12195,22 @@ MonoBehaviour:
     - "What\u2019s happening \u2026 I feel lighter \u2026 "
     - "What\u2019s that \u2026 Is \u2026 is that my soul??"
     - ......
+    - (Dimension Shift ends, soul returns to player, everything returns to normal)
     rightname:
     - 
     - 
     - PLAYER SOUL
+    - 
     leftname:
     - PLAYER
     - 'PLAYER '
+    - 
     - 
     textColor:
     - {r: 1, g: 1, b: 1, a: 1}
     - {r: 1, g: 1, b: 1, a: 1}
     - {r: 0.23921569, g: 1, b: 0.69411767, a: 1}
+    - {r: 1, g: 1, b: 1, a: 1}
   dialogueManagement: {fileID: 1966035742}
   isTrigger: 0
   forCutScene: 1
@@ -13134,7 +13153,9 @@ MonoBehaviour:
     - Well, Aunt Sally gave me the key to the old 101. No harm in checking it out
       I suppose.
     - Need something to clear my mind anyhow.
+    - (Rummaging, ending with metallic object being fetched)
     rightname:
+    - 
     - 
     - 
     - 
@@ -13144,7 +13165,9 @@ MonoBehaviour:
     - PLAYER
     - PLAYER
     - PLAYER
+    - 
     textColor:
+    - {r: 1, g: 1, b: 1, a: 1}
     - {r: 1, g: 1, b: 1, a: 1}
     - {r: 1, g: 1, b: 1, a: 1}
     - {r: 1, g: 1, b: 1, a: 1}
@@ -13695,21 +13718,29 @@ MonoBehaviour:
     - "My child\u2026"
     - "\u2026Mom? "
     - "A final gift\u2026"
+    - (Ghostly transformation occurs in player, soul separates from body)
+    - "(Parent\u2019s soul fades away)"
     rightname:
     - 
     - PARENT SOUL
     - 
     - PARENT SOUL
+    - 
+    - 
     leftname:
     - PLAYER
     - 
-    - PLAYER SOUL
+    - PLAYER
+    - 
+    - 
     - 
     textColor:
     - {r: 1, g: 1, b: 1, a: 1}
     - {r: 0.1737273, g: 0.754717, b: 0.5211232, a: 1}
-    - {r: 0.23921569, g: 1, b: 0.69411767, a: 1}
+    - {r: 1, g: 1, b: 1, a: 1}
     - {r: 0.17254902, g: 0.7529412, b: 0.52156866, a: 1}
+    - {r: 1, g: 1, b: 1, a: 1}
+    - {r: 1, g: 1, b: 1, a: 1}
   dialogueManagement: {fileID: 1273035189}
   isTrigger: 0
   forCutScene: 1
