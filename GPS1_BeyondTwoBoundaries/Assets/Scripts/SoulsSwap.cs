@@ -51,7 +51,10 @@ public class SoulsSwap : MonoBehaviour
 
     void Update()
     {
-        ShiftDimension();
+        if (playerMovement.enableMove)
+        {
+            ShiftDimension();
+        }
 
 
 

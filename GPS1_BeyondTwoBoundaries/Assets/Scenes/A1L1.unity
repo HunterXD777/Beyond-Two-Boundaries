@@ -17514,7 +17514,7 @@ MonoBehaviour:
   endPos: {fileID: 66986943}
   previewCamSmoothness: 0.4
   playerCamSmoothness: 8
-  cameraPreviewSize: 12
+  cameraPreviewSize: 14
   cameraPlaySize: 7
   previewDuration: 16
   camPauseDuration: 9
@@ -22838,11 +22838,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4765186393565593278, guid: d6884b9e49ea35e43a01d4d21fc33f6a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -457.79
+      value: -459.08
       objectReference: {fileID: 0}
     - target: {fileID: 4765186393565593278, guid: d6884b9e49ea35e43a01d4d21fc33f6a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -240.69
+      value: -240.41
       objectReference: {fileID: 0}
     - target: {fileID: 4765186393565593278, guid: d6884b9e49ea35e43a01d4d21fc33f6a, type: 3}
       propertyPath: m_LocalPosition.z

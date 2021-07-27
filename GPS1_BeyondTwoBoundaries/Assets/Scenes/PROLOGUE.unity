@@ -6097,6 +6097,10 @@ PrefabInstance:
       propertyPath: ColorModule.gradient.maxGradient.key0.r
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2977646634152245359, guid: ea94072153d01c245b994370d58d0588, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3315706970515853687, guid: ea94072153d01c245b994370d58d0588, type: 3}
       propertyPath: moveWithTransform
       value: 0
@@ -6137,6 +6141,10 @@ PrefabInstance:
       propertyPath: textBox
       value: 
       objectReference: {fileID: 1677442926}
+    - target: {fileID: 5387185793855522374, guid: ea94072153d01c245b994370d58d0588, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5387185793855522374, guid: ea94072153d01c245b994370d58d0588, type: 3}
       propertyPath: ghostWalls.Array.data[0]
       value: 
@@ -6193,6 +6201,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 10308, guid: 0000000000000000f000000000000000, type: 0}
+    - target: {fileID: 7736716599892882483, guid: ea94072153d01c245b994370d58d0588, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8064045985832580230, guid: ea94072153d01c245b994370d58d0588, type: 3}
       propertyPath: m_Name
       value: MAIN PLAYER
@@ -6200,6 +6212,10 @@ PrefabInstance:
     - target: {fileID: 8064045985832580230, guid: ea94072153d01c245b994370d58d0588, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8430253316800681320, guid: ea94072153d01c245b994370d58d0588, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9064339296849992314, guid: ea94072153d01c245b994370d58d0588, type: 3}
       propertyPath: m_RootOrder

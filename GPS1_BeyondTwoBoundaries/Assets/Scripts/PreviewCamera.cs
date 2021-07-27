@@ -71,7 +71,7 @@ public class PreviewCamera : MonoBehaviour
                 {
                     cutScene.Play();
                     cutScenePlay = true;
-                }
+                }        
             }
         }
         
