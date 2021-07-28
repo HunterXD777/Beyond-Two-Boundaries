@@ -15,6 +15,7 @@ TagManager:
   - CheckPoint
   - ElectricalDoor
   - Button
+  - CameraControl
   layers:
   - Default
   - TransparentFX

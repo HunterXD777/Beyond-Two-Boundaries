@@ -93,7 +93,11 @@ public class PreviewCamera : MonoBehaviour
         smoothness = playerCamSmoothness;
         moveCamera = false;
         playerCam = true;
-        player.GetComponent<PlatformerMovement>().enableMove = true;
+        //kangrui code
+        if (!playCutsceneAfterPreview)
+        {
+            player.GetComponent<PlatformerMovement>().enableMove = true;
+        }
     }
     
     

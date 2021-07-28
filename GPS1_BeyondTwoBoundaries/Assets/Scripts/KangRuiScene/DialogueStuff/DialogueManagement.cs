@@ -63,13 +63,13 @@ public class DialogueManagement : MonoBehaviour
         sentences.Clear();
        
         //for non cutscene used
-        lockAbility();
-        playerControl.GetComponent<Animator>().SetFloat("Speed", 0);//set to player_idle animation when trigger the dialogue box
-        playerControl.GetComponent<PlatformerMovement>().enabled = false; //can't move during dialogue pop out
-        if (dialogueTrigger.GetComponent<DialogueTrigger>().forCutScene == false)
-        {                                                                 
-            playerControl.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0); //can't move during dialogue pop out
-        }
+        
+        //playerControl.GetComponent<Animator>().SetFloat("Speed", 0);//set to player_idle animation when trigger the dialogue box
+        //playerControl.GetComponent<PlatformerMovement>().enabled = false; //can't move during dialogue pop out
+        //if (dialogueTrigger.GetComponent<DialogueTrigger>().forCutScene == false)
+        //{                                                                 
+        //    playerControl.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0); //can't move during dialogue pop out
+        //}
         //dialogue box in
         animator.SetBool("OpenDialogue", true);
 
@@ -110,9 +110,10 @@ public class DialogueManagement : MonoBehaviour
         leftnametext.color = color;
         rightnametext.text = rnamess;
         leftnametext.text = lnamess;
-        StartCoroutine(Typesentence(sentence,color));
+        dialogue.color = color;
+        dialogue.text = sentence;
+        //StartCoroutine(Typesentence(sentence,color));
 
-        //dialogue.text = sentence;
     }
     IEnumerator Typesentence(string sentence,Color color)
     {
@@ -130,42 +131,12 @@ public class DialogueManagement : MonoBehaviour
         Debug.Log("End");
         stopTrigger = true;
         DialogueEnd = true;
-        unlockAbility();
-        playerControl.GetComponent<PlatformerMovement>().enabled = true;   //can move after dialogue pop out
+        
+        //playerControl.GetComponent<PlatformerMovement>().enabled = true;   //can move after dialogue pop out
         
         //dialogue box out
         animator.SetBool("OpenDialogue", false);
     }
 
-    void lockAbility()
-    {
-        if (lockDimensionShift == true)
-        {
-            dimensionShift.GetComponent<DimensionShift>().enabled = false;  //can't use dimension shift during dialogue pop out  
-        }
-        if (lockDimensionBreath == true)
-        {
-            dimensionShift.GetComponent<DimensionBreach>().enabled = false;  //can't use dimension breath during dialogue pop out  
-        }
-        if (lockSoulSwap == true)
-        {
-            dimensionShift.GetComponent<SoulsSwap>().enabled = false;  //can't use soul swap during dialogue pop out  
-        }
-    }
-
-    void unlockAbility()
-    {
-        if (lockDimensionShift == true)
-        {
-            dimensionShift.GetComponent<DimensionShift>().enabled = true;  //can use dimension shift after dialogue pop out  
-        }
-        if (lockDimensionBreath == true)
-        {
-            dimensionShift.GetComponent<DimensionBreach>().enabled = true;  //can use dimension breath after dialogue pop out  
-        }
-        if (lockSoulSwap == true)
-        {
-            dimensionShift.GetComponent<SoulsSwap>().enabled = true;  //can use soul swap after dialogue pop out  
-        }
-    }
+    
 }
