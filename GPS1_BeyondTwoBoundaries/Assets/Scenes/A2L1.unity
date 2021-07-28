@@ -1899,7 +1899,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8762415760145822383, guid: 08daa84167e68134d8ffb4f88516b1a5, type: 3}
       propertyPath: m_Value
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8762415760164126843, guid: 08daa84167e68134d8ffb4f88516b1a5, type: 3}
       propertyPath: m_AnchorMax.x
@@ -5114,7 +5114,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7675637650464819674, guid: 802843e141ae8674ba85b608c01b3afb, type: 3}
       propertyPath: nextSceneLoad
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7675637650464819674, guid: 802843e141ae8674ba85b608c01b3afb, type: 3}
       propertyPath: requiredPieces
@@ -13265,7 +13265,7 @@ MonoBehaviour:
   camPauseDuration: 9
   moveCamera: 0
   playerCam: 0
-  playCutsceneAfterPreview: 1
+  playCutsceneAfterPreview: 0
   offsetX: 0
   offsetY: 0
   cutScene: {fileID: 2114751426}
@@ -25356,7 +25356,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1893321102
 Transform:
   m_ObjectHideFlags: 0
@@ -26598,6 +26598,7 @@ MonoBehaviour:
   - {fileID: 760677657}
   playerAnim: {fileID: 226545814}
   dialogueRefer: 0
+  skipTime: 5
 --- !u!4 &2114751429
 Transform:
   m_ObjectHideFlags: 0

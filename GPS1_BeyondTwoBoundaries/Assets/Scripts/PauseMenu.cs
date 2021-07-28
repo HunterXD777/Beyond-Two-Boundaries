@@ -58,8 +58,11 @@ public class PauseMenu : MonoBehaviour
     }
     public void LoadMenu()
     {
+        GameObject resetPreviewCam;
+        resetPreviewCam = GameObject.FindWithTag("CameraControl");
         SceneManager.LoadScene("MainMenu");
         Time.timeScale = 1f;
+        resetPreviewCam.GetComponent<CameraControll>().resetPreviewCam();
     }
     public void Option()
     {

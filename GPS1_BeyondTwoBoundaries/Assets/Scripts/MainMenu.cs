@@ -5,7 +5,23 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
+    public bool deleteSetVolumeMax;
+    private void Awake()
+    {//Kang rui code 
+        if (!PlayerPrefs.HasKey("SetVolumeMax"))
+        {
+            PlayerPrefs.SetFloat("volume", 1f);
+            PlayerPrefs.SetInt("SetVolumeMax", 1);
+        }
+    }
 
+    private void Update()
+    {
+        if (deleteSetVolumeMax)
+        {
+            PlayerPrefs.DeleteKey("SetVolumeMax");
+        }
+    }
     public void PlayGame()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1); //load next scene

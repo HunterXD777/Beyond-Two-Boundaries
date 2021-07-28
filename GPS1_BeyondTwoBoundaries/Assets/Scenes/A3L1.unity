@@ -2184,7 +2184,7 @@ MonoBehaviour:
   PreviewCam: {fileID: 708274988}
   MainCam: {fileID: 1026249108}
   setplayerPreb: A3L1
-  resetCutscene: 0
+  resetPreview: 0
 --- !u!1 &278000768
 GameObject:
   m_ObjectHideFlags: 0
@@ -4992,10 +4992,9 @@ MonoBehaviour:
   camPauseDuration: 9
   moveCamera: 0
   playerCam: 0
-  playCutsceneAfterPreview: 1
+  playCutsceneAfterPreview: 0
   offsetX: 0
   offsetY: 0
-  cutScene: {fileID: 1883913672}
 --- !u!81 &708274992
 AudioListener:
   m_ObjectHideFlags: 0
@@ -19844,7 +19843,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2033775133
 Transform:
   m_ObjectHideFlags: 0

@@ -843,6 +843,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa3b4543f1b352f46b7c4ee1e6fd2220, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  deleteSetVolumeMax: 0
 --- !u!1 &1429587228
 GameObject:
   m_ObjectHideFlags: 0

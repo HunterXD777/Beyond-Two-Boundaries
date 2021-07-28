@@ -7691,7 +7691,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7675637650464819674, guid: 802843e141ae8674ba85b608c01b3afb, type: 3}
       propertyPath: nextSceneLoad
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7675637650464819674, guid: 802843e141ae8674ba85b608c01b3afb, type: 3}
       propertyPath: requiredPieces
@@ -17140,8 +17140,9 @@ MonoBehaviour:
   cutScene: {fileID: 1843609272}
   dialogueManagement:
   - {fileID: 0}
-  player: {fileID: 1166424338388030169}
+  playerAnim: {fileID: 0}
   dialogueRefer: 0
+  skipTime: 0
 --- !u!4 &1843609275
 Transform:
   m_ObjectHideFlags: 0

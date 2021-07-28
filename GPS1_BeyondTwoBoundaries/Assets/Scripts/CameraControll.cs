@@ -10,7 +10,7 @@ public class CameraControll : MonoBehaviour
     public string setplayerPreb;
     
 
-    public bool resetCutscene;
+    public bool resetPreview;
    
     void Start()
     {
@@ -30,11 +30,14 @@ public class CameraControll : MonoBehaviour
 
     private void Update()
     {
-        if (resetCutscene == true)
+        if (resetPreview == true)
         {
-            PlayerPrefs.DeleteKey(setplayerPreb); //just for test
+            resetPreviewCam();
         }
     }
-    
+    public void resetPreviewCam()
+    {
+        PlayerPrefs.DeleteKey(setplayerPreb);
+    }
 
 }

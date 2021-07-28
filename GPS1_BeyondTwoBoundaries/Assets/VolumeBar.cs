@@ -9,6 +9,7 @@ public class VolumeBar : MonoBehaviour
     public Slider slider;
     public float musicVolume = 1f;
     // Start is called before the first frame update
+    
     void Start()
     {
         slider.value = PlayerPrefs.GetFloat("volume");

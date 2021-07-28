@@ -29,7 +29,7 @@ public class PreviewCamera : MonoBehaviour
     public float offsetY;
 
    
-    public PlayableDirector cutScene;
+    
     private GameObject player;
     private Camera mainCam;
 
@@ -64,15 +64,6 @@ public class PreviewCamera : MonoBehaviour
             Vector3 moveTo = new Vector3(player.transform.position.x + offsetX, player.transform.position.y + offsetY, -10f);
             transform.position = Vector3.Lerp(transform.position, moveTo, smoothness * Time.deltaTime);
 
-            //kang rui code
-            if (playCutsceneAfterPreview)
-            {
-                if (!cutScenePlay)
-                {
-                    cutScene.Play();
-                    cutScenePlay = true;
-                }        
-            }
         }
         
 
@@ -92,12 +83,9 @@ public class PreviewCamera : MonoBehaviour
         mainCam.orthographicSize = cameraPlaySize;
         smoothness = playerCamSmoothness;
         moveCamera = false;
-        playerCam = true;
-        //kangrui code
-        if (!playCutsceneAfterPreview)
-        {
-            player.GetComponent<PlatformerMovement>().enableMove = true;
-        }
+        playerCam = true;       
+        player.GetComponent<PlatformerMovement>().enableMove = true;
+        
     }
     
     

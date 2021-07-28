@@ -10569,7 +10569,7 @@ MonoBehaviour:
   PreviewCam: {fileID: 1752131971}
   MainCam: {fileID: 25679496}
   setplayerPreb: A3T
-  resetCutscene: 0
+  resetPreview: 0
 --- !u!1 &1249023164
 GameObject:
   m_ObjectHideFlags: 0
@@ -22826,7 +22826,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7675637650464819674, guid: 802843e141ae8674ba85b608c01b3afb, type: 3}
       propertyPath: nextSceneLoad
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7675637650464819674, guid: 802843e141ae8674ba85b608c01b3afb, type: 3}
       propertyPath: requiredPieces
@@ -24263,7 +24263,6 @@ MonoBehaviour:
   playCutsceneAfterPreview: 0
   offsetX: 3
   offsetY: 3
-  cutScene: {fileID: 0}
 --- !u!81 &1752131975
 AudioListener:
   m_ObjectHideFlags: 0
