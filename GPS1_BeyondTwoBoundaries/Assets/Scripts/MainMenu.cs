@@ -30,6 +30,7 @@ public class MainMenu : MonoBehaviour
 
     public void QuitGame()
     {
+        PlayerPrefs.DeleteKey("SetVolumeMax");
         Debug.Log("GAME QUITTED!"); //to show this works as unity won't actually show us that it quitted the game
         Application.Quit(); //quit game
     }
@@ -43,5 +44,8 @@ public class MainMenu : MonoBehaviour
     {
         SceneManager.LoadScene("ControlsMenu"); //load to ControlsMenu
     }
-
+    public void LevelSelectMenu()
+    {
+        SceneManager.LoadScene("LevelMenu");
+    }
 }

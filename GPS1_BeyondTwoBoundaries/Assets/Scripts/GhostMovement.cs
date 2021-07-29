@@ -23,6 +23,7 @@ public class GhostMovement : MonoBehaviour
     public float checkGroundRadius;
     public LayerMask groundLayer;
 
+    
     //Jane's codes
     public bool PlayerFacingRight = true;  // For determining which way the player is currently facing.
 
@@ -31,18 +32,23 @@ public class GhostMovement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         rb.gravityScale = defaultGravity;
 
+        
+
     }
 
 
     void Update()
     {
-        Move();
-        //BetterJump();
-        Jump();
-        Glide();
-        //Fly();
-        CheckIfGrounded();
-        Interact(); //Jane's codes
+
+       
+            Move();
+            //BetterJump();
+            Jump();
+            Glide();
+            //Fly();
+            CheckIfGrounded();
+            Interact(); //Jane's codes
+        
     }
 
 

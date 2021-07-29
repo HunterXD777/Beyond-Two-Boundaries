@@ -11,23 +11,77 @@ public class PauseMenu : MonoBehaviour
     public GameObject PauseMenuUi;
     public GameObject OptionMenuUi;
     public GameObject ControlsMenuUi;
-
-
+    GameObject CameraController;
+    GameObject Previewcam;
+    GameObject MainCam;
+    GameObject player;
+    public bool forTutorial;
 
     void Update()
     {
+        if (!forTutorial) {
+            PauseGameForPreview();
+        }
+        else
+        {
+            PauseGameForNonPreview();
+        }
+       
+    }
+
+    public void PauseGameForPreview()
+    {
+
+        CameraController = GameObject.Find("Camera Controller");
+
+        Previewcam = CameraController.transform.Find("Preview Camera").gameObject;
+        MainCam = CameraController.transform.Find("Main Camera").gameObject;
+
+        player = GameObject.FindWithTag("Player");
         if (inpausedMenu == true)
         {
             if (Input.GetKeyDown(KeyCode.Escape))
             {
-                if (gameispaused)
+                if (Previewcam.GetComponent<PreviewCamera>().playerCam)
                 {
-                    Resume();
+                    if (gameispaused)
+                    {
+                        Resume();
+                       
+                    }
+                    else
+                    {
+                        Pause();
+                        
+                    }
                 }
                 else
                 {
-                    Pause();
+                    //Kang Rui Code- Skip Preview Camera
+                    Previewcam.SetActive(false);
+                    MainCam.SetActive(true);
+                    Previewcam.GetComponent<PreviewCamera>().playerCam = true;
+                    player.GetComponent<PlatformerMovement>().enableMove = true;
                 }
+            }
+        }
+    }
+    public void PauseGameForNonPreview()
+    {     
+        if (inpausedMenu == true)
+        {
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                
+                    if (gameispaused)
+                    {                   
+                    Resume();                   
+                    }
+                    else
+                    {
+                    Pause();
+                    }
+                
             }
         }
     }
@@ -73,8 +127,11 @@ public class PauseMenu : MonoBehaviour
     }
     public void QuitGame()
     {
+        GameObject resetPreviewCam;
+        resetPreviewCam = GameObject.FindWithTag("CameraControl");
         Debug.Log("Quitgame");
         Application.Quit();
+        resetPreviewCam.GetComponent<CameraControll>().resetPreviewCam();
     }
    
 }

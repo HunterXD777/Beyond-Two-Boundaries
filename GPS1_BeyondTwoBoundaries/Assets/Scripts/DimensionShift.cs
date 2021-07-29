@@ -49,9 +49,12 @@ public class DimensionShift : MonoBehaviour
     
     void Update()
     {
-        ShiftDimension();
 
-        
+        if (playerMovement.enableMove)
+        {
+            ShiftDimension();
+
+        }
 
 
         if (timerActive)

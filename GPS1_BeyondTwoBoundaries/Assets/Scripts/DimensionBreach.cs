@@ -28,9 +28,11 @@ public class DimensionBreach : MonoBehaviour
 
     public GameObject[] ghostWalls;
 
+    
+
     //Timer Stuff
     public float TimerDuration = 10f;
-    public float timeStart;
+    public static float timeStart;
     public Text textBox;
     public bool timerActive = false;
 
@@ -42,18 +44,18 @@ public class DimensionBreach : MonoBehaviour
     {
         textBox.text = timeStart.ToString("F2");
         ResetFilter();
-
-
+        
         //textBox.text = timeStart.ToString();
     }
 
 
     void Update()
     {
-        if (playerMovement.enableMove)
-        {
-            ShiftDimension();
-        }
+        
+            if (playerMovement.enableMove)
+            {
+                ShiftDimension();
+            }
         
 
 
@@ -72,7 +74,7 @@ public class DimensionBreach : MonoBehaviour
         }
 
         SoulBar.fillAmount = timeStart / TimerDuration;
-
+        
     }
 
     public void ShiftDimension()

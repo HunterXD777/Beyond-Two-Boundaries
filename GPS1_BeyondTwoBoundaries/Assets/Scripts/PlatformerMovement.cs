@@ -14,6 +14,9 @@ public class PlatformerMovement : MonoBehaviour
     public float fallMultiplier = 2.5f;
     public bool enableMove = true;
     public bool isGrounded = false;
+    //Kang Rui code
+    public bool forNonPreview;
+
     public Transform isGroundedChecker;
     public float checkGroundRadius;
     public LayerMask groundLayer;
@@ -21,15 +24,21 @@ public class PlatformerMovement : MonoBehaviour
     //Jane's codes
     public bool PlayerFacingRight = true;  // For determining which way the player is currently facing.
 
+    GameObject PauseMenuSystem;// fix player can flip and use dimension shift during pause
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        GameObject UiGroup = GameObject.Find("UI");
+        PauseMenuSystem = UiGroup.transform.Find("PauseMenuSystem").gameObject;
 
     }
 
 
     void Update()
     {
+        //Kang Rui code 
+         checkPause();// fix player can flip and use dimension shift during pause
+        Debug.Log(enableMove);
         if (enableMove)
         {
             Move();
@@ -127,6 +136,41 @@ public class PlatformerMovement : MonoBehaviour
         else if (Input.GetKeyUp(KeyCode.E))
         {
             animator.SetBool("IsInteracting", false);
+        }
+    }
+
+    //Kang Rui code
+    void checkPause()
+    {
+        
+
+        if (!forNonPreview)
+        {
+            GameObject Cameracontrol = GameObject.FindWithTag("CameraControl");
+            GameObject previewCam = Cameracontrol.transform.Find("Preview Camera").gameObject;
+            if (previewCam.GetComponent<PreviewCamera>().playerCam || !previewCam.activeSelf)
+            {
+                if (PauseMenuSystem.GetComponent<PauseMenu>().gameispaused)
+                {
+                    enableMove = false;
+                }
+                else
+                {
+                    enableMove = true;
+                }
+
+            }
+        }
+        else
+        {
+            if (PauseMenuSystem.GetComponent<PauseMenu>().gameispaused)
+            {
+                enableMove = false;
+            }
+            else
+            {
+                enableMove = true;
+            }
         }
     }
 }

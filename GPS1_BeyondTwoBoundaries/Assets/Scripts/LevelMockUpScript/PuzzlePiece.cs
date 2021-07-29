@@ -12,6 +12,7 @@ public class PuzzlePiece : MonoBehaviour
     LoadNextLevel pieceCheck;
 
     public GameObject puzzleParticleEffect;
+
     // Start is called before the first frame update
     void Start()
     {

@@ -21,8 +21,8 @@ public class PreviewCamera : MonoBehaviour
     public float camPauseDuration = 2;
     public bool moveCamera = false;
     public bool playerCam = false;
-    public bool playCutsceneAfterPreview;//kang rui code // play cutscene or not after preview
-    bool cutScenePlay = false;//kang rui code // check cutscene had play or not
+    //public bool playCutsceneAfterPreview;//kang rui code // play cutscene or not after preview
+    //bool cutScenePlay = false;//kang rui code // check cutscene had play or not
 
 
     public float offsetX;

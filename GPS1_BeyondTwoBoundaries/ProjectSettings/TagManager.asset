@@ -16,6 +16,7 @@ TagManager:
   - ElectricalDoor
   - Button
   - CameraControl
+  - GreenDiamond
   layers:
   - Default
   - TransparentFX

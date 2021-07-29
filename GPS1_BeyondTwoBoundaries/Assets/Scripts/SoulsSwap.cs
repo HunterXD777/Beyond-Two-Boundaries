@@ -90,8 +90,8 @@ public class SoulsSwap : MonoBehaviour
                 ShiftToSoul();
 
             }
-            else if (ghostState && AutoShfit && timeStart <= 4.5)
-            {                                 
+            else if (ghostState && AutoShfit)
+            {
                 AutoShiftToBody();
             }
         }
