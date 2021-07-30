@@ -12,7 +12,9 @@ public class DimensionShift : MonoBehaviour
     public bool ManualShift;
     public bool AutoShfit;
     public bool shiftReady = true;
-    
+
+    public bool shiftBackBeforeTimerEnds = false; //Jane's Codes
+
 
     public bool ghostState = false;  
 
@@ -119,6 +121,7 @@ public class DimensionShift : MonoBehaviour
             if (timeStart <= 0)
             {
                 AutoShiftToBody();
+                shiftBackBeforeTimerEnds = false; //Jane's Codes
             }
         }
 
@@ -256,6 +259,8 @@ public class DimensionShift : MonoBehaviour
 
         //Play Sound Effect
         FindObjectOfType<SoundManager>().Play("BreathIn");
+
+        shiftBackBeforeTimerEnds = true; //Jane's Codes
 
     }
 
