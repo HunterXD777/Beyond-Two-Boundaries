@@ -16,6 +16,8 @@ public class DimensionBreach : MonoBehaviour
 
     public bool ghostState = false;
     public bool breachedGhost = false;
+    
+    public bool shiftBackBeforeTimerEnds = false; //Jane's Codes
 
     public GameObject MainPlayer;
     public GameObject GhostPlayer;
@@ -114,6 +116,7 @@ public class DimensionBreach : MonoBehaviour
             if (timeStart <= 0)
             {
                 AutoShiftToBody();
+                shiftBackBeforeTimerEnds = false; //Jane's Codes
             }
         }
 
@@ -298,6 +301,8 @@ public class DimensionBreach : MonoBehaviour
 
         //Play Sound Effect
         FindObjectOfType<SoundManager>().Play("BreathIn");
+
+        shiftBackBeforeTimerEnds = true; //Jane's Codes
 
     }
 

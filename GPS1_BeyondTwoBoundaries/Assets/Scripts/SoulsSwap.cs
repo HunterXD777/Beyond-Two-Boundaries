@@ -12,7 +12,9 @@ public class SoulsSwap : MonoBehaviour
     public bool AutoShfit;
     public bool shiftReady = true;
 
-     int shiftCharge;
+    public bool shiftBackBeforeTimerEnds = false; //Jane's Codes
+
+    public int shiftCharge;
     public int timecharge;
     public bool ghostState = false;
 
@@ -101,6 +103,7 @@ public class SoulsSwap : MonoBehaviour
             if (timeStart <= 0)
             {
                 AutoShiftToBody();
+                shiftBackBeforeTimerEnds = false; //Jane's Codes
             }
         }
 
@@ -250,8 +253,15 @@ public class SoulsSwap : MonoBehaviour
         //Play Sound Effect
         FindObjectOfType<SoundManager>().Play("BreathIn");
 
+        shiftBackBeforeTimerEnds = true; //Jane's Codes
+        Invoke("timerShiftBackBeforeTimerEnds", 0.1f); //need to set it to false quick before it scans just in case player shift again too fast
     }
 
+    //Jane's Codes
+    public void timerShiftBackBeforeTimerEnds()
+    {
+        shiftBackBeforeTimerEnds = false;
+    }
     public void chargeUI()//for charge ui
     {
         if (shiftCharge == 1)
