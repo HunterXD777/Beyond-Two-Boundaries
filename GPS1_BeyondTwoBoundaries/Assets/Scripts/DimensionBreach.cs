@@ -34,7 +34,7 @@ public class DimensionBreach : MonoBehaviour
 
     //Timer Stuff
     public float TimerDuration = 10f;
-    public static float timeStart;
+    public float timeStart;
     public Text textBox;
     public bool timerActive = false;
 
