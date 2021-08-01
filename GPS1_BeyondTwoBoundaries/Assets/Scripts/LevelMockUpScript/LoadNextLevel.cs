@@ -41,6 +41,9 @@ public class LoadNextLevel : MonoBehaviour
             SceneManager.LoadScene(nextSceneLoad);
             FindObjectOfType<SoundManager>().Play("Checkpoint"); //play checkpoint sound effect
             PlayerPrefs.DeleteKey(deletePreb.GetComponent<CameraControll>().setplayerPreb);
+
+            //Kang Rui code
+            FindObjectOfType<SoundManager>().Stop("HeartBeat");// stop the sound effect
         }
 
         

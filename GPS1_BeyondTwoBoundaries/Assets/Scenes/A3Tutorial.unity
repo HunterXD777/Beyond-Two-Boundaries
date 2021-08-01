@@ -23803,12 +23803,14 @@ MonoBehaviour:
   playerCamSmoothness: 4
   cameraPreviewSize: 10
   cameraPlaySize: 7
+  PlayerPreviewCamSmoothness: 1
   previewDuration: 16
   camPauseDuration: 9
   moveCamera: 0
   playerCam: 0
   offsetX: 3
   offsetY: 3
+  overviewCam: 0
 --- !u!81 &1752131975
 AudioListener:
   m_ObjectHideFlags: 0

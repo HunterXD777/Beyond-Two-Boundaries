@@ -16,6 +16,8 @@ public class PreviewCamera : MonoBehaviour
     public float playerCamSmoothness;
     public float cameraPreviewSize;
     public float cameraPlaySize;
+    public float PlayerPreviewCamSmoothness;
+
 
     public float previewDuration;
     public float camPauseDuration = 2;
@@ -28,8 +30,10 @@ public class PreviewCamera : MonoBehaviour
     public float offsetX;
     public float offsetY;
 
-   
+    public bool overviewCam;
+
     
+
     private GameObject player;
     private Camera mainCam;
 
@@ -60,9 +64,43 @@ public class PreviewCamera : MonoBehaviour
 
         if (playerCam)
         {
-            player = GameObject.FindWithTag("Player");
-            Vector3 moveTo = new Vector3(player.transform.position.x + offsetX, player.transform.position.y + offsetY, -10f);
-            transform.position = Vector3.Lerp(transform.position, moveTo, smoothness * Time.deltaTime);
+            //player = GameObject.FindWithTag("Player");
+            //Vector3 moveTo = new Vector3(player.transform.position.x + offsetX, player.transform.position.y + offsetY, -10f);
+            //transform.position = Vector3.Lerp(transform.position, moveTo, smoothness * Time.deltaTime);
+
+            if (Input.GetKey(KeyCode.Mouse1))
+            {
+                overviewCam = true;
+                mainCam.orthographicSize = cameraPreviewSize;
+            }
+
+            if (Input.GetKeyUp(KeyCode.Mouse1))
+            {
+                overviewCam = false;
+                mainCam.orthographicSize = cameraPlaySize;
+            }
+
+
+
+            if (!overviewCam)
+            {
+                player = GameObject.FindWithTag("Player");
+                Vector3 moveTo = new Vector3(player.transform.position.x + offsetX, player.transform.position.y + offsetY, -10f);
+                transform.position = Vector3.Lerp(transform.position, moveTo, smoothness * Time.deltaTime);
+            }
+            else
+            {
+                Vector3 worldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                Vector3 moveTo = worldPosition;
+
+                //Vector3 boundPosition = new Vector3(
+                //Mathf.Clamp(moveTo.x, minValues.x, maxValues.x),
+                //Mathf.Clamp(moveTo.y, minValues.y, maxValues.y),
+                //Mathf.Clamp(moveTo.z, minValues.z, maxValues.z));
+
+
+                transform.position = Vector3.Lerp(transform.position, moveTo, PlayerPreviewCamSmoothness * Time.deltaTime);
+            }
 
         }
         

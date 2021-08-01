@@ -216,7 +216,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 66986942}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 53.46, y: 55.5, z: 0}
+  m_LocalPosition: {x: 16.8, y: 2.83, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1517310678}
@@ -16342,12 +16342,14 @@ MonoBehaviour:
   playerCamSmoothness: 8
   cameraPreviewSize: 14
   cameraPlaySize: 7
+  PlayerPreviewCamSmoothness: 1
   previewDuration: 16
   camPauseDuration: 9
   moveCamera: 0
   playerCam: 0
   offsetX: 0
   offsetY: 0
+  overviewCam: 0
 --- !u!81 &926635856
 AudioListener:
   m_ObjectHideFlags: 0
@@ -20656,7 +20658,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1739041874}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 23.3, y: 55.5, z: 0}
+  m_LocalPosition: {x: -7.56, y: 2.83, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1517310678}

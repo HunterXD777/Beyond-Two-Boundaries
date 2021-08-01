@@ -15,7 +15,7 @@ public class MovingPlatform : MonoBehaviour
     public GameObject ghost;
     public GameObject Decoy;
 
-    public GameObject block;
+   // public GameObject block;
 
 
 
@@ -131,7 +131,7 @@ public class MovingPlatform : MonoBehaviour
             {
                 lever.SetActive(true);
             }
-            block.SetActive(false);
+            //block.SetActive(false);
 
         }
         else
@@ -144,7 +144,7 @@ public class MovingPlatform : MonoBehaviour
             {
                 lever.SetActive(false);
             }
-             block.SetActive(true);
+             //block.SetActive(true);
         }
     }
     public void LeverelevatorV2()//for model 3 basic
@@ -159,7 +159,7 @@ public class MovingPlatform : MonoBehaviour
             {
                 lever.SetActive(true);
             }
-            block.SetActive(false);                                      
+            //block.SetActive(false);                                      
 
         }
         else
@@ -172,7 +172,7 @@ public class MovingPlatform : MonoBehaviour
             {
                 lever.SetActive(false);
             }
-            block.SetActive(true);
+           // block.SetActive(true);
         }
     }
     void playeronplatform()

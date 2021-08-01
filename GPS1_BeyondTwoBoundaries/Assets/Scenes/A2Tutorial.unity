@@ -9770,12 +9770,14 @@ MonoBehaviour:
   playerCamSmoothness: 8
   cameraPreviewSize: 8
   cameraPlaySize: 7
+  PlayerPreviewCamSmoothness: 1
   previewDuration: 16
   camPauseDuration: 9
   moveCamera: 0
   playerCam: 0
   offsetX: 0
   offsetY: 3
+  overviewCam: 0
 --- !u!81 &1336961158
 AudioListener:
   m_ObjectHideFlags: 0
