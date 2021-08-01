@@ -4375,6 +4375,10 @@ MonoBehaviour:
   offsetY: 0
   offsetX: 0
   smoothness: 8
+  previewCamSmoothness: 1
+  mainCamSize: 7
+  previewCamSize: 12
+  overviewCam: 0
 --- !u!81 &783997007
 AudioListener:
   m_ObjectHideFlags: 0
