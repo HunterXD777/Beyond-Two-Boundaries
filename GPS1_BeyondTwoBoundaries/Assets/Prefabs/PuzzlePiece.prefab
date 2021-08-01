@@ -126,7 +126,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   puzzlePiece: {fileID: 0}
-  puzzleParticleEffect: {fileID: 2503827344786788338, guid: b6939f4b14737b4449a0afe453b58801, type: 3}
+  puzzleParticleEffect: {fileID: 4905733062634276521, guid: 1e54de237f6cd5a479de46d694f3ffd8, type: 3}
 --- !u!199 &4765186393565593269
 ParticleSystemRenderer:
   serializedVersion: 6

@@ -45,4 +45,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   soulswap: {fileID: 0}
   encourageResetParticles: {fileID: 0}
-  particleTimeToAppear: 3
+  particleTimeToAppear: 6
