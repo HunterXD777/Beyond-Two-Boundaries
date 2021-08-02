@@ -4340,6 +4340,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 10199128}
     m_Modifications:
+    - target: {fileID: 6761374445479998441, guid: 802843e141ae8674ba85b608c01b3afb, type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6761374445479998441, guid: 802843e141ae8674ba85b608c01b3afb, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1423298205
+      objectReference: {fileID: 0}
     - target: {fileID: 7675637650464819674, guid: 802843e141ae8674ba85b608c01b3afb, type: 3}
       propertyPath: nextSceneLoad
       value: 0
@@ -4362,11 +4370,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7675637650464819677, guid: 802843e141ae8674ba85b608c01b3afb, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -464.5105
+      value: -464.64
       objectReference: {fileID: 0}
     - target: {fileID: 7675637650464819677, guid: 802843e141ae8674ba85b608c01b3afb, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -313.26468
+      value: -314.03
       objectReference: {fileID: 0}
     - target: {fileID: 7675637650464819677, guid: 802843e141ae8674ba85b608c01b3afb, type: 3}
       propertyPath: m_LocalPosition.z
