@@ -25,10 +25,9 @@ public class PlayerDie : MonoBehaviour
        
 
     }
-
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.tag == "Player" || collision.gameObject.tag == "Decoy")
+        if (collision.gameObject.tag == "Player" || collision.gameObject.tag == "Decoy")
         {
             //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
             ResetOnSceen.SetActive(false);
@@ -37,7 +36,7 @@ public class PlayerDie : MonoBehaviour
             FindObjectOfType<SoundManager>().Stop("HeartBeat");
         }
     }
-
+    
     IEnumerator TextAndButton()
     {
         yield return new WaitForSeconds(1.3f);

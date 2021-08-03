@@ -29,7 +29,7 @@ public class PlatformerMovement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         GameObject UiGroup = GameObject.Find("UI");
-        PauseMenuSystem = UiGroup.transform.Find("PauseMenuSystem").gameObject;
+        PauseMenuSystem = UiGroup.transform.Find("PauseSystem").gameObject.transform.Find("PauseMenuSystem").gameObject;
 
     }
 
