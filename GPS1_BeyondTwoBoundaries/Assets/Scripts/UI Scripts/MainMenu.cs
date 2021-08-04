@@ -10,7 +10,7 @@ public class MainMenu : MonoBehaviour
     {//Kang rui code 
         if (!PlayerPrefs.HasKey("SetVolumeMax"))
         {
-            PlayerPrefs.SetFloat("volume", 1f);
+            PlayerPrefs.SetFloat("volume", 0.5f);
             PlayerPrefs.SetInt("SetVolumeMax", 1);
         }
     }

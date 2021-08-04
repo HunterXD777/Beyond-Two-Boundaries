@@ -90,6 +90,7 @@ public class PauseMenu : MonoBehaviour
         Scene scene = SceneManager.GetActiveScene(); 
         SceneManager.LoadScene(scene.name);
         Time.timeScale = 1f;
+        FindObjectOfType<SoundManager>().Stop("HeartBeat");
     }
     public void Resume()
     {

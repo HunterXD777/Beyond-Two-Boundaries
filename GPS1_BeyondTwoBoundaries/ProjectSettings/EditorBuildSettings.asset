@@ -27,6 +27,15 @@ EditorBuildSettings:
     path: Assets/Scenes/A3L1.unity
     guid: f5c929f16b9f0e54aa4dd507febf5888
   - enabled: 0
+    path: Assets/Scenes/A1L2.unity
+    guid: d24f07f537680274094f24cb1e58a883
+  - enabled: 0
+    path: Assets/Scenes/A2L2.unity
+    guid: ca22650c9a77c194d90029f283179865
+  - enabled: 0
+    path: Assets/Scenes/A3L2.unity
+    guid: 1d56e8842e781874fbf990bba6da9665
+  - enabled: 0
     path: Assets/Scenes/PROLOGUE.unity
     guid: 7dd40b91f44553b47ab67466fdf274a4
   - enabled: 0

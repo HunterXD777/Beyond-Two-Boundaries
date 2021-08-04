@@ -10,19 +10,22 @@ public class PlayerDie : MonoBehaviour
     public Image DieScene;
     public GameObject TextAButton;
     public GameObject ResetOnSceen;
+    
+
+    bool playerDie;
     private void Awake()
     {
         DieScene.CrossFadeAlpha(0, 0.2f, false);
     }
     void Start()
     {
-        
+       
     }
 
     // Update is called once per frame
     void Update()
     {
-       
+        
 
     }
     private void OnTriggerEnter2D(Collider2D collision)
@@ -30,11 +33,15 @@ public class PlayerDie : MonoBehaviour
         if (collision.gameObject.tag == "Player" || collision.gameObject.tag == "Decoy")
         {
             //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            
             ResetOnSceen.SetActive(false);
             DieScene.CrossFadeAlpha(1, 1, false);
             StartCoroutine(TextAndButton());
             FindObjectOfType<SoundManager>().Stop("HeartBeat");
+            FindObjectOfType<PauseMenu>().inpausedMenu = false;
+            
         }
+        
     }
     
     IEnumerator TextAndButton()
