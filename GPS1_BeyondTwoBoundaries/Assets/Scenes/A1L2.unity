@@ -6874,8 +6874,8 @@ MonoBehaviour:
   cameraPreviewSize: 10
   cameraPlaySize: 7
   PlayerPreviewCamSmoothness: 1
-  previewDuration: 16
-  camPauseDuration: 9
+  previewDuration: 12
+  camPauseDuration: 6
   moveCamera: 0
   playerCam: 0
   offsetX: 0
