@@ -675,7 +675,7 @@ PrefabInstance:
     - target: {fileID: 5387185793855522374, guid: ea94072153d01c245b994370d58d0588, type: 3}
       propertyPath: ghostWalls.Array.data[3]
       value: 
-      objectReference: {fileID: 1860176722}
+      objectReference: {fileID: 1579084565}
     - target: {fileID: 5397124291439421866, guid: ea94072153d01c245b994370d58d0588, type: 3}
       propertyPath: m_SortingOrder
       value: 3
@@ -11181,7 +11181,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1579084566
 Transform:
   m_ObjectHideFlags: 0
@@ -11590,6 +11590,7 @@ MonoBehaviour:
   playCutsceneAfterPreview: 0
   offsetX: 3
   offsetY: 3
+  cutSceneduration: 0
   overviewCam: 0
   cutScene: {fileID: 0}
 --- !u!81 &1752131975

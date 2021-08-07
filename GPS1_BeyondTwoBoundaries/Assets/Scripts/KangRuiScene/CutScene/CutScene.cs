@@ -25,7 +25,7 @@ public class CutScene : MonoBehaviour
     {       
         dialogueRefer = 0;
         //previewCam = GameObject.Find("Camera Controller").gameObject.transform.Find("Preview Camera").gameObject;
-        Player = GameObject.FindWithTag("Player");
+        //Player = GameObject.FindWithTag("Player");
     }
 
     // Update is called once per frame
@@ -37,7 +37,7 @@ public class CutScene : MonoBehaviour
         {
             skipCutscene();
         }
-        Debug.Log(cutScene.duration);
+       
               
         //player.GetComponent<PlatformerMovement>().enableMove = false;
         
@@ -108,7 +108,7 @@ public class CutScene : MonoBehaviour
     public void CutsceneEnd()
     {
         cutSceneEnd = true;
-        Player.GetComponent<PlatformerMovement>().enableMove = true;
+       // Player.GetComponent<PlatformerMovement>().enableMove = true;
     }
 
     public void CutsceneSoundEffect(string soundName, bool loop)

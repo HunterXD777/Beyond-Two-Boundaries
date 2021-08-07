@@ -154,7 +154,7 @@ Transform:
   - {fileID: 1900606886}
   - {fileID: 1737766923}
   m_Father: {fileID: 10199128}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &10199127
 GameObject:
@@ -188,7 +188,6 @@ Transform:
   - {fileID: 426610723}
   - {fileID: 986263391}
   - {fileID: 584660533}
-  - {fileID: 1645393641}
   - {fileID: 7137754}
   - {fileID: 1313478746}
   - {fileID: 1417197592}
@@ -7770,7 +7769,7 @@ Transform:
   m_Children:
   - {fileID: 1033662582}
   m_Father: {fileID: 1313478746}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1224213128
 BoxCollider2D:
@@ -8381,10 +8380,11 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 1645393641}
   - {fileID: 1224213127}
   - {fileID: 1356061923}
   m_Father: {fileID: 10199128}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1321519255
 GameObject:
@@ -8562,6 +8562,7 @@ MonoBehaviour:
   dialogueRefer: 0
   nextSceneLoad: 0
   previewCam: {fileID: 0}
+  Player: {fileID: 0}
   forPrologue: 0
   cutSceneEnd: 0
 --- !u!4 &1349798933
@@ -8589,7 +8590,6 @@ GameObject:
   - component: {fileID: 1356061923}
   - component: {fileID: 1356061925}
   - component: {fileID: 1356061924}
-  - component: {fileID: 1356061926}
   m_Layer: 8
   m_Name: Ghost Wall 1 (Revealed) (1)
   m_TagString: Untagged
@@ -8610,7 +8610,7 @@ Transform:
   m_Children:
   - {fileID: 1703112754}
   m_Father: {fileID: 1313478746}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1356061924
 BoxCollider2D:
@@ -8619,7 +8619,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1356061922}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -8690,22 +8690,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1356061926
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1356061922}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b372a5dab52adbe489dd4a4de40585a3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  forPlace: 1
-  forDecoy: 0
-  ignoreDecoy: 0
-  ignoreCollision: {fileID: 0}
 --- !u!1 &1374061657
 GameObject:
   m_ObjectHideFlags: 0
@@ -8937,7 +8921,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7675637650464819677, guid: 802843e141ae8674ba85b608c01b3afb, type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 7675637650464819677, guid: 802843e141ae8674ba85b608c01b3afb, type: 3}
       propertyPath: m_LocalScale.y
@@ -9750,10 +9734,10 @@ Transform:
   m_GameObject: {fileID: 1645393640}
   m_LocalRotation: {x: -0, y: -0, z: -0.00076278974, w: 0.99999976}
   m_LocalPosition: {x: -452.2612, y: -271.0651, z: 3.2994075}
-  m_LocalScale: {x: 19.773706, y: 3.3329136, z: 1}
+  m_LocalScale: {x: 19.773708, y: 3.3329139, z: 1}
   m_Children: []
-  m_Father: {fileID: 10199128}
-  m_RootOrder: 5
+  m_Father: {fileID: 1313478746}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1645393642
 BoxCollider2D:
@@ -11661,7 +11645,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 357817890049293230, guid: 1d678ddc82c53dd47b9cf8b7e2bf5a87, type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 357817890049293230, guid: 1d678ddc82c53dd47b9cf8b7e2bf5a87, type: 3}
       propertyPath: m_LocalPosition.x

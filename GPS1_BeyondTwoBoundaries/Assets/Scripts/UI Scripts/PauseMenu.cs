@@ -36,7 +36,7 @@ public class PauseMenu : MonoBehaviour
     {
 
         CameraController = GameObject.Find("Camera Controller");
-        CutsceneSystem = GameObject.Find("Level").gameObject.transform.Find("Cutscene System").gameObject;
+        //CutsceneSystem = GameObject.Find("Level").gameObject.transform.Find("Cutscene System").gameObject;
 
         Previewcam = CameraController.transform.Find("Preview Camera").gameObject;
         MainCam = CameraController.transform.Find("Main Camera").gameObject;
@@ -65,7 +65,7 @@ public class PauseMenu : MonoBehaviour
                     Previewcam.SetActive(false);
                     MainCam.SetActive(true);
                     Previewcam.GetComponent<PreviewCamera>().playerCam = true;
-                    CutsceneSystem.SetActive(false);
+                    //CutsceneSystem.SetActive(false);
                    
                     player.GetComponent<PlatformerMovement>().enableMove = true;
                 }
