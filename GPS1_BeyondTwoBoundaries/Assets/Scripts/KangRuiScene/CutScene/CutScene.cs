@@ -15,13 +15,15 @@ public class CutScene : MonoBehaviour
 
     public int nextSceneLoad;
 
-
+    public GameObject previewCam;
 
    public bool forPrologue;
-   
+
+    public bool cutSceneEnd;
     void Start()
     {       
         dialogueRefer = 0;
+        //previewCam = GameObject.Find("Camera Controller").gameObject.transform.Find("Preview Camera").gameObject;
     }
 
     // Update is called once per frame
@@ -42,7 +44,7 @@ public class CutScene : MonoBehaviour
     {
         cutScene.Pause();
         press = true;
-        playerAnim.applyRootMotion = true;
+       // playerAnim.applyRootMotion = true;
        
            
         //make sure when cutscene pause the player wouldn't back to the original position
@@ -60,7 +62,7 @@ public class CutScene : MonoBehaviour
             {
                 if (Input.GetKeyDown(KeyCode.E))
                 {
-                playerAnim.applyRootMotion = false;                         
+                //playerAnim.applyRootMotion = false;                         
                 dialogueManagement[dialogueRefer].GetComponent<DialogueManagement>().DisplayNextSentence();
                 
                     cutScene.Resume();
@@ -99,5 +101,10 @@ public class CutScene : MonoBehaviour
                 //playerAnim.applyRootMotion = false;
             }
         
+    }
+
+    public void CutsceneEnd()
+    {
+        cutSceneEnd = true;
     }
 }

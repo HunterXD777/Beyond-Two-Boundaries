@@ -25,12 +25,14 @@ public class PreviewCamera : MonoBehaviour
     public bool playerCam = false;
     public bool playCutsceneAfterPreview;//kang rui code // play cutscene or not after preview
     bool cutScenePlay = false;//kang rui code // check cutscene had play or not
-
+    //bool cutSceneEnd = false;
 
     public float offsetX;
     public float offsetY;
 
-    float duration;
+
+
+    public float cutSceneduration;
     public bool overviewCam;
 
     public PlayableDirector cutScene;
@@ -68,11 +70,11 @@ public class PreviewCamera : MonoBehaviour
             //player = GameObject.FindWithTag("Player");
             //Vector3 moveTo = new Vector3(player.transform.position.x + offsetX, player.transform.position.y + offsetY, -10f);
             //transform.position = Vector3.Lerp(transform.position, moveTo, smoothness * Time.deltaTime);
-
-
+            
+            player.GetComponent<PlatformerMovement>().enableMove = true;
             //Kang Rui Code
-           
-                if (Input.GetKey(KeyCode.Mouse1))
+
+            if (Input.GetKey(KeyCode.Mouse1))
                 {
                     overviewCam = true;
                     mainCam.orthographicSize = cameraPreviewSize;
@@ -111,19 +113,28 @@ public class PreviewCamera : MonoBehaviour
 
             
         }
-        if (cutScenePlay)
+        if (!cutScene.GetComponent<CutScene>().cutSceneEnd)
         {
             player = GameObject.FindWithTag("Player");
             Vector3 moveTo = new Vector3(player.transform.position.x + offsetX, player.transform.position.y + offsetY, -10f);
             transform.position = Vector3.Lerp(transform.position, moveTo, smoothness * Time.deltaTime);
+            
 
-            cutScene.Play();
-            if(cutScene.time >= cutScene.duration)
+
+            if (cutScenePlay)
             {
-                playerCam = true;
+                cutScene.Play();
+                cutScenePlay = false;
+                
             }
+           
         }
-        
+        if (cutScene.GetComponent<CutScene>().cutSceneEnd)
+        {
+            playerCam = true;
+
+        }
+       
 
 
     }
@@ -148,9 +159,8 @@ public class PreviewCamera : MonoBehaviour
         {
             playerCam = true;
         }
-        
-
 
     }
    
+  
 }

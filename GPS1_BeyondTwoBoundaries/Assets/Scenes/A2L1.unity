@@ -820,7 +820,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8835506678459882890, guid: 54e2a7dab8f98d34eaff181c6d8a95d2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -78
+      value: -78.69
       objectReference: {fileID: 0}
     - target: {fileID: 8835506678459882890, guid: 54e2a7dab8f98d34eaff181c6d8a95d2, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5651,7 +5651,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1336961154}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 20.3, y: -4.3982, z: 9.697502}
+  m_LocalPosition: {x: 21.92, y: 6.67, z: 9.697502}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1088011234}
@@ -5699,8 +5699,9 @@ MonoBehaviour:
   playCutsceneAfterPreview: 0
   offsetX: 0
   offsetY: 0
+  cutSceneduration: 4.5
   overviewCam: 0
-  cutScene: {fileID: 0}
+  cutScene: {fileID: 2114751426}
 --- !u!81 &1336961158
 AudioListener:
   m_ObjectHideFlags: 0
@@ -14228,7 +14229,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1893321102
 Transform:
   m_ObjectHideFlags: 0
@@ -15113,7 +15114,7 @@ PlayableDirector:
   - key: {fileID: -5516788339300347487, guid: d6eed5b5e77902a4ba51644c7b736b06, type: 2}
     value: {fileID: 1344878427}
   - key: {fileID: 5151759748893539513, guid: d6eed5b5e77902a4ba51644c7b736b06, type: 2}
-    value: {fileID: 2114751427}
+    value: {fileID: 0}
   - key: {fileID: -216443994633459730, guid: d6eed5b5e77902a4ba51644c7b736b06, type: 2}
     value: {fileID: 779403898}
   - key: {fileID: -8719677091169433669, guid: d6eed5b5e77902a4ba51644c7b736b06, type: 2}
@@ -15131,6 +15132,8 @@ PlayableDirector:
   - key: {fileID: -8719677091169433669, guid: 235f71f06c4e4c149a0119c82d6672ee, type: 2}
     value: {fileID: 1069968840}
   - key: {fileID: 5151759748893539513, guid: 235f71f06c4e4c149a0119c82d6672ee, type: 2}
+    value: {fileID: 2114751427}
+  - key: {fileID: 6078217574832527400, guid: 235f71f06c4e4c149a0119c82d6672ee, type: 2}
     value: {fileID: 2114751427}
   m_ExposedReferences:
     m_References:
@@ -15152,13 +15155,31 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Events:
     m_Signals:
+    - {fileID: 0}
     - {fileID: 11400000, guid: 14a6bb42242ec34488b9c5008e93249f, type: 2}
+    - {fileID: 11400000, guid: 5f1b8c519307da34bb91179e05c00380, type: 2}
     m_Events:
+    - m_PersistentCalls:
+        m_Calls: []
     - m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 2114751428}
           m_TargetAssemblyTypeName: CutScene, Assembly-CSharp
           m_MethodName: dialougePause
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2114751428}
+          m_TargetAssemblyTypeName: CutScene, Assembly-CSharp
+          m_MethodName: CutsceneEnd
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -15186,7 +15207,9 @@ MonoBehaviour:
   playerAnim: {fileID: 226545814}
   dialogueRefer: 0
   nextSceneLoad: 0
+  previewCam: {fileID: 0}
   forPrologue: 0
+  cutSceneEnd: 0
 --- !u!4 &2114751429
 Transform:
   m_ObjectHideFlags: 0

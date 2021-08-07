@@ -29,12 +29,15 @@ public class DimensionShift : MonoBehaviour
 
     public GameObject[] ghostWalls;
 
+    public GameObject SoulsPiece;//Kang Rui code // specifically for wall tutorial
+
     //Timer Stuff
     public float TimerDuration = 10f;
     public float timeStart;
     public Text textBox;
     public bool timerActive = false;
 
+    public bool forWallTutorial;
 
     public Image SoulBar;
     public Image filter;
@@ -58,6 +61,19 @@ public class DimensionShift : MonoBehaviour
 
         }
 
+        //Kang Rui code 
+        // specifically for wall tutorial
+        if (forWallTutorial)
+        {
+            if (shiftReady)
+            {
+                SoulsPiece.SetActive(true);
+            }
+            else
+            {
+                SoulsPiece.SetActive(false);
+            }
+        }
 
         if (timerActive)
         {

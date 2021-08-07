@@ -5940,6 +5940,7 @@ MonoBehaviour:
   playCutsceneAfterPreview: 0
   offsetX: 0
   offsetY: 0
+  cutSceneduration: 0
   overviewCam: 0
   cutScene: {fileID: 0}
 --- !u!81 &1336961158
@@ -12017,7 +12018,9 @@ MonoBehaviour:
   playerAnim: {fileID: 226545814}
   dialogueRefer: 0
   nextSceneLoad: 0
+  previewCam: {fileID: 0}
   forPrologue: 0
+  cutSceneEnd: 0
 --- !u!4 &2114751429
 Transform:
   m_ObjectHideFlags: 0
