@@ -6,7 +6,8 @@ public class CollisionDetect : MonoBehaviour
 {
     public bool forPlace;
     public bool forDecoy;
-    public GameObject ghostPlayer;
+    public bool ignoreDecoy;
+    public GameObject ignoreCollision;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,11 +19,15 @@ public class CollisionDetect : MonoBehaviour
     {
         if (forPlace)
         {
-            Physics2D.IgnoreCollision(ghostPlayer.GetComponent<Collider2D>(), GetComponent<Collider2D>());
+            Physics2D.IgnoreCollision(ignoreCollision.GetComponent<Collider2D>(), GetComponent<BoxCollider2D>());
         }
         if (forDecoy)
         {
-            Physics2D.IgnoreCollision(ghostPlayer.GetComponent<Collider2D>(), GetComponent<CircleCollider2D>());
+            Physics2D.IgnoreCollision(ignoreCollision.GetComponent<Collider2D>(), GetComponent<CircleCollider2D>());
+        }
+        if (ignoreDecoy)
+        {
+            Physics2D.IgnoreCollision(ignoreCollision.GetComponent<CircleCollider2D>(), GetComponent<BoxCollider2D>());
         }
     }
 

@@ -8177,7 +8177,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7675637650464819674, guid: 802843e141ae8674ba85b608c01b3afb, type: 3}
       propertyPath: nextSceneLoad
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7675637650464819676, guid: 802843e141ae8674ba85b608c01b3afb, type: 3}
       propertyPath: m_Name
@@ -9695,42 +9695,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue:
     sentences:
-    - "\u2026"
-    - "YOU ARE NEITHER CORRECT NOR WRONG \u2026 "
-    - "I AM NOT YOU, RATHER I AM THE BEING THAT SLEEPS WITHIN, THE MIND WITHIN THE
-      MIND \u2026"
-    - "OR AS SOME WOULD SAY, THE CONSCIOUS SOUL \u2026"
-    - "What\u2026 what the hell\u2019s going on??"
-    - THE TIME FOR RECKONING IS AT HAND.
-    - YOU WILL BE JUDGED FOR YOUR SINS.
-    - "\u2026 I should probably just focus on getting out of here."
+    - A bright future awaits, but for only those that seek it and persist.
     rightname:
-    - PLAYER SOUL
     - 
-    - PLAYER SOUL
-    - PLAYER SOUL
-    - PLAYER SOUL
-    - 
-    - PLAYER SOUL
-    - PLAYER SOUL
     leftname:
-    - 
     - PLAYER
-    - 
-    - 
-    - 
-    - PLAYER
-    - 
-    - 
     textColor:
-    - {r: 0.23921569, g: 1, b: 0.69411767, a: 1}
     - {r: 1, g: 1, b: 1, a: 1}
-    - {r: 0.23921569, g: 1, b: 0.69411767, a: 1}
-    - {r: 0.23921569, g: 1, b: 0.69411767, a: 1}
-    - {r: 0.23921569, g: 1, b: 0.69411767, a: 1}
-    - {r: 1, g: 1, b: 1, a: 1}
-    - {r: 0.23921569, g: 1, b: 0.69411767, a: 1}
-    - {r: 0.23921569, g: 1, b: 0.69411767, a: 1}
   dialogueManagement: {fileID: 1297419109}
   isTrigger: 0
   forCutScene: 1
@@ -11508,7 +11479,7 @@ PlayableDirector:
   m_GameObject: {fileID: 1349798929}
   m_Enabled: 1
   serializedVersion: 3
-  m_PlayableAsset: {fileID: 11400000, guid: 61bd462f8d05a914b97a96f34c284c14, type: 2}
+  m_PlayableAsset: {fileID: 11400000, guid: 6e8282b6665bf83448a42a35d6bba868, type: 2}
   m_InitialState: 1
   m_WrapMode: 2
   m_DirectorUpdateMode: 1
@@ -11542,18 +11513,6 @@ PlayableDirector:
     value: {fileID: 1349798931}
   - key: {fileID: -1447769951123547409, guid: 6e8282b6665bf83448a42a35d6bba868, type: 2}
     value: {fileID: 546592469}
-  - key: {fileID: -1447769951123547409, guid: 61bd462f8d05a914b97a96f34c284c14, type: 2}
-    value: {fileID: 546592469}
-  - key: {fileID: -216443994633459730, guid: 61bd462f8d05a914b97a96f34c284c14, type: 2}
-    value: {fileID: 1064188882}
-  - key: {fileID: -8719677091169433669, guid: 61bd462f8d05a914b97a96f34c284c14, type: 2}
-    value: {fileID: 2038488066}
-  - key: {fileID: 5151759748893539513, guid: 61bd462f8d05a914b97a96f34c284c14, type: 2}
-    value: {fileID: 1349798931}
-  - key: {fileID: -5516788339300347487, guid: 61bd462f8d05a914b97a96f34c284c14, type: 2}
-    value: {fileID: 1695551273}
-  - key: {fileID: -7549909812037699319, guid: 61bd462f8d05a914b97a96f34c284c14, type: 2}
-    value: {fileID: 828250413}
   m_ExposedReferences:
     m_References:
     - 2479027a986e860409da0ca2bbae822a: {fileID: 1695551273}
@@ -11608,7 +11567,7 @@ MonoBehaviour:
   - {fileID: 1297419109}
   playerAnim: {fileID: 7294373901404429732}
   dialogueRefer: 0
-  nextSceneLoad: 2
+  skipTime: 8
   forPrologue: 1
 --- !u!4 &1349798933
 Transform:
@@ -12473,21 +12432,98 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue:
     sentences:
-    - "Oohh \u2026 my head \u2026"
-    - "Where \u2026 am I?"
-    - "Everything looks wrong\u2026 everything feels wrong\u2026 What is this place?"
+    - I did it, I actually did it! I got through and made it out!
+    - "\u2026"
+    - Nothing to say now, boogie man?
+    - HMPH. SO WHAT?
+    - "THE JUBILATION AND HAPPINESS YOU\u2019RE FEELING RIGHT NOW, THEY AMOUNT TO
+      NOTHING!"
+    - "THEY\u2019RE NOTHING BUT FAINT HORMONAL IMPULSES, INSIGNIFICANT AND INCONSEQUENTIAL
+      IN THE GRAND SCHEME!  "
+    - "EVERYTHING YOU\u2019VE EVER DONE AND WILL EVER DO WILL BE WIPED AWAY IN THE
+      TIME IT TAKES THE UNIVERSE TO BLINK."
+    - "YOU\u2019RE VERY EXISTENCE IS BUT A MINISCULE SPECK ON THE COSMIC SCALE."
+    - DOOMED TO BE HELD HOSTAGE BY THE SYSTEMS THAT HAVE LASTED SINCE THE INCEPTION
+      OF OUR SPECIES!
+    - "\u2026"
+    - "Maybe so \u2026 "
+    - "But that doesn\u2019t mean we can\u2019t make the most out of our time here. "
+    - The systems and values that we are governed by will always be unfair, and there
+      will always be horrible people.
+    - By finding a goal to work towards in our journey, whether it be an aspiration,
+      a passion, a relationship or even a fundamental truth.
+    - 'We keep ourselves sane in this absurd land we call modern reality. '
+    - NOOO! NOOOO! IT IS ONLY FITTING FOR YOU TO CRUMBLE! AS SO MANY ELSE HAVE!
+    - But by the same token, only by overcoming great trials have some of the greatest
+      people been forged.
+    - 'There will always be moments where we lend ourselves to doubt and the strain
+      of modern life,  '
+    - And the only solution is to maintain the determination and strength of will
+      keep going, as so many else have.
+    - FINE. HAVE IT YOUR WAY. BE IGNORANT OF THE INEVITABLE!
     rightname:
     - 
+    - PLAYER SOUL
+    - 
+    - PLAYER SOUL
+    - PLAYER SOUL
+    - PLAYER SOUL
+    - PLAYER SOUL
+    - PLAYER SOUL
+    - PLAYER SOUL
     - 
     - 
+    - 
+    - 
+    - 
+    - 
+    - PLAYER SOUL
+    - 
+    - 
+    - 
+    - PLAYER SOUL
     leftname:
     - PLAYER
+    - 
+    - PLAYER
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
     - PLAYER
     - PLAYER
+    - PLAYER
+    - PLAYER
+    - PLAYER
+    - PLAYER
+    - 
+    - 'PLAYER '
+    - 'PLAYER '
+    - 'PLAYER '
+    - 
     textColor:
     - {r: 1, g: 1, b: 1, a: 1}
+    - {r: 0.23921569, g: 1, b: 0.69411767, a: 1}
+    - {r: 1, g: 1, b: 1, a: 1}
+    - {r: 0.23921569, g: 1, b: 0.69411767, a: 1}
+    - {r: 0.23921569, g: 1, b: 0.69411767, a: 1}
+    - {r: 0.23921569, g: 1, b: 0.69411767, a: 1}
+    - {r: 0.23921569, g: 1, b: 0.69411767, a: 1}
+    - {r: 0.23921569, g: 1, b: 0.69411767, a: 1}
+    - {r: 0.23921569, g: 1, b: 0.69411767, a: 1}
     - {r: 1, g: 1, b: 1, a: 1}
     - {r: 1, g: 1, b: 1, a: 1}
+    - {r: 1, g: 1, b: 1, a: 1}
+    - {r: 1, g: 1, b: 1, a: 1}
+    - {r: 1, g: 1, b: 1, a: 1}
+    - {r: 1, g: 1, b: 1, a: 1}
+    - {r: 0.23921569, g: 1, b: 0.69411767, a: 1}
+    - {r: 1, g: 1, b: 1, a: 1}
+    - {r: 1, g: 1, b: 1, a: 1}
+    - {r: 1, g: 1, b: 1, a: 1}
+    - {r: 0.23921569, g: 1, b: 0.69411767, a: 1}
   dialogueManagement: {fileID: 1724217656}
   isTrigger: 0
   forCutScene: 1

@@ -3330,9 +3330,6 @@ MonoBehaviour:
   animator: {fileID: 1918458860}
   dialogueTrigger: {fileID: 1344878427}
   stopTrigger: 0
-  lockSoulSwap: 1
-  lockDimensionShift: 0
-  lockDimensionBreath: 0
   DialogueEnd: 0
 --- !u!4 &760677659
 Transform:
@@ -3648,7 +3645,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 792275043}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 27.945, y: -4.3982, z: 10}
+  m_LocalPosition: {x: 1.1, y: 2.3, z: 10}
   m_LocalScale: {x: 61.122456, y: 60.95068, z: 10.6625}
   m_Children: []
   m_Father: {fileID: 1336961155}
@@ -5654,7 +5651,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1336961154}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.9, y: 2.33, z: 9.697502}
+  m_LocalPosition: {x: 20.3, y: -4.3982, z: 9.697502}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1088011234}
@@ -5699,9 +5696,11 @@ MonoBehaviour:
   camPauseDuration: 6
   moveCamera: 0
   playerCam: 0
+  playCutsceneAfterPreview: 0
   offsetX: 0
   offsetY: 0
   overviewCam: 0
+  cutScene: {fileID: 0}
 --- !u!81 &1336961158
 AudioListener:
   m_ObjectHideFlags: 0
@@ -14561,7 +14560,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1983089380}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 8.5165, y: -4.5835, z: 10}
+  m_LocalPosition: {x: 1.2, y: -0.6, z: 10}
   m_LocalScale: {x: 55.813953, y: 63.263138, z: 10.6625}
   m_Children: []
   m_Father: {fileID: 783997004}
@@ -15186,7 +15185,8 @@ MonoBehaviour:
   - {fileID: 760677657}
   playerAnim: {fileID: 226545814}
   dialogueRefer: 0
-  skipTime: 5
+  nextSceneLoad: 0
+  forPrologue: 0
 --- !u!4 &2114751429
 Transform:
   m_ObjectHideFlags: 0

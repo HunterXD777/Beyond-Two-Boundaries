@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.Playables;
 using UnityEngine.Timeline;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 public class CutScene : MonoBehaviour
 {
     public PlayableDirector cutScene;
@@ -11,15 +12,16 @@ public class CutScene : MonoBehaviour
     bool press;
     public Animator playerAnim;
     public int dialogueRefer;
-    public float skipTime;
-  GameObject cutSceneObject;
-   bool skip;
-    GameObject player;
+
+    public int nextSceneLoad;
+
+
+
+   public bool forPrologue;
+   
     void Start()
-    {
-        skip = false;
+    {       
         dialogueRefer = 0;
-        player = GameObject.FindWithTag("Player");
     }
 
     // Update is called once per frame
@@ -27,7 +29,14 @@ public class CutScene : MonoBehaviour
     {
         forMultipleDialogue();
         dialogueContinue();
-        skipDialogue();
+        if (forPrologue)
+        {
+            skipCutscene();
+        }
+        Debug.Log(cutScene.duration);
+              
+        //player.GetComponent<PlatformerMovement>().enableMove = false;
+        
     }
     public void dialougePause()
     {
@@ -35,16 +44,12 @@ public class CutScene : MonoBehaviour
         press = true;
         playerAnim.applyRootMotion = true;
        
-            if (Input.GetKeyDown(KeyCode.H))
-            {
-                
-                skip = true;
-            }
+           
         //make sure when cutscene pause the player wouldn't back to the original position
-         //foreach (Animator animator in animator)
-         //{
-         //    animator.applyRootMotion = true;//make sure when cutscene pause the player wouldn't back to the original position
-         //}
+        // foreach (Animator animator in animator)
+        //{
+        //    animator.applyRootMotion = true;//make sure when cutscene pause the player wouldn't back to the original position
+        //}
 
     }
 
@@ -55,8 +60,7 @@ public class CutScene : MonoBehaviour
             {
                 if (Input.GetKeyDown(KeyCode.E))
                 {
-                playerAnim.applyRootMotion = false;
-
+                playerAnim.applyRootMotion = false;                         
                 dialogueManagement[dialogueRefer].GetComponent<DialogueManagement>().DisplayNextSentence();
                 
                     cutScene.Resume();
@@ -74,29 +78,26 @@ public class CutScene : MonoBehaviour
                 dialogueRefer += 1;
             }
         }
-        else
-        {
-            player.GetComponent<PlatformerMovement>().enableMove = true;
-        }
+        //else
+        //{
+        //    player.GetComponent<PlatformerMovement>().enableMove = true;
+        //}
     }
 
-    public void skipDialogue()
+    public void skipCutscene()
     {
-        cutSceneObject = GameObject.Find("CutSceneObject");
-        if (!skip)
-        {
-            if (Input.GetKeyDown(KeyCode.H))
+        //cutSceneObject = GameObject.Find("Level").gameObject.transform.Find("CutSceneObject").gameObject;
+       
+            if (Input.GetKeyDown(KeyCode.Escape))
             {
-                if (press == true)
-                {
-                    cutScene.Resume();
-                }
-                cutScene.time = skipTime;
-                skip = true;
-                cutSceneObject.SetActive(false);
-                player.GetComponent<PlatformerMovement>().enableMove = true;
-                playerAnim.applyRootMotion = false;
+                SceneManager.LoadScene(nextSceneLoad);
+                //cutScene.Stop();
+                //cutScene.time = skipTime;
+                //skip = true;
+                ////cutSceneObject.SetActive(false);
+                //player.GetComponent<PlatformerMovement>().enableMove = true;
+                //playerAnim.applyRootMotion = false;
             }
-        }
+        
     }
 }

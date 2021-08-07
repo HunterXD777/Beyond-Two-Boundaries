@@ -37,8 +37,8 @@ public class LoadNextLevel : MonoBehaviour
         if(collectedPieces == requiredPieces)
         {
             //Jane's Codes
-            //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1); //load next scene
-            SceneManager.LoadScene(nextSceneLoad);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1); //load next scene
+            //SceneManager.LoadScene(nextSceneLoad);
             FindObjectOfType<SoundManager>().Play("Checkpoint"); //play checkpoint sound effect
             PlayerPrefs.DeleteKey(deletePreb.GetComponent<CameraControll>().setplayerPreb);
 

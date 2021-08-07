@@ -26,10 +26,10 @@ public class DialogueManagement : MonoBehaviour
 
     public bool stopTrigger = false;//set one time trigger for dialogue
 
-    public bool lockSoulSwap;
-    public bool lockDimensionShift;
-    public bool lockDimensionBreath;
+   
     public bool DialogueEnd;
+
+    public IEnumerator coroutine;
 
     void Start()
     {
@@ -37,6 +37,10 @@ public class DialogueManagement : MonoBehaviour
         lnames = new Queue<string>();
         rnames = new Queue<string>();
         textColor = new Queue<Color>();
+
+        
+
+
     }
 
     // Update is called once per frame
@@ -94,7 +98,11 @@ public class DialogueManagement : MonoBehaviour
 
     public void DisplayNextSentence()
     {
-        if(sentences.Count == 0)
+        if (coroutine != null)
+        {
+            StopCoroutine(coroutine);
+        }
+        if (sentences.Count == 0)
         {
             EndDialogue();
             return;
@@ -104,6 +112,8 @@ public class DialogueManagement : MonoBehaviour
         string sentence = sentences.Dequeue();
         string rnamess = rnames.Dequeue();
         string lnamess = lnames.Dequeue();
+
+    
         //animate the sentence 
         prompt.color = color;
         rightnametext.color = color;
@@ -112,7 +122,11 @@ public class DialogueManagement : MonoBehaviour
         leftnametext.text = lnamess;
         dialogue.color = color;
         dialogue.text = sentence;
-        //StartCoroutine(Typesentence(sentence,color));
+
+        coroutine = Typesentence(sentence, color);
+        StartCoroutine(coroutine);
+        
+
 
     }
     IEnumerator Typesentence(string sentence,Color color)
@@ -120,10 +134,13 @@ public class DialogueManagement : MonoBehaviour
         //animate the sentence 
         dialogue.color = color;
         dialogue.text = "";
+
         foreach (char letter in sentence.ToCharArray())
         {
+           
             dialogue.text += letter;
-            yield return null;
+           
+            yield return new WaitForSeconds(0.001f);
         }
     }
     void EndDialogue()

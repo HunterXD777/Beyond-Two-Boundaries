@@ -4024,6 +4024,11 @@ Animator:
   m_CorrespondingSourceObject: {fileID: 7294373901549016216, guid: ea94072153d01c245b994370d58d0588, type: 3}
   m_PrefabInstance: {fileID: 144886076}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &144886078 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5817772069079718549, guid: ea94072153d01c245b994370d58d0588, type: 3}
+  m_PrefabInstance: {fileID: 144886076}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &154181354
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4349,11 +4354,6 @@ Transform:
   m_Father: {fileID: 1239117864}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &303416155 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5817772069079718549, guid: ea94072153d01c245b994370d58d0588, type: 3}
-  m_PrefabInstance: {fileID: 144886076}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &312945262
 GameObject:
   m_ObjectHideFlags: 0
@@ -4513,7 +4513,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 315902823}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 41.9269, y: 52.4582, z: 10}
+  m_LocalPosition: {x: 1.8, y: -2.3, z: 10}
   m_LocalScale: {x: 99.894455, y: 65.540504, z: 10.6625}
   m_Children: []
   m_Father: {fileID: 926635853}
@@ -4679,7 +4679,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 405571279}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 20.9258, y: 0.6005, z: 10}
+  m_LocalPosition: {x: 14.1, y: -5.3, z: 10}
   m_LocalScale: {x: 95.005905, y: 61.231537, z: 10.6625}
   m_Children: []
   m_Father: {fileID: 1265042970}
@@ -6906,7 +6906,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 926635852}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.9, y: 2.33, z: 9.697502}
+  m_LocalPosition: {x: 27.3, y: 45.2, z: 9.697502}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 93856270}
@@ -6951,9 +6951,11 @@ MonoBehaviour:
   camPauseDuration: 6
   moveCamera: 0
   playerCam: 0
+  playCutsceneAfterPreview: 0
   offsetX: 0
   offsetY: 0
   overviewCam: 0
+  cutScene: {fileID: 1349798930}
 --- !u!81 &926635856
 AudioListener:
   m_ObjectHideFlags: 0
@@ -7222,7 +7224,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &986263391
 Transform:
   m_ObjectHideFlags: 0
@@ -7861,7 +7863,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   forPlace: 1
   forDecoy: 0
-  ghostPlayer: {fileID: 303416155}
+  ignoreDecoy: 0
+  ignoreCollision: {fileID: 144886078}
 --- !u!1 &1239117863
 GameObject:
   m_ObjectHideFlags: 0
@@ -8491,7 +8494,7 @@ PlayableDirector:
   serializedVersion: 3
   m_PlayableAsset: {fileID: 11400000, guid: d6eed5b5e77902a4ba51644c7b736b06, type: 2}
   m_InitialState: 0
-  m_WrapMode: 2
+  m_WrapMode: 0
   m_DirectorUpdateMode: 1
   m_InitialTime: 0
   m_SceneBindings:
@@ -8556,7 +8559,8 @@ MonoBehaviour:
   - {fileID: 1724217656}
   playerAnim: {fileID: 144886077}
   dialogueRefer: 0
-  skipTime: 6
+  nextSceneLoad: 0
+  forPrologue: 0
 --- !u!4 &1349798933
 Transform:
   m_ObjectHideFlags: 0
@@ -8697,7 +8701,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   forPlace: 1
   forDecoy: 0
-  ghostPlayer: {fileID: 303416155}
+  ignoreDecoy: 0
+  ignoreCollision: {fileID: 0}
 --- !u!1 &1374061657
 GameObject:
   m_ObjectHideFlags: 0
@@ -10311,9 +10316,6 @@ MonoBehaviour:
   animator: {fileID: 627908190}
   dialogueTrigger: {fileID: 1695551273}
   stopTrigger: 0
-  lockSoulSwap: 0
-  lockDimensionShift: 1
-  lockDimensionBreath: 0
   DialogueEnd: 0
 --- !u!4 &1724217658
 Transform:

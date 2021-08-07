@@ -26,8 +26,9 @@ public class ShiftDurationExtend : MonoBehaviour
             GameObject DB = GameObject.Find("MAIN PLAYER");
             if (other.gameObject.name == "GhostPlayer")
             {
-                DB.GetComponent<DimensionBreach>().timeStart += 3;
+                DB.GetComponent<DimensionBreach>().timeStart += 5;
                 resetFilterTimer = DB.GetComponent<DimensionBreach>().timeStart;
+                DB.GetComponent<DimensionBreach>().ResetFilter();
                 DB.GetComponent<DimensionBreach>().filter.CrossFadeAlpha(1, resetFilterTimer, false);
                 Destroy(this.gameObject);
             }
@@ -37,8 +38,9 @@ public class ShiftDurationExtend : MonoBehaviour
             GameObject DS = GameObject.Find("MAIN PLAYER");
             if (other.gameObject.name == "GhostPlayer")
             {
-                DS.GetComponent<DimensionShift>().timeStart += 3;
+                DS.GetComponent<DimensionShift>().timeStart += 5;
                 resetFilterTimer = DS.GetComponent<DimensionShift>().timeStart;
+                DS.GetComponent<DimensionShift>().ResetFilter();
                 DS.GetComponent<DimensionShift>().filter.CrossFadeAlpha(1, resetFilterTimer, false);
                 Destroy(this.gameObject);
             }

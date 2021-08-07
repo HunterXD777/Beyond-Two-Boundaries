@@ -23,16 +23,17 @@ public class PreviewCamera : MonoBehaviour
     public float camPauseDuration = 2;
     public bool moveCamera = false;
     public bool playerCam = false;
-    //public bool playCutsceneAfterPreview;//kang rui code // play cutscene or not after preview
-    //bool cutScenePlay = false;//kang rui code // check cutscene had play or not
+    public bool playCutsceneAfterPreview;//kang rui code // play cutscene or not after preview
+    bool cutScenePlay = false;//kang rui code // check cutscene had play or not
 
 
     public float offsetX;
     public float offsetY;
 
+    float duration;
     public bool overviewCam;
 
-    
+    public PlayableDirector cutScene;
 
     private GameObject player;
     private Camera mainCam;
@@ -68,40 +69,59 @@ public class PreviewCamera : MonoBehaviour
             //Vector3 moveTo = new Vector3(player.transform.position.x + offsetX, player.transform.position.y + offsetY, -10f);
             //transform.position = Vector3.Lerp(transform.position, moveTo, smoothness * Time.deltaTime);
 
-            if (Input.GetKey(KeyCode.Mouse1))
+
+            //Kang Rui Code
+           
+                if (Input.GetKey(KeyCode.Mouse1))
+                {
+                    overviewCam = true;
+                    mainCam.orthographicSize = cameraPreviewSize;
+                }
+
+                if (Input.GetKeyUp(KeyCode.Mouse1))
+                {
+                    overviewCam = false;
+                    mainCam.orthographicSize = cameraPlaySize;
+                }
+            
+
+
+                if (!overviewCam)
+                {
+                    player = GameObject.FindWithTag("Player");
+                    Vector3 moveTo = new Vector3(player.transform.position.x + offsetX, player.transform.position.y + offsetY, -10f);
+                    transform.position = Vector3.Lerp(transform.position, moveTo, smoothness * Time.deltaTime);
+
+                   
+                }
+                else
+                {
+                    Vector3 worldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                    Vector3 moveTo = worldPosition;
+
+                    //Vector3 boundPosition = new Vector3(
+                    //Mathf.Clamp(moveTo.x, minValues.x, maxValues.x),
+                    //Mathf.Clamp(moveTo.y, minValues.y, maxValues.y),
+                    //Mathf.Clamp(moveTo.z, minValues.z, maxValues.z));
+
+
+                    transform.position = Vector3.Lerp(transform.position, moveTo, PlayerPreviewCamSmoothness * Time.deltaTime);
+                }
+            
+
+            
+        }
+        if (cutScenePlay)
+        {
+            player = GameObject.FindWithTag("Player");
+            Vector3 moveTo = new Vector3(player.transform.position.x + offsetX, player.transform.position.y + offsetY, -10f);
+            transform.position = Vector3.Lerp(transform.position, moveTo, smoothness * Time.deltaTime);
+
+            cutScene.Play();
+            if(cutScene.time >= cutScene.duration)
             {
-                overviewCam = true;
-                mainCam.orthographicSize = cameraPreviewSize;
+                playerCam = true;
             }
-
-            if (Input.GetKeyUp(KeyCode.Mouse1))
-            {
-                overviewCam = false;
-                mainCam.orthographicSize = cameraPlaySize;
-            }
-
-
-
-            if (!overviewCam)
-            {
-                player = GameObject.FindWithTag("Player");
-                Vector3 moveTo = new Vector3(player.transform.position.x + offsetX, player.transform.position.y + offsetY, -10f);
-                transform.position = Vector3.Lerp(transform.position, moveTo, smoothness * Time.deltaTime);
-            }
-            else
-            {
-                Vector3 worldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-                Vector3 moveTo = worldPosition;
-
-                //Vector3 boundPosition = new Vector3(
-                //Mathf.Clamp(moveTo.x, minValues.x, maxValues.x),
-                //Mathf.Clamp(moveTo.y, minValues.y, maxValues.y),
-                //Mathf.Clamp(moveTo.z, minValues.z, maxValues.z));
-
-
-                transform.position = Vector3.Lerp(transform.position, moveTo, PlayerPreviewCamSmoothness * Time.deltaTime);
-            }
-
         }
         
 
@@ -121,11 +141,16 @@ public class PreviewCamera : MonoBehaviour
         mainCam.orthographicSize = cameraPlaySize;
         smoothness = playerCamSmoothness;
         moveCamera = false;
-        playerCam = true;       
-        player.GetComponent<PlatformerMovement>().enableMove = true;
+        if (playCutsceneAfterPreview) {
+            cutScenePlay = true;
+        }
+        else
+        {
+            playerCam = true;
+        }
         
-    }
-    
-    
 
+
+    }
+   
 }
