@@ -6954,6 +6954,7 @@ MonoBehaviour:
   playCutsceneAfterPreview: 0
   offsetX: 0
   offsetY: 0
+  cutSceneduration: 0
   overviewCam: 0
   cutScene: {fileID: 1349798930}
 --- !u!81 &926635856
@@ -7224,7 +7225,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &986263391
 Transform:
   m_ObjectHideFlags: 0
@@ -8560,7 +8561,9 @@ MonoBehaviour:
   playerAnim: {fileID: 144886077}
   dialogueRefer: 0
   nextSceneLoad: 0
+  previewCam: {fileID: 0}
   forPrologue: 0
+  cutSceneEnd: 0
 --- !u!4 &1349798933
 Transform:
   m_ObjectHideFlags: 0

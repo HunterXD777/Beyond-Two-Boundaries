@@ -26,6 +26,7 @@ public class ChargeRefill : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         Destroy(gameObject);
+        FindObjectOfType<SoundManager>().Play("Collected");
         if (forWallTutorial)
         {
             if (!soulSeperation.GetComponent<DimensionShift>().shiftReady)

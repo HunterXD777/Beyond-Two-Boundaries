@@ -71,7 +71,6 @@ public class PreviewCamera : MonoBehaviour
             //Vector3 moveTo = new Vector3(player.transform.position.x + offsetX, player.transform.position.y + offsetY, -10f);
             //transform.position = Vector3.Lerp(transform.position, moveTo, smoothness * Time.deltaTime);
             
-            player.GetComponent<PlatformerMovement>().enableMove = true;
             //Kang Rui Code
 
             if (Input.GetKey(KeyCode.Mouse1))
@@ -113,6 +112,7 @@ public class PreviewCamera : MonoBehaviour
 
             
         }
+        //Kang Rui code
         if (!cutScene.GetComponent<CutScene>().cutSceneEnd)
         {
             player = GameObject.FindWithTag("Player");
@@ -132,6 +132,7 @@ public class PreviewCamera : MonoBehaviour
         if (cutScene.GetComponent<CutScene>().cutSceneEnd)
         {
             playerCam = true;
+            player.GetComponent<PlatformerMovement>().enableMove = true;
 
         }
        

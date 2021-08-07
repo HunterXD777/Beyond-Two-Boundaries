@@ -21,6 +21,7 @@ public class ShiftDurationExtend : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
+        FindObjectOfType<SoundManager>().Play("Collected");
         if (DBreachExtend)//for dimension breach
         {
             GameObject DB = GameObject.Find("MAIN PLAYER");
