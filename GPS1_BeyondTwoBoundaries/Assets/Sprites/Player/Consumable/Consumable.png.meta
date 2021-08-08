@@ -1,0 +1,612 @@
+fileFormatVersion: 2
+guid: 2dbb07251888b6b409e65f7637447c62
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7704059203647548489
+    second: Consumable_0
+  - first:
+      213: -3724689132807532713
+    second: Consumable_1
+  - first:
+      213: -4991789455777650155
+    second: Consumable_2
+  - first:
+      213: -8722286250696676311
+    second: Consumable_3
+  - first:
+      213: -866830662735550545
+    second: Consumable_4
+  - first:
+      213: 690954979929987491
+    second: Consumable_5
+  - first:
+      213: 8584010139483404044
+    second: Consumable_6
+  - first:
+      213: 8576483922636852994
+    second: Consumable_7
+  - first:
+      213: -4573918802062683945
+    second: Consumable_8
+  - first:
+      213: 2086306619347854041
+    second: Consumable_9
+  - first:
+      213: -5537332946810952974
+    second: Consumable_10
+  - first:
+      213: 1405722288770878130
+    second: Consumable_11
+  - first:
+      213: -6799467399022863606
+    second: Consumable_12
+  - first:
+      213: -3130226625941466703
+    second: Consumable_13
+  - first:
+      213: 6983277734481478843
+    second: Consumable_14
+  - first:
+      213: -2799556458283107028
+    second: Consumable_15
+  - first:
+      213: 7705924949154530846
+    second: Consumable_16
+  - first:
+      213: -405884141828356665
+    second: Consumable_17
+  - first:
+      213: 937063270399332873
+    second: Consumable_18
+  - first:
+      213: 9199208229590612867
+    second: Consumable_19
+  - first:
+      213: -5455836247265125627
+    second: Consumable_20
+  - first:
+      213: -1467192390056664527
+    second: Consumable_21
+  - first:
+      213: 2376987102198811924
+    second: Consumable_22
+  - first:
+      213: 5268196834288978950
+    second: Consumable_23
+  - first:
+      213: -4808380049802974612
+    second: Consumable_24
+  - first:
+      213: -7555318943214306218
+    second: Consumable_25
+  - first:
+      213: 2477820139178529031
+    second: Consumable_26
+  - first:
+      213: 7352161904275956720
+    second: Consumable_27
+  - first:
+      213: -716028828499107527
+    second: Consumable_28
+  - first:
+      213: -6735376148456539417
+    second: Consumable_29
+  - first:
+      213: -1599345249503833501
+    second: Consumable_30
+  - first:
+      213: -9120109516146273449
+    second: Consumable_31
+  - first:
+      213: 6785620589294086561
+    second: Consumable_32
+  - first:
+      213: 1913855869276576595
+    second: Consumable_33
+  - first:
+      213: 4302567574880675113
+    second: Consumable_34
+  - first:
+      213: -7205437785561741638
+    second: Consumable_35
+  - first:
+      213: 1056058085871299634
+    second: Consumable_36
+  - first:
+      213: 4247798034971474569
+    second: Consumable_37
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Consumable_0
+      rect:
+        serializedVersion: 2
+        x: 462
+        y: 1114
+        width: 129
+        height: 130
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94cadf127015aea60800000000000000
+      internalID: 7704059203647548489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Consumable_1
+      rect:
+        serializedVersion: 2
+        x: 596
+        y: 1114
+        width: 120
+        height: 130
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75fcf3cc7fe3f4cc0800000000000000
+      internalID: -3724689132807532713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Consumable_2
+      rect:
+        serializedVersion: 2
+        x: 733
+        y: 1115
+        width: 103
+        height: 129
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51a25d600f999bab0800000000000000
+      internalID: -4991789455777650155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Consumable_3
+      rect:
+        serializedVersion: 2
+        x: 878
+        y: 1114
+        width: 68
+        height: 130
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92c63fd1ed634f680800000000000000
+      internalID: -8722286250696676311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Consumable_4
+      rect:
+        serializedVersion: 2
+        x: 1025
+        y: 1114
+        width: 34
+        height: 130
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa72b3bda1668f3f0800000000000000
+      internalID: -866830662735550545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Consumable_5
+      rect:
+        serializedVersion: 2
+        x: 1131
+        y: 1114
+        width: 68
+        height: 130
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a99386b4e3c69900800000000000000
+      internalID: 690954979929987491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Consumable_6
+      rect:
+        serializedVersion: 2
+        x: 1241
+        y: 1115
+        width: 103
+        height: 129
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c077248edb7802770800000000000000
+      internalID: 8584010139483404044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Consumable_7
+      rect:
+        serializedVersion: 2
+        x: 1361
+        y: 1114
+        width: 120
+        height: 130
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20f4e9effaac50770800000000000000
+      internalID: 8576483922636852994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Consumable_8
+      rect:
+        serializedVersion: 2
+        x: 1486
+        y: 1114
+        width: 130
+        height: 130
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d0d29b451d2680c0800000000000000
+      internalID: -4573918802062683945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Consumable_20
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 656
+        width: 130
+        height: 129
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50bdf01e6d9f844b0800000000000000
+      internalID: -5455836247265125627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Consumable_21
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 656
+        width: 121
+        height: 129
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13224857b4c73abe0800000000000000
+      internalID: -1467192390056664527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Consumable_22
+      rect:
+        serializedVersion: 2
+        x: 671
+        y: 656
+        width: 103
+        height: 129
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41dce36fc21ccf020800000000000000
+      internalID: 2376987102198811924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Consumable_23
+      rect:
+        serializedVersion: 2
+        x: 805
+        y: 656
+        width: 78
+        height: 129
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60cc1a2db156c1940800000000000000
+      internalID: 5268196834288978950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Consumable_24
+      rect:
+        serializedVersion: 2
+        x: 968
+        y: 656
+        width: 33
+        height: 129
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6a2b6212d3354db0800000000000000
+      internalID: -4808380049802974612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Consumable_25
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 656
+        width: 77
+        height: 129
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65c7ee0737d162790800000000000000
+      internalID: -7555318943214306218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Consumable_26
+      rect:
+        serializedVersion: 2
+        x: 1190
+        y: 656
+        width: 102
+        height: 129
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7019b0dd94cf26220800000000000000
+      internalID: 2477820139178529031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Consumable_27
+      rect:
+        serializedVersion: 2
+        x: 1307
+        y: 656
+        width: 121
+        height: 129
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f3278b6c40280660800000000000000
+      internalID: 7352161904275956720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Consumable_28
+      rect:
+        serializedVersion: 2
+        x: 1429
+        y: 656
+        width: 130
+        height: 129
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9312f5cf2972016f0800000000000000
+      internalID: -716028828499107527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

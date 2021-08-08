@@ -24,6 +24,7 @@ public class PreviewCamera : MonoBehaviour
     public bool moveCamera = false;
     public bool playerCam = false;
     public bool playCutsceneAfterPreview;//kang rui code // play cutscene or not after preview
+    bool cutScenePlayed = false;
     bool cutScenePlay = false;//kang rui code // check cutscene had play or not
     //bool cutSceneEnd = false;
 
@@ -113,19 +114,18 @@ public class PreviewCamera : MonoBehaviour
             
         }
         //Kang Rui code
-        if (!cutScene.GetComponent<CutScene>().cutSceneEnd)
+        if (cutScenePlay)
         {
             player = GameObject.FindWithTag("Player");
             Vector3 moveTo = new Vector3(player.transform.position.x + offsetX, player.transform.position.y + offsetY, -10f);
             transform.position = Vector3.Lerp(transform.position, moveTo, smoothness * Time.deltaTime);
-            
 
 
-            if (cutScenePlay)
+
+            if (!cutScenePlayed)
             {
                 cutScene.Play();
-                cutScenePlay = false;
-                
+                cutScenePlayed = true;
             }
            
         }
@@ -133,6 +133,7 @@ public class PreviewCamera : MonoBehaviour
         {
             playerCam = true;
             player.GetComponent<PlatformerMovement>().enableMove = true;
+            cutScenePlay = false;
 
         }
        

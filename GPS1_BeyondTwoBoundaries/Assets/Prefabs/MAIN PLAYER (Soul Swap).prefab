@@ -5038,10 +5038,12 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  SoulsPiece: {fileID: 0}
   TimerDuration: 10
   timeStart: 0
   textBox: {fileID: 0}
   timerActive: 0
+  forWallTutorial: 0
   SoulBar: {fileID: 0}
   filter: {fileID: 0}
 --- !u!114 &4599875357217280146
@@ -5251,7 +5253,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   forPlace: 0
   forDecoy: 1
-  ghostPlayer: {fileID: 2713922852220292161}
+  ignoreDecoy: 0
+  ignoreCollision: {fileID: 2713922852220292161}
 --- !u!58 &8957257834626326591
 CircleCollider2D:
   m_ObjectHideFlags: 0
