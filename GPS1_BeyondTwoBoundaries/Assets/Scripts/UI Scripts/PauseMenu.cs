@@ -16,6 +16,8 @@ public class PauseMenu : MonoBehaviour
     GameObject MainCam;
     GameObject player;
     GameObject CutsceneSystem;
+
+    GameObject Ghost;
     public bool forTutorial;
     public bool forPrologue;
 
@@ -40,6 +42,7 @@ public class PauseMenu : MonoBehaviour
 
         Previewcam = CameraController.transform.Find("Preview Camera").gameObject;
         MainCam = CameraController.transform.Find("Main Camera").gameObject;
+
 
         player = GameObject.FindWithTag("Player");
         if (inpausedMenu == true)
@@ -104,6 +107,11 @@ public class PauseMenu : MonoBehaviour
         PauseMenuUi.SetActive(false);
         Time.timeScale = 1f;
         gameispaused = false;
+        if (GhostMovement.GhostStatePause)
+        {
+            FindObjectOfType<SoundManager>().Play("HeartBeat");
+        }
+       
     }
     public void Pause()
     {

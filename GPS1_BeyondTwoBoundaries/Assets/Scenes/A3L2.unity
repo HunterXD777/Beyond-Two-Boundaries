@@ -257,7 +257,7 @@ MonoBehaviour:
   offsetY: 3
   offsetX: 3
   smoothness: 3
-  previewCamSmoothness: 0
+  previewCamSmoothness: 1
   mainCamSize: 7
   previewCamSize: 12
   overviewCam: 0
@@ -2680,6 +2680,7 @@ MonoBehaviour:
   LevitateSign: {fileID: 0}
   InteractSign: {fileID: 0}
   ShiftBackSign: {fileID: 0}
+  GoalSign: {fileID: 0}
   leverOn: 0
 --- !u!4 &1031959767 stripped
 Transform:
@@ -2739,6 +2740,7 @@ MonoBehaviour:
   LevitateSign: {fileID: 0}
   InteractSign: {fileID: 0}
   ShiftBackSign: {fileID: 0}
+  GoalSign: {fileID: 0}
   leverOn: 0
 --- !u!1 &1131942783
 GameObject:
@@ -11801,7 +11803,7 @@ MonoBehaviour:
   playerCamSmoothness: 4
   cameraPreviewSize: 10
   cameraPlaySize: 7
-  PlayerPreviewCamSmoothness: 0
+  PlayerPreviewCamSmoothness: 1
   previewDuration: 12
   camPauseDuration: 6
   moveCamera: 0

@@ -23,6 +23,8 @@ public class GhostMovement : MonoBehaviour
     public float checkGroundRadius;
     public LayerMask groundLayer;
 
+    public static bool GhostStatePause;//Kang Rui code
+
     GameObject pauseMenu;
 
     //Jane's codes
@@ -178,11 +180,13 @@ public class GhostMovement : MonoBehaviour
         {
             if (pauseMenu.GetComponent<PauseMenu>().gameispaused)
             {
+                GhostStatePause = true;
                 FindObjectOfType<SoundManager>().Stop("HeartBeat");
             }
             else
             {
-                FindObjectOfType<SoundManager>().Play("HeartBeat");
+                GhostStatePause = false;
+                //FindObjectOfType<SoundManager>().Play("HeartBeat");
             }
         }
     }
