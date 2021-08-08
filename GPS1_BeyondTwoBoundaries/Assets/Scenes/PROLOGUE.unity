@@ -9796,8 +9796,8 @@ MonoBehaviour:
       MIND \u2026"
     - "OR AS SOME WOULD SAY, THE CONSCIOUS SOUL \u2026"
     - "What\u2026 what the hell\u2019s going on??"
-    - THE TIME FOR RECKONING IS AT HAND.
-    - YOU WILL BE JUDGED FOR YOUR SINS.
+    - "WE HAVE BECOME SEPARATED \u2026"
+    - "SEEK THE SOUL ORBS \u2026 "
     - "\u2026 I should probably just focus on getting out of here."
     rightname:
     - PLAYER SOUL
@@ -11772,6 +11772,7 @@ MonoBehaviour:
   dialogueRefer: 0
   nextSceneLoad: 2
   previewCam: {fileID: 0}
+  Player: {fileID: 0}
   forPrologue: 1
   cutSceneEnd: 0
 --- !u!4 &1349798933

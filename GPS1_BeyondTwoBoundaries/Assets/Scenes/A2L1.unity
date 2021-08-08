@@ -14229,7 +14229,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1893321102
 Transform:
   m_ObjectHideFlags: 0
@@ -15208,6 +15208,7 @@ MonoBehaviour:
   dialogueRefer: 0
   nextSceneLoad: 0
   previewCam: {fileID: 0}
+  Player: {fileID: 0}
   forPrologue: 0
   cutSceneEnd: 0
 --- !u!4 &2114751429

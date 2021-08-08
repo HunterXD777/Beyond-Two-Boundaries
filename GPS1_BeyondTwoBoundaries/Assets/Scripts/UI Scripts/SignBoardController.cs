@@ -18,6 +18,8 @@ public class SignBoardController : MonoBehaviour
     public Image LevitateSign;
     public Image InteractSign;
     public Image ShiftBackSign;
+    //Kang Rui code
+    public Image GoalSign;
 
     public bool leverOn;
 
@@ -30,6 +32,7 @@ public class SignBoardController : MonoBehaviour
         LevitateSign.CrossFadeAlpha(0, 0.2f, false);
         InteractSign.CrossFadeAlpha(0, 0.2f, false);
         ShiftBackSign.CrossFadeAlpha(0, 0.2f, false);
+        GoalSign.CrossFadeAlpha(0, 0.2f, false);
         leverOn = false;
     }
 
@@ -91,6 +94,13 @@ public class SignBoardController : MonoBehaviour
 
             
         }
+        //Kang Rui code
+        if (other.CompareTag("GoalSignTrigger"))
+        {
+            GoalSign.CrossFadeAlpha(1, 1, false);
+
+
+        }
 
     }
 
@@ -129,6 +139,13 @@ public class SignBoardController : MonoBehaviour
         if (other.CompareTag("ShiftBackTrigger"))
         {
             ShiftBackSign.CrossFadeAlpha(0, 1, false);
+        }
+        //Kang Rui code
+        if (other.CompareTag("GoalSignTrigger"))
+        {
+            GoalSign.CrossFadeAlpha(0, 1, false);
+
+
         }
     }
 }

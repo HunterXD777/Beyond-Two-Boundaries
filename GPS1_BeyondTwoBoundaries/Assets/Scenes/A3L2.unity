@@ -10529,7 +10529,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7675637650464819674, guid: 802843e141ae8674ba85b608c01b3afb, type: 3}
       propertyPath: nextSceneLoad
-      value: 6
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7675637650464819674, guid: 802843e141ae8674ba85b608c01b3afb, type: 3}
+      propertyPath: specificLevel
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7675637650464819674, guid: 802843e141ae8674ba85b608c01b3afb, type: 3}
       propertyPath: requiredPieces

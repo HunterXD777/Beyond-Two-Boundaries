@@ -9,6 +9,7 @@ public class LoadNextLevel : MonoBehaviour
     public int requiredPieces;
     public int collectedPieces;
     public bool forPrologue;
+    public bool specificLevel;
     GameObject deletePreb;
     private void Awake()
     {
@@ -37,7 +38,14 @@ public class LoadNextLevel : MonoBehaviour
         if(collectedPieces == requiredPieces)
         {
             //Jane's Codes
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1); //load next scene
+            if (!specificLevel)
+            {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            }
+            else
+            {
+                SceneManager.LoadScene(nextSceneLoad);
+            }//load next scene
             //SceneManager.LoadScene(nextSceneLoad);
             FindObjectOfType<SoundManager>().Play("Checkpoint"); //play checkpoint sound effect
             PlayerPrefs.DeleteKey(deletePreb.GetComponent<CameraControll>().setplayerPreb);
