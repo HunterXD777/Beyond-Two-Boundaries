@@ -13,6 +13,9 @@ public class PlayerDie : MonoBehaviour
     
 
     bool playerDie;
+
+    public bool playerAndDecoy;
+    public bool GhostDie;
     private void Awake()
     {
         DieScene.CrossFadeAlpha(0, 0.2f, false);
@@ -30,16 +33,33 @@ public class PlayerDie : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Player" || collision.gameObject.tag == "Decoy")
+        if (playerAndDecoy)
         {
-            //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-            
-            ResetOnSceen.SetActive(false);
-            DieScene.CrossFadeAlpha(1, 1, false);
-            StartCoroutine(TextAndButton());
-            FindObjectOfType<SoundManager>().Stop("HeartBeat");
-            FindObjectOfType<PauseMenu>().inpausedMenu = false;
-            
+            if (collision.gameObject.name == ("Player") || collision.gameObject.tag == "Decoy")
+            {
+                //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+
+                ResetOnSceen.SetActive(false);
+                DieScene.CrossFadeAlpha(1, 1, false);
+                StartCoroutine(TextAndButton());
+                FindObjectOfType<SoundManager>().Stop("HeartBeat");
+                FindObjectOfType<PauseMenu>().inpausedMenu = false;
+
+            }
+        }
+        if (GhostDie)
+        {
+            if (collision.gameObject.name == ("GhostPlayer"))
+            {
+                //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+
+                ResetOnSceen.SetActive(false);
+                DieScene.CrossFadeAlpha(1, 1, false);
+                StartCoroutine(TextAndButton());
+                FindObjectOfType<SoundManager>().Stop("HeartBeat");
+                FindObjectOfType<PauseMenu>().inpausedMenu = false;
+
+            }
         }
         
     }

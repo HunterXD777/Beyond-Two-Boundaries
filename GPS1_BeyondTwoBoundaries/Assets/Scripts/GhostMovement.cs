@@ -23,7 +23,8 @@ public class GhostMovement : MonoBehaviour
     public float checkGroundRadius;
     public LayerMask groundLayer;
 
-    
+    GameObject pauseMenu;
+
     //Jane's codes
     public bool PlayerFacingRight = true;  // For determining which way the player is currently facing.
 
@@ -32,7 +33,7 @@ public class GhostMovement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         rb.gravityScale = defaultGravity;
 
-        
+        pauseMenu = GameObject.Find("UI").gameObject.transform.Find("PauseSystem").gameObject.transform.Find("PauseMenuSystem").gameObject;
 
     }
 
@@ -48,7 +49,7 @@ public class GhostMovement : MonoBehaviour
             //Fly();
             CheckIfGrounded();
             Interact(); //Jane's codes
-        
+        PauseForSFX();//Kang Rui code
     }
 
 
@@ -168,6 +169,21 @@ public class GhostMovement : MonoBehaviour
         else if (Input.GetKeyUp(KeyCode.E))
         {
             animator.SetBool("IsInteracting", false);
+        }
+    }
+
+    void PauseForSFX()
+    {
+        if (Input.GetKeyUp(KeyCode.Escape))
+        {
+            if (pauseMenu.GetComponent<PauseMenu>().gameispaused)
+            {
+                FindObjectOfType<SoundManager>().Stop("HeartBeat");
+            }
+            else
+            {
+                FindObjectOfType<SoundManager>().Play("HeartBeat");
+            }
         }
     }
 }

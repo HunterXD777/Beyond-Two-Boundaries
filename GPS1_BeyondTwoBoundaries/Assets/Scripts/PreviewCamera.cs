@@ -116,13 +116,15 @@ public class PreviewCamera : MonoBehaviour
         //Kang Rui code
         if (cutScenePlay)
         {
-            player = GameObject.FindWithTag("Player");
-            Vector3 moveTo = new Vector3(player.transform.position.x + offsetX, player.transform.position.y + offsetY, -10f);
-            transform.position = Vector3.Lerp(transform.position, moveTo, smoothness * Time.deltaTime);
+            //if (!cutScenePlayed)
+            //{
+            //    player = GameObject.FindWithTag("Player");
+            //    Vector3 moveTo = new Vector3(player.transform.position.x + offsetX, player.transform.position.y + offsetY, -10f);
+            //    transform.position = Vector3.Lerp(transform.position, moveTo, smoothness * Time.deltaTime);
 
+            //}
 
-
-            if (!cutScenePlayed)
+           if (!cutScenePlayed)
             {
                 cutScene.Play();
                 cutScenePlayed = true;

@@ -1471,7 +1471,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &194182020
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1926,6 +1926,8 @@ MonoBehaviour:
   DieScene: {fileID: 9603244}
   TextAButton: {fileID: 967535508}
   ResetOnSceen: {fileID: 284604315}
+  playerAndDecoy: 1
+  GhostDie: 1
 --- !u!61 &361588842
 BoxCollider2D:
   m_ObjectHideFlags: 0

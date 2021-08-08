@@ -322,7 +322,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1635492072}
         m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
         m_MethodName: ResetButton
         m_Mode: 1
@@ -2448,6 +2448,8 @@ MonoBehaviour:
   DieScene: {fileID: 1155305127}
   TextAButton: {fileID: 472549358}
   ResetOnSceen: {fileID: 1678151444}
+  playerAndDecoy: 1
+  GhostDie: 1
 --- !u!61 &550131274
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11009,6 +11011,8 @@ MonoBehaviour:
   DieScene: {fileID: 1155305127}
   TextAButton: {fileID: 472549358}
   ResetOnSceen: {fileID: 1678151444}
+  playerAndDecoy: 1
+  GhostDie: 1
 --- !u!61 &1407271796
 BoxCollider2D:
   m_ObjectHideFlags: 0

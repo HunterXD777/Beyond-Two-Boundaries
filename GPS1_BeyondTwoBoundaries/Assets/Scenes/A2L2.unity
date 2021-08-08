@@ -1496,6 +1496,8 @@ MonoBehaviour:
   DieScene: {fileID: 1695339405}
   TextAButton: {fileID: 508520307}
   ResetOnSceen: {fileID: 728411905}
+  playerAndDecoy: 1
+  GhostDie: 1
 --- !u!61 &361588842
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2741,6 +2743,8 @@ MonoBehaviour:
   DieScene: {fileID: 1695339405}
   TextAButton: {fileID: 508520307}
   ResetOnSceen: {fileID: 728411905}
+  playerAndDecoy: 1
+  GhostDie: 1
 --- !u!61 &684723004
 BoxCollider2D:
   m_ObjectHideFlags: 0

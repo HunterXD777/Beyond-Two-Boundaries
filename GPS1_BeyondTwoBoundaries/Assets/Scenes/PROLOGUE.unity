@@ -9791,6 +9791,7 @@ MonoBehaviour:
   dialogue:
     sentences:
     - "\u2026"
+    - "What\u2019s that \u2026 Is \u2026 is that me?? "
     - "YOU ARE NEITHER CORRECT NOR WRONG \u2026 "
     - "I AM NOT YOU, RATHER I AM THE BEING THAT SLEEPS WITHIN, THE MIND WITHIN THE
       MIND \u2026"
@@ -9807,6 +9808,7 @@ MonoBehaviour:
     - PLAYER SOUL
     - 
     - PLAYER SOUL
+    - PLAYER SOUL
     - 
     leftname:
     - 
@@ -9816,6 +9818,7 @@ MonoBehaviour:
     - 
     - PLAYER
     - 
+    - 
     - PLAYER
     textColor:
     - {r: 0.23921569, g: 1, b: 0.69411767, a: 1}
@@ -9824,6 +9827,7 @@ MonoBehaviour:
     - {r: 0.23921569, g: 1, b: 0.69411767, a: 1}
     - {r: 0.23921569, g: 1, b: 0.69411767, a: 1}
     - {r: 1, g: 1, b: 1, a: 1}
+    - {r: 0.23921569, g: 1, b: 0.69411767, a: 1}
     - {r: 0.23921569, g: 1, b: 0.69411767, a: 1}
     - {r: 1, g: 1, b: 1, a: 1}
   dialogueManagement: {fileID: 1297419109}
