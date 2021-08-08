@@ -9807,7 +9807,7 @@ MonoBehaviour:
     - PLAYER SOUL
     - 
     - PLAYER SOUL
-    - PLAYER SOUL
+    - 
     leftname:
     - 
     - PLAYER
@@ -9816,7 +9816,7 @@ MonoBehaviour:
     - 
     - PLAYER
     - 
-    - 
+    - PLAYER
     textColor:
     - {r: 0.23921569, g: 1, b: 0.69411767, a: 1}
     - {r: 1, g: 1, b: 1, a: 1}
@@ -9825,7 +9825,7 @@ MonoBehaviour:
     - {r: 0.23921569, g: 1, b: 0.69411767, a: 1}
     - {r: 1, g: 1, b: 1, a: 1}
     - {r: 0.23921569, g: 1, b: 0.69411767, a: 1}
-    - {r: 0.23921569, g: 1, b: 0.69411767, a: 1}
+    - {r: 1, g: 1, b: 1, a: 1}
   dialogueManagement: {fileID: 1297419109}
   isTrigger: 0
   forCutScene: 1
