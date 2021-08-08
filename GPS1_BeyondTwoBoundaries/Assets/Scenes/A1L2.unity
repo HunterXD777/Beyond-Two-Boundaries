@@ -8324,7 +8324,7 @@ MonoBehaviour:
   offsetY: 0
   offsetX: 0
   smoothness: 8
-  previewCamSmoothness: 0
+  previewCamSmoothness: 1
   mainCamSize: 7
   previewCamSize: 12
   overviewCam: 0
