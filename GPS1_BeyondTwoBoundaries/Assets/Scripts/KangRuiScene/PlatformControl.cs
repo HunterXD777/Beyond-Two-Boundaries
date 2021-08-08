@@ -5,12 +5,19 @@ using UnityEngine;
 public class PlatformControl : MonoBehaviour
 {
     public bool OnTouching;
-    
+    public GameObject helpUI;
+
+    private void Start()
+    {
+        helpUI.SetActive(false);
+    }
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {
             OnTouching = true;
+            helpUI.SetActive(true);
         }
     }
 
@@ -19,6 +26,7 @@ public class PlatformControl : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             OnTouching = false;
+            helpUI.SetActive(false);
         }
     }
 }
