@@ -306,11 +306,10 @@ MonoBehaviour:
   player: {fileID: 0}
   ghost: {fileID: 0}
   Decoy: {fileID: 0}
-  block: {fileID: 0}
   playerOnPlatform: 0
   ghostOnPlatform: 0
   decoyOnPlatform: 0
-  forModel3: 1
+  foroneway: 0
   fornormal: 0
   ElevatorLeverOn:
   - {fileID: 2474589665330769086}
