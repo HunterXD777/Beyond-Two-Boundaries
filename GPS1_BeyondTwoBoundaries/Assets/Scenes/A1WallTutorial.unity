@@ -11239,6 +11239,7 @@ MonoBehaviour:
   LevitateSign: {fileID: 1730275842}
   InteractSign: {fileID: 2085082573}
   ShiftBackSign: {fileID: 1253292168}
+  GoalSign: {fileID: 0}
   leverOn: 0
 --- !u!1001 &847907725
 PrefabInstance:
@@ -11493,6 +11494,8 @@ MonoBehaviour:
   DieScene: {fileID: 1155305127}
   TextAButton: {fileID: 472549358}
   ResetOnSceen: {fileID: 1821099214}
+  playerAndDecoy: 0
+  GhostDie: 0
 --- !u!61 &879492847
 BoxCollider2D:
   m_ObjectHideFlags: 0
