@@ -13054,7 +13054,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1251312047467510016, guid: 463ef15fc416f6243b011da13840ee79, type: 3}
       propertyPath: m_Name
-      value: HelpMenu (OnScreenGuide) [GENERAL]
+      value: HelpMenu (OnScreenGuide) [GENERAL + SOUL SEPERATION]
       objectReference: {fileID: 0}
     - target: {fileID: 1251312047467510017, guid: 463ef15fc416f6243b011da13840ee79, type: 3}
       propertyPath: m_Pivot.x

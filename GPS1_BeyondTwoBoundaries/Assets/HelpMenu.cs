@@ -5,10 +5,11 @@ using UnityEngine;
 public class HelpMenu : MonoBehaviour
 {
     public GameObject generalHelpMenu;
+    public GameObject SSeperationHelpMenu;
     //// Start is called before the first frame update
     //void Start()
     //{
-        
+
     //}
 
     // Update is called once per frame
@@ -17,10 +18,12 @@ public class HelpMenu : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.H))// || Input.GetKeyDown(KeyCode.Mouse0))
         {
             generalHelpMenu.SetActive(true);
+            SSeperationHelpMenu.SetActive(true);
         }
         else if (Input.GetKeyUp(KeyCode.H))// || Input.GetKeyUp(KeyCode.Mouse0))
         {
             generalHelpMenu.SetActive(false);
+            SSeperationHelpMenu.SetActive(false);
         }
     }
 }
