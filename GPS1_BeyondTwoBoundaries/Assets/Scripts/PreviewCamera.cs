@@ -114,30 +114,30 @@ public class PreviewCamera : MonoBehaviour
             
         }
         //Kang Rui code
-        if (cutScenePlay)
-        {
-            //if (!cutScenePlayed)
-            //{
-            //    player = GameObject.FindWithTag("Player");
-            //    Vector3 moveTo = new Vector3(player.transform.position.x + offsetX, player.transform.position.y + offsetY, -10f);
-            //    transform.position = Vector3.Lerp(transform.position, moveTo, smoothness * Time.deltaTime);
+        //if (cutScenePlay)
+        //{
+        //    //if (!cutScenePlayed)
+        //    //{
+        //    //    player = GameObject.FindWithTag("Player");
+        //    //    Vector3 moveTo = new Vector3(player.transform.position.x + offsetX, player.transform.position.y + offsetY, -10f);
+        //    //    transform.position = Vector3.Lerp(transform.position, moveTo, smoothness * Time.deltaTime);
 
-            //}
+        //    //}
 
-           if (!cutScenePlayed)
-            {
-                cutScene.Play();
-                cutScenePlayed = true;
-            }
+        //   if (!cutScenePlayed)
+        //    {
+        //        cutScene.Play();
+        //        cutScenePlayed = true;
+        //    }
            
-        }
-        if (cutScene.GetComponent<CutScene>().cutSceneEnd)
-        {
-            playerCam = true;
-            player.GetComponent<PlatformerMovement>().enableMove = true;
-            cutScenePlay = false;
+        //}
+        //if (cutScene.GetComponent<CutScene>().cutSceneEnd)
+        //{
+        //    playerCam = true;
+        //    player.GetComponent<PlatformerMovement>().enableMove = true;
+        //    cutScenePlay = false;
 
-        }
+        //}
        
 
 
