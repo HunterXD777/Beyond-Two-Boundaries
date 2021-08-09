@@ -111,18 +111,14 @@ public class CutScene : MonoBehaviour
        // Player.GetComponent<PlatformerMovement>().enableMove = true;
     }
 
-    public void CutsceneSoundEffect(string soundName, bool loop)
-    {
-        if (loop)
-        {
-            if (!dialogueManagement[dialogueRefer].GetComponent<DialogueManagement>().DialogueEnd)
-            {
-                FindObjectOfType<SoundManager>().Play(soundName);
-            }
-        }
-        else
-        {
-            FindObjectOfType<SoundManager>().Play(soundName);
-        }
+    public void CutsceneSoundEffect(string soundName)
+    {       
+       FindObjectOfType<SoundManager>().Play(soundName);       
     }
+
+    public void CutsceneStopSoundEffect(string soundName)
+    {
+        FindObjectOfType<SoundManager>().Stop(soundName);
+    }
+
 }

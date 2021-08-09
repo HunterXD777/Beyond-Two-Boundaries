@@ -49,7 +49,7 @@ public class PauseMenu : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Escape))
             {
-                if (Previewcam.GetComponent<PreviewCamera>().playerCam)
+                if (Previewcam.GetComponent<PreviewCamera>().playerCam || (MainCam.activeSelf && !Previewcam.activeSelf))
                 {
                     if (gameispaused)
                     {

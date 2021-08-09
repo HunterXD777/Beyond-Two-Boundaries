@@ -39,6 +39,7 @@ public class MovingPlatform : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         if(foroneway == true)
         {
             foronewayPlatform();
@@ -147,6 +148,7 @@ public class MovingPlatform : MonoBehaviour
              //block.SetActive(true);
         }
     }
+    
     public void LeverelevatorV2()//for model 3 basic
     {
         if (transform.position == pos1.position)
