@@ -638,6 +638,10 @@ PrefabInstance:
       propertyPath: m_SortingLayerID
       value: -1423298205
       objectReference: {fileID: 0}
+    - target: {fileID: 1704960809302744696, guid: ea94072153d01c245b994370d58d0588, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.35
+      objectReference: {fileID: 0}
     - target: {fileID: 2977646634152245359, guid: ea94072153d01c245b994370d58d0588, type: 3}
       propertyPath: groundLayer.m_Bits
       value: 264
