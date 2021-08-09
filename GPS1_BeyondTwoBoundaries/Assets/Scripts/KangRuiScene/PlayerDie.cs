@@ -10,9 +10,10 @@ public class PlayerDie : MonoBehaviour
     public Image DieScene;
     public GameObject TextAButton;
     public GameObject ResetOnSceen;
+
     
 
-    bool playerDie;
+    public static bool playerDie;
 
     public bool playerAndDecoy;
     public bool GhostDie;
@@ -22,13 +23,17 @@ public class PlayerDie : MonoBehaviour
     }
     void Start()
     {
-       
+        playerDie = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (playerDie)
+        {
+            StartCoroutine(TextAndButton());
+            
+        }
 
     }
     private void OnTriggerEnter2D(Collider2D collision)
@@ -41,7 +46,8 @@ public class PlayerDie : MonoBehaviour
 
                 ResetOnSceen.SetActive(false);
                 DieScene.CrossFadeAlpha(1, 1, false);
-                StartCoroutine(TextAndButton());
+                playerDie = true;
+                
                 FindObjectOfType<SoundManager>().Stop("HeartBeat");
                 FindObjectOfType<PauseMenu>().inpausedMenu = false;
 
@@ -55,7 +61,8 @@ public class PlayerDie : MonoBehaviour
 
                 ResetOnSceen.SetActive(false);
                 DieScene.CrossFadeAlpha(1, 1, false);
-                StartCoroutine(TextAndButton());
+                playerDie = true;
+                
                 FindObjectOfType<SoundManager>().Stop("HeartBeat");
                 FindObjectOfType<PauseMenu>().inpausedMenu = false;
 

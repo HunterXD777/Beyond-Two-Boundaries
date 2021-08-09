@@ -810,6 +810,10 @@ PrefabInstance:
       propertyPath: EmissionModule.rateOverDistance.scalar
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 6649445542541684411, guid: 54e2a7dab8f98d34eaff181c6d8a95d2, type: 3}
+      propertyPath: enableMove
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8835506678459882890, guid: 54e2a7dab8f98d34eaff181c6d8a95d2, type: 3}
       propertyPath: m_RootOrder
       value: 5

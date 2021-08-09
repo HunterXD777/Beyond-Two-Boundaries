@@ -142,7 +142,7 @@ public class PlatformerMovement : MonoBehaviour
     //Kang Rui code
     void checkPause()
     {
-        
+       
 
         if (!forNonPreview)
         {
@@ -159,6 +159,10 @@ public class PlatformerMovement : MonoBehaviour
                     enableMove = true;
                 }
 
+            }
+            if (PlayerDie.playerDie)
+            {
+                enableMove = false;
             }
         }
         else
