@@ -31,6 +31,10 @@ public class PauseMenu : MonoBehaviour
             PauseGameForNonPreview();
         }
         
+        if (Input.GetKey(KeyCode.R))
+        {
+            ResetButton();
+        }
        
     }
 
