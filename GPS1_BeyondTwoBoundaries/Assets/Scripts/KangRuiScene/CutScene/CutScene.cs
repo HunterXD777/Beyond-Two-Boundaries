@@ -35,7 +35,10 @@ public class CutScene : MonoBehaviour
         dialogueContinue();
         if (forPrologue)
         {
-            skipCutscene();
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                skipCutscene();
+            }
         }
        
               
@@ -92,8 +95,7 @@ public class CutScene : MonoBehaviour
     {
         //cutSceneObject = GameObject.Find("Level").gameObject.transform.Find("CutSceneObject").gameObject;
        
-            if (Input.GetKeyDown(KeyCode.Escape))
-            {
+            
                 SceneManager.LoadScene(nextSceneLoad);
                 //cutScene.Stop();
                 //cutScene.time = skipTime;
@@ -101,7 +103,7 @@ public class CutScene : MonoBehaviour
                 ////cutSceneObject.SetActive(false);
                 //player.GetComponent<PlatformerMovement>().enableMove = true;
                 //playerAnim.applyRootMotion = false;
-            }
+            
         
     }
 

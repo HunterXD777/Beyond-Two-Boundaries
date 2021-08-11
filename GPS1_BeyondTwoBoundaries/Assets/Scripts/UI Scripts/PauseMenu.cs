@@ -79,6 +79,17 @@ public class PauseMenu : MonoBehaviour
             }
         }
     }
+
+    public void skipMenuForButton()// Use this for skip preview
+    {
+        //Kang Rui Code- Skip Preview Camera
+        Previewcam.SetActive(false);
+        MainCam.SetActive(true);
+        Previewcam.GetComponent<PreviewCamera>().playerCam = true;
+        //CutsceneSystem.SetActive(false);
+
+        player.GetComponent<PlatformerMovement>().enableMove = true;
+    }
     public void PauseGameForNonPreview()
     {     
         if (inpausedMenu == true)

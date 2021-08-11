@@ -659,6 +659,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1677442926}
     - target: {fileID: 5387185793855522374, guid: ea94072153d01c245b994370d58d0588, type: 3}
+      propertyPath: SoulsPiece
+      value: 
+      objectReference: {fileID: 1360736944}
+    - target: {fileID: 5387185793855522374, guid: ea94072153d01c245b994370d58d0588, type: 3}
       propertyPath: TimerDuration
       value: 15
       objectReference: {fileID: 0}
@@ -3660,9 +3664,13 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1486261621}
     m_Modifications:
-    - target: {fileID: 2331290829486081044, guid: 6b0b79fda6fc1a0429de02f896681840, type: 3}
+    - target: {fileID: 2331290829387591097, guid: 6b0b79fda6fc1a0429de02f896681840, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2331290829486081044, guid: 6b0b79fda6fc1a0429de02f896681840, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2331290829511230321, guid: 6b0b79fda6fc1a0429de02f896681840, type: 3}
       propertyPath: m_Name
@@ -3752,6 +3760,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2331290829857406257, guid: 6b0b79fda6fc1a0429de02f896681840, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6b0b79fda6fc1a0429de02f896681840, type: 3}
 --- !u!224 &1360736941 stripped
@@ -3767,6 +3779,11 @@ GameObject:
 --- !u!1 &1360736943 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2331290829746648778, guid: 6b0b79fda6fc1a0429de02f896681840, type: 3}
+  m_PrefabInstance: {fileID: 1360736940}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1360736944 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2331290829371708033, guid: 6b0b79fda6fc1a0429de02f896681840, type: 3}
   m_PrefabInstance: {fileID: 1360736940}
   m_PrefabAsset: {fileID: 0}
 --- !u!224 &1368298482 stripped

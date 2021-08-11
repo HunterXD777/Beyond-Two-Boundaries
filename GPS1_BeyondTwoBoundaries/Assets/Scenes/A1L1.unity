@@ -13132,9 +13132,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1486261621}
     m_Modifications:
-    - target: {fileID: 2331290829486081044, guid: 6b0b79fda6fc1a0429de02f896681840, type: 3}
+    - target: {fileID: 2331290828985435982, guid: 6b0b79fda6fc1a0429de02f896681840, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2331290829387591097, guid: 6b0b79fda6fc1a0429de02f896681840, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2331290829486081044, guid: 6b0b79fda6fc1a0429de02f896681840, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2331290829511230321, guid: 6b0b79fda6fc1a0429de02f896681840, type: 3}
       propertyPath: m_Name
@@ -13224,8 +13232,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2331290829857406257, guid: 6b0b79fda6fc1a0429de02f896681840, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6b0b79fda6fc1a0429de02f896681840, type: 3}
+--- !u!1 &84570909 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2331290829371708033, guid: 6b0b79fda6fc1a0429de02f896681840, type: 3}
+  m_PrefabInstance: {fileID: 84570908}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &93856269
 GameObject:
   m_ObjectHideFlags: 0
@@ -13508,6 +13525,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6243189576839071427, guid: ea94072153d01c245b994370d58d0588, type: 3}
+      propertyPath: SoulsPiece
+      value: 
+      objectReference: {fileID: 84570909}
     - target: {fileID: 6243189576839071427, guid: ea94072153d01c245b994370d58d0588, type: 3}
       propertyPath: ghostWalls.Array.data[0]
       value: 

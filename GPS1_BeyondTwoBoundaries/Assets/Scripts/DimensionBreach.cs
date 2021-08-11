@@ -30,7 +30,7 @@ public class DimensionBreach : MonoBehaviour
 
     public GameObject[] ghostWalls;
 
-    
+     public GameObject SoulsPiece;
 
     //Timer Stuff
     public float TimerDuration = 10f;
@@ -58,8 +58,17 @@ public class DimensionBreach : MonoBehaviour
             {
                 ShiftDimension();
             }
-        
 
+        //Kang Rui code 
+        //for charge ui
+        if (shiftReady)
+            {
+                SoulsPiece.SetActive(true);
+            }
+            else
+            {
+                SoulsPiece.SetActive(false);
+            }
 
 
 
