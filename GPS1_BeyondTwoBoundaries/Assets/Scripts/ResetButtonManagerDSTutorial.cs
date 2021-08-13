@@ -2,13 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ResetButtonManagerDS : MonoBehaviour
+public class ResetButtonManagerDSTutorial : MonoBehaviour
 {
     public DimensionShift dimensionShift;
     public GameObject encourageResetParticles;
-    public float particleTimeToAppear = 3f;
-
-    public LoadNextLevel loadNextLevel;
+    public float particleTimeToAppear = 6f;
 
     public void triggerParticle()
     {
@@ -18,11 +16,11 @@ public class ResetButtonManagerDS : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (dimensionShift.shiftReady == false && dimensionShift.shiftBackBeforeTimerEnds == false && loadNextLevel.collectedPieces != loadNextLevel.requiredPieces) //if player shift back to LS when DStimer ends
+        if (dimensionShift.shiftReady == false && dimensionShift.shiftBackBeforeTimerEnds == false) //if player shift back to LS when DStimer ends
         {
             Invoke("triggerParticle", particleTimeToAppear + dimensionShift.TimerDuration);
         }
-        else if (dimensionShift.shiftReady == false && dimensionShift.shiftBackBeforeTimerEnds == true && loadNextLevel.collectedPieces != loadNextLevel.requiredPieces) //if player shift back to LS before DStimer ends
+        else if (dimensionShift.shiftReady == false && dimensionShift.shiftBackBeforeTimerEnds == true) //if player shift back to LS before DStimer ends
         {
             Invoke("triggerParticle", particleTimeToAppear);
 

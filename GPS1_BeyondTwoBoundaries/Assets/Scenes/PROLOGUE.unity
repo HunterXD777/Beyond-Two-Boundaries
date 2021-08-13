@@ -6362,6 +6362,85 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &200030241
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 200030242}
+  - component: {fileID: 200030244}
+  - component: {fileID: 200030243}
+  m_Layer: 5
+  m_Name: ESC prompt
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &200030242
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 200030241}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 627908189}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -264.9, y: -44.100006}
+  m_SizeDelta: {x: 214.07, y: 26.844}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &200030243
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 200030241}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: bffa2f21ee5ff9b4a9e50a92cb641d89, type: 3}
+    m_FontSize: 15
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 1
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: Press ESC to skip
+--- !u!222 &200030244
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 200030241}
+  m_CullTransparentMesh: 1
 --- !u!1 &259413371
 GameObject:
   m_ObjectHideFlags: 0
@@ -8199,7 +8278,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 627908189}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -8626,6 +8705,7 @@ RectTransform:
   m_Children:
   - {fileID: 455211933}
   - {fileID: 431635812}
+  - {fileID: 200030242}
   - {fileID: 529849425}
   - {fileID: 1321519256}
   m_Father: {fileID: 1670965439}
@@ -11577,7 +11657,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 627908189}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -33357,6 +33437,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerMovement: {fileID: 2977646634297127251}
+  ghostMovement: {fileID: 0}
   AutoShfit: 1
   shiftReady: 1
   ghostState: 0
@@ -33370,6 +33451,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 1878927210}
   - {fileID: 0}
+  SoulsPiece: {fileID: 0}
   TimerDuration: 10
   timeStart: 0
   textBox: {fileID: 1677442926}
@@ -33727,6 +33809,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerMovement: {fileID: 2977646634297127251}
+  ghostMovement: {fileID: 0}
   ManualShift: 0
   AutoShfit: 1
   shiftReady: 1
@@ -33745,7 +33828,6 @@ MonoBehaviour:
   timeStart: 0
   textBox: {fileID: 1677442926}
   timerActive: 0
-  forWallTutorial: 0
   SoulBar: {fileID: 878708042}
   filter: {fileID: 1878927212}
 --- !u!1001 &6273296135204813240
@@ -38684,6 +38766,8 @@ MonoBehaviour:
   fallMultiplier: 3
   isTouchingDecoy: 0
   isGrounded: 0
+  forNonPreview: 0
+  enableMove: 1
   isGroundedChecker: {fileID: 2918872782670922163}
   checkGroundRadius: 0.05
   groundLayer:

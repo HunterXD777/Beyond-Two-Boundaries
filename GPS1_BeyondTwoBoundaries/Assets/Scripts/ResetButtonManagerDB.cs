@@ -9,6 +9,8 @@ public class ResetButtonManagerDB : MonoBehaviour
     public GameObject encourageResetParticles;
     public float particleTimeToAppear = 3f;
 
+    public LoadNextLevel loadNextLevel;
+
     public void triggerParticle()
     {
         encourageResetParticles.SetActive(true);
@@ -17,11 +19,11 @@ public class ResetButtonManagerDB : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(dimensionBreach.shiftReady == false && dimensionBreach.shiftBackBeforeTimerEnds == false) //if player shift back to LS when DBtimer ends
+        if(dimensionBreach.shiftReady == false && dimensionBreach.shiftBackBeforeTimerEnds == false && loadNextLevel.collectedPieces != loadNextLevel.requiredPieces) //if player shift back to LS when DBtimer ends
         {
             Invoke("triggerParticle", particleTimeToAppear + dimensionBreach.TimerDuration);
         }
-        else if(dimensionBreach.shiftReady == false && dimensionBreach.shiftBackBeforeTimerEnds == true) //if player shift back to LS before DBtimer ends
+        else if(dimensionBreach.shiftReady == false && dimensionBreach.shiftBackBeforeTimerEnds == true && loadNextLevel.collectedPieces != loadNextLevel.requiredPieces) //if player shift back to LS before DBtimer ends
         {
             Invoke("triggerParticle", particleTimeToAppear);
         }

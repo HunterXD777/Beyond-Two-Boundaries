@@ -9,6 +9,8 @@ public class ResetButtonManagerSS : MonoBehaviour
     public GameObject encourageResetParticles;
     public float particleTimeToAppear = 3f;
 
+    public LoadNextLevel loadNextLevel;
+
     public void triggerParticle()
     {
         encourageResetParticles.SetActive(true);
@@ -17,11 +19,11 @@ public class ResetButtonManagerSS : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (soulswap.shiftCharge == 0 && soulswap.shiftBackBeforeTimerEnds == false) //if player shift back to LS when SStimer ends
+        if (soulswap.shiftCharge == 0 && soulswap.shiftBackBeforeTimerEnds == false && loadNextLevel.collectedPieces != loadNextLevel.requiredPieces) //if player shift back to LS when SStimer ends
         {
             Invoke("triggerParticle", particleTimeToAppear + soulswap.TimerDuration);
         }
-        else if (soulswap.shiftCharge == 0 && soulswap.shiftBackBeforeTimerEnds == true) //if player shift back to LS before SStimer ends
+        else if (soulswap.shiftCharge == 0 && soulswap.shiftBackBeforeTimerEnds == true && loadNextLevel.collectedPieces != loadNextLevel.requiredPieces) //if player shift back to LS before SStimer ends
         {
             Invoke("triggerParticle", particleTimeToAppear);
         }
