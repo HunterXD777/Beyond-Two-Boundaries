@@ -854,7 +854,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Level 2
+  m_Text: 'Level 3
+
 
 '
 --- !u!222 &338490921
@@ -3710,7 +3711,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1297169451}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b372a5dab52adbe489dd4a4de40585a3, type: 3}
   m_Name: 
@@ -11262,6 +11263,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 357817890049293231, guid: 1d678ddc82c53dd47b9cf8b7e2bf5a87, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 357817890049293231, guid: 1d678ddc82c53dd47b9cf8b7e2bf5a87, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 357817890049293231, guid: 1d678ddc82c53dd47b9cf8b7e2bf5a87, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6818720370084645130, guid: 1d678ddc82c53dd47b9cf8b7e2bf5a87, type: 3}
       propertyPath: m_Controller
       value: 
@@ -13290,6 +13303,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Lever Activated Door
       objectReference: {fileID: 0}
+    - target: {fileID: 1288799083825802258, guid: 75a6d0b10c9c7ae448799c3775aeb82d, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 6798250452694383815, guid: c71e55e2f915c8c41a9f40526c3c8207, type: 3}
     - target: {fileID: 2234538422438894359, guid: 75a6d0b10c9c7ae448799c3775aeb82d, type: 3}
       propertyPath: m_LocalPosition.y
       value: -12.79

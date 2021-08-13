@@ -11,6 +11,9 @@ public class PauseMenu : MonoBehaviour
     public GameObject PauseMenuUi;
     public GameObject OptionMenuUi;
     public GameObject ControlsMenuUi;
+
+
+
     GameObject CameraController;
     GameObject Previewcam;
     GameObject MainCam;
@@ -18,6 +21,7 @@ public class PauseMenu : MonoBehaviour
     GameObject CutsceneSystem;
 
     GameObject Ghost;
+   
     public bool forTutorial;
     public bool forPrologue;
 
@@ -80,7 +84,7 @@ public class PauseMenu : MonoBehaviour
         }
     }
 
-    public void skipMenuForButton()// Use this for skip preview
+    public void skipMenuForButton()// Use this for use button skip preview
     {
         //Kang Rui Code- Skip Preview Camera
         Previewcam.SetActive(false);
@@ -119,6 +123,7 @@ public class PauseMenu : MonoBehaviour
     }
     public void Resume()
     {
+        
         PauseMenuUi.SetActive(false);
         Time.timeScale = 1f;
         gameispaused = false;
@@ -126,7 +131,7 @@ public class PauseMenu : MonoBehaviour
         {
             FindObjectOfType<SoundManager>().Play("HeartBeat");
         }
-       
+        
     }
     public void Pause()
     {

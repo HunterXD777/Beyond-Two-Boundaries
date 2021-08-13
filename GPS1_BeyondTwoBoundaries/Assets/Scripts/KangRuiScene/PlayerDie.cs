@@ -15,7 +15,8 @@ public class PlayerDie : MonoBehaviour
 
     public static bool playerDie;
 
-    public bool playerAndDecoy;
+    public bool player;
+    public bool Decoy;
     public bool GhostDie;
     private void Awake()
     {
@@ -34,20 +35,37 @@ public class PlayerDie : MonoBehaviour
             StartCoroutine(TextAndButton());
             
         }
+        Debug.Log(playerDie);
 
     }
+   
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (playerAndDecoy)
+        if (player)
         {
-            if (collision.gameObject.name == ("Player") || collision.gameObject.tag == "Decoy")
+            if (collision.gameObject.name == ("Player"))
             {
                 //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
 
                 ResetOnSceen.SetActive(false);
                 DieScene.CrossFadeAlpha(1, 1, false);
                 playerDie = true;
-                
+
+                FindObjectOfType<SoundManager>().Stop("HeartBeat");
+                FindObjectOfType<PauseMenu>().inpausedMenu = false;
+
+            }
+        }
+        if (Decoy)
+        {
+            if (collision.gameObject.tag == "Decoy")
+            {
+                //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+
+                ResetOnSceen.SetActive(false);
+                DieScene.CrossFadeAlpha(1, 1, false);
+                playerDie = true;
+
                 FindObjectOfType<SoundManager>().Stop("HeartBeat");
                 FindObjectOfType<PauseMenu>().inpausedMenu = false;
 
@@ -62,15 +80,16 @@ public class PlayerDie : MonoBehaviour
                 ResetOnSceen.SetActive(false);
                 DieScene.CrossFadeAlpha(1, 1, false);
                 playerDie = true;
-                
+
                 FindObjectOfType<SoundManager>().Stop("HeartBeat");
                 FindObjectOfType<PauseMenu>().inpausedMenu = false;
 
             }
         }
-        
+
     }
-    
+
+   
     IEnumerator TextAndButton()
     {
         yield return new WaitForSeconds(1.3f);

@@ -8,8 +8,8 @@ public class DimensionBreach : MonoBehaviour
 {
 
     public PlatformerMovement playerMovement;
+    public GhostMovement ghostMovement;
 
-    
     public bool AutoShfit;
     public bool shiftReady = true;
 
@@ -54,7 +54,7 @@ public class DimensionBreach : MonoBehaviour
     void Update()
     {
         
-            if (playerMovement.enableMove)
+            if (playerMovement.enableMove && ghostMovement.enableMove)//Kang Rui code add ghost enableMove to make sure when ghost die, ghost cant move or use dimension shift
             {
                 ShiftDimension();
             }

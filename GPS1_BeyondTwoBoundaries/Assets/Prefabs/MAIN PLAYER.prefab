@@ -9786,6 +9786,8 @@ MonoBehaviour:
   fallMultiplier: 3
   isTouchingDecoy: 0
   isGrounded: 0
+  forNonPreview: 0
+  enableMove: 1
   isGroundedChecker: {fileID: 2918872782526400655}
   checkGroundRadius: 0.05
   groundLayer:
@@ -15060,6 +15062,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerMovement: {fileID: 2977646634152245359}
+  ghostMovement: {fileID: 8430253316800681320}
   ManualShift: 0
   AutoShfit: 1
   shiftReady: 1
@@ -15078,7 +15081,6 @@ MonoBehaviour:
   timeStart: 0
   textBox: {fileID: 0}
   timerActive: 0
-  forWallTutorial: 0
   SoulBar: {fileID: 0}
   filter: {fileID: 0}
 --- !u!114 &5387185793855522374
@@ -15094,6 +15096,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerMovement: {fileID: 2977646634152245359}
+  ghostMovement: {fileID: 8430253316800681320}
   AutoShfit: 1
   shiftReady: 1
   ghostState: 0
@@ -15107,6 +15110,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  SoulsPiece: {fileID: 0}
   TimerDuration: 10
   timeStart: 0
   textBox: {fileID: 0}

@@ -19,6 +19,9 @@ public class GhostMovement : MonoBehaviour
 
     public bool isTouchingDecoy = false;
     public bool isGrounded = false;
+    public bool forNonPreview = false;
+    public bool enableMove = true;
+
     public Transform isGroundedChecker;
     public float checkGroundRadius;
     public LayerMask groundLayer;
@@ -26,7 +29,7 @@ public class GhostMovement : MonoBehaviour
     public static bool GhostStatePause;//Kang Rui code
 
     GameObject pauseMenu;
-
+    
     //Jane's codes
     public bool PlayerFacingRight = true;  // For determining which way the player is currently facing.
 
@@ -36,14 +39,16 @@ public class GhostMovement : MonoBehaviour
         rb.gravityScale = defaultGravity;
 
         pauseMenu = GameObject.Find("UI").gameObject.transform.Find("PauseSystem").gameObject.transform.Find("PauseMenuSystem").gameObject;
-
+       
     }
 
 
     void Update()
     {
-
-       
+        checkPause();
+        PauseForSFX();//Kang Rui code
+        if (enableMove)
+        {
             Move();
             //BetterJump();
             Jump();
@@ -51,7 +56,8 @@ public class GhostMovement : MonoBehaviour
             //Fly();
             CheckIfGrounded();
             Interact(); //Jane's codes
-        PauseForSFX();//Kang Rui code
+            
+        }
     }
 
 
@@ -173,7 +179,48 @@ public class GhostMovement : MonoBehaviour
             animator.SetBool("IsInteracting", false);
         }
     }
+    void checkPause()//Kang Rui code
+    {
+        if (!forNonPreview)
+        {
+            GameObject Cameracontrol = GameObject.FindWithTag("CameraControl");
+            GameObject previewCam = Cameracontrol.transform.Find("Preview Camera").gameObject;
+            if (previewCam.GetComponent<PreviewCamera>().playerCam || !previewCam.activeSelf)
+            {
+                if (pauseMenu.GetComponent<PauseMenu>().gameispaused)
+                {
+                    enableMove = false;
+                }
+                else
+                {
+                    enableMove = true;
+                }
 
+            }
+           
+        }
+        if (forNonPreview)
+        {
+           
+            if (pauseMenu.GetComponent<PauseMenu>().gameispaused)
+            {
+                enableMove = false;
+            }
+            else
+            {
+                enableMove = true;
+
+            }
+            
+
+        }
+        if (PlayerDie.playerDie)
+        {
+            enableMove = false;
+            rb.velocity = new Vector2(0, rb.velocity.y);
+        }
+
+    }
     void PauseForSFX()
     {
         if (Input.GetKeyUp(KeyCode.Escape))

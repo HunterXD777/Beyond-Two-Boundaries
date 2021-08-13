@@ -160,19 +160,11 @@ public class PlatformerMovement : MonoBehaviour
                 }
 
             }
-            if (PlayerDie.playerDie)
-            {
-                enableMove = false;
-                rb.velocity = new Vector2(0, rb.velocity.y);
-            }
+          
         }
         if(forNonPreview)
         {
-            if (PlayerDie.playerDie)
-            {
-                enableMove = false;
-                rb.velocity = new Vector2(0, rb.velocity.y);
-            }
+           
             if (PauseMenuSystem.GetComponent<PauseMenu>().gameispaused)
             {
                 enableMove = false;
@@ -184,6 +176,11 @@ public class PlatformerMovement : MonoBehaviour
             }
             
         }
-       
+        if (PlayerDie.playerDie)
+        {
+            enableMove = false;
+            rb.velocity = new Vector2(0, rb.velocity.y);
+        }
+
     }
 }

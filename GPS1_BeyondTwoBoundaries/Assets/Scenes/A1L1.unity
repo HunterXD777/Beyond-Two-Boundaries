@@ -13530,6 +13530,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 84570909}
     - target: {fileID: 6243189576839071427, guid: ea94072153d01c245b994370d58d0588, type: 3}
+      propertyPath: ghostMovement
+      value: 
+      objectReference: {fileID: 323340583}
+    - target: {fileID: 6243189576839071427, guid: ea94072153d01c245b994370d58d0588, type: 3}
       propertyPath: ghostWalls.Array.data[0]
       value: 
       objectReference: {fileID: 4387854}
@@ -13805,6 +13809,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5817772069079718549, guid: ea94072153d01c245b994370d58d0588, type: 3}
   m_PrefabInstance: {fileID: 144886076}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &323340583 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8430253316800681320, guid: ea94072153d01c245b994370d58d0588, type: 3}
+  m_PrefabInstance: {fileID: 144886076}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 323340579}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83005c10fc15dd34d86d0f78acc89c2f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &405248393 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5866999161560061310, guid: 75b590f7488439548bcc2eec50459ad7, type: 3}
@@ -14465,7 +14480,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Level 1
+  m_Text: 'Level 2
 
 '
 --- !u!222 &625463109
@@ -16130,7 +16145,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1288799083431531803, guid: 75a6d0b10c9c7ae448799c3775aeb82d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.380001
+      value: 6.38
       objectReference: {fileID: 0}
     - target: {fileID: 1288799083431531803, guid: 75a6d0b10c9c7ae448799c3775aeb82d, type: 3}
       propertyPath: m_LocalPosition.y
@@ -16146,7 +16161,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1288799083825802260, guid: 75a6d0b10c9c7ae448799c3775aeb82d, type: 3}
       propertyPath: m_LocalScale.y
-      value: 4.5077395
+      value: 1.0163763
       objectReference: {fileID: 0}
     - target: {fileID: 1288799083825802260, guid: 75a6d0b10c9c7ae448799c3775aeb82d, type: 3}
       propertyPath: m_LocalPosition.x

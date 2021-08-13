@@ -5526,9 +5526,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Level 2
-
-'
+  m_Text: Level 3
 --- !u!222 &625463109
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -9156,17 +9154,25 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -5.01
       objectReference: {fileID: 0}
+    - target: {fileID: 1288799083825802258, guid: 75a6d0b10c9c7ae448799c3775aeb82d, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 6798250452694383815, guid: c71e55e2f915c8c41a9f40526c3c8207, type: 3}
     - target: {fileID: 1288799083825802260, guid: 75a6d0b10c9c7ae448799c3775aeb82d, type: 3}
       propertyPath: m_LocalScale.y
-      value: 4.1628976
+      value: 1.1205027
       objectReference: {fileID: 0}
     - target: {fileID: 1288799083825802260, guid: 75a6d0b10c9c7ae448799c3775aeb82d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 10.149989
+      value: 10.15
       objectReference: {fileID: 0}
     - target: {fileID: 1288799083825802260, guid: 75a6d0b10c9c7ae448799c3775aeb82d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -9.5211
+      value: -9.5769
+      objectReference: {fileID: 0}
+    - target: {fileID: 1288799083825802261, guid: 75a6d0b10c9c7ae448799c3775aeb82d, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 1.29
       objectReference: {fileID: 0}
     - target: {fileID: 2234538422438894359, guid: 75a6d0b10c9c7ae448799c3775aeb82d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -11144,7 +11150,8 @@ MonoBehaviour:
   DieScene: {fileID: 849342648}
   TextAButton: {fileID: 455540467}
   ResetOnSceen: {fileID: 312945262}
-  playerAndDecoy: 1
+  player: 1
+  Decoy: 1
   GhostDie: 0
 --- !u!61 &2095528884
 BoxCollider2D:

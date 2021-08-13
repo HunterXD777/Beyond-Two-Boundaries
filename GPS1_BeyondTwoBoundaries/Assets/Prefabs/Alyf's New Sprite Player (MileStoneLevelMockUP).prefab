@@ -110,11 +110,14 @@ MonoBehaviour:
   fallMultiplier: 3
   isTouchingDecoy: 0
   isGrounded: 0
+  forNonPreview: 0
+  enableMove: 1
   isGroundedChecker: {fileID: 8720479689988176705}
   checkGroundRadius: 0.05
   groundLayer:
     serializedVersion: 2
     m_Bits: 256
+  PlayerFacingRight: 1
 --- !u!70 &1214945863883428107
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -9948,7 +9951,9 @@ MonoBehaviour:
   speed: 5
   jumpForce: 12
   fallMultiplier: 2.5
+  enableMove: 1
   isGrounded: 0
+  forNonPreview: 0
   isGroundedChecker: {fileID: 1653623588993566906}
   checkGroundRadius: 0.05
   groundLayer:
@@ -10149,9 +10154,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b372a5dab52adbe489dd4a4de40585a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  forPLace: 0
+  forPlace: 0
   forDecoy: 1
-  ghostPlayer: {fileID: 87914308258081115}
+  ignoreDecoy: 0
+  ignoreCollision: {fileID: 0}
 --- !u!58 &6403851933232055589
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -10246,9 +10252,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerMovement: {fileID: 8707160750310951841}
+  ghostMovement: {fileID: 2700739200583247526}
   ManualShift: 0
   AutoShfit: 1
   shiftReady: 1
+  shiftBackBeforeTimerEnds: 0
   ghostState: 0
   MainPlayer: {fileID: 3526188705048121605}
   GhostPlayer: {fileID: 87914308258081115}
@@ -10257,6 +10265,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  SoulsPiece: {fileID: 0}
   TimerDuration: 10
   timeStart: 0
   textBox: {fileID: 0}

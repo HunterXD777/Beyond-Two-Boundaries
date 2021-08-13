@@ -7491,11 +7491,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1288799083825802260, guid: 75a6d0b10c9c7ae448799c3775aeb82d, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.93107134
+      value: 0.75672996
       objectReference: {fileID: 0}
     - target: {fileID: 1288799083825802260, guid: 75a6d0b10c9c7ae448799c3775aeb82d, type: 3}
       propertyPath: m_LocalScale.y
-      value: 3.9776292
+      value: 0.99820465
       objectReference: {fileID: 0}
     - target: {fileID: 1288799083825802260, guid: 75a6d0b10c9c7ae448799c3775aeb82d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7503,7 +7503,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1288799083825802260, guid: 75a6d0b10c9c7ae448799c3775aeb82d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -54.535
+      value: -54.4458
       objectReference: {fileID: 0}
     - target: {fileID: 2234538422438894359, guid: 75a6d0b10c9c7ae448799c3775aeb82d, type: 3}
       propertyPath: m_LocalPosition.y
@@ -9793,6 +9793,8 @@ MonoBehaviour:
   fallMultiplier: 3
   isTouchingDecoy: 0
   isGrounded: 0
+  forNonPreview: 0
+  enableMove: 1
   isGroundedChecker: {fileID: 6743227844203269838}
   checkGroundRadius: 0.05
   groundLayer:
@@ -14704,6 +14706,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerMovement: {fileID: 6649445542348766766}
+  ghostMovement: {fileID: 138323038603973417}
   ManualShift: 0
   AutoShfit: 1
   shiftReady: 1

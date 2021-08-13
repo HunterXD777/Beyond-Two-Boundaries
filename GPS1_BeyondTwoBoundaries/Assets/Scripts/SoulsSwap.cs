@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class SoulsSwap : MonoBehaviour
 {
     public PlatformerMovement playerMovement;
+    public GhostMovement ghostMovement;
 
     public bool ManualShift;
     public bool AutoShfit;
@@ -53,7 +54,7 @@ public class SoulsSwap : MonoBehaviour
 
     void Update()
     {
-        if (playerMovement.enableMove)
+        if (playerMovement.enableMove && ghostMovement.enableMove)
         {
             ShiftDimension();
         }

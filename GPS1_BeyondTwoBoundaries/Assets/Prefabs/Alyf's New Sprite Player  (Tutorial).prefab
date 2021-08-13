@@ -14594,6 +14594,8 @@ MonoBehaviour:
   fallMultiplier: 3
   isTouchingDecoy: 0
   isGrounded: 0
+  forNonPreview: 0
+  enableMove: 1
   isGroundedChecker: {fileID: 7699920669393405493}
   checkGroundRadius: 0.05
   groundLayer:
@@ -14622,6 +14624,7 @@ MonoBehaviour:
   LevitateSign: {fileID: 0}
   InteractSign: {fileID: 0}
   ShiftBackSign: {fileID: 0}
+  GoalSign: {fileID: 0}
   leverOn: 0
 --- !u!70 &7699920669954967828
 CapsuleCollider2D:
@@ -14865,6 +14868,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerMovement: {fileID: 7699920670642818363}
+  ghostMovement: {fileID: 7699920669954967829}
   ManualShift: 0
   AutoShfit: 1
   shiftReady: 1
@@ -14877,6 +14881,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  SoulsPiece: {fileID: 0}
   TimerDuration: 10
   timeStart: 0
   textBox: {fileID: 0}
@@ -15193,7 +15198,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   forPlace: 0
   forDecoy: 1
-  ghostPlayer: {fileID: 7699920669954967825}
+  ignoreDecoy: 0
+  ignoreCollision: {fileID: 0}
 --- !u!58 &7699920670919925938
 CircleCollider2D:
   m_ObjectHideFlags: 0
