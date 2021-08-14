@@ -27,13 +27,9 @@ public class PauseMenu : MonoBehaviour
 
     void Update()
     {
-        if (!forTutorial) {
-            PauseGameForPreview();
-        }
-        else
-        {
-            PauseGameForNonPreview();
-        }
+        
+        PauseGameForPreview();
+       
         
         if (Input.GetKey(KeyCode.R))
         {

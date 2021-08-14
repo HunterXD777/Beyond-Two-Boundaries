@@ -15,7 +15,7 @@ public class PlatformerMovement : MonoBehaviour
     public bool enableMove = true;
     public bool isGrounded = false;
     //Kang Rui code
-    public bool forNonPreview;
+    
 
     public Transform isGroundedChecker;
     public float checkGroundRadius;
@@ -144,8 +144,7 @@ public class PlatformerMovement : MonoBehaviour
     {
        
 
-        if (!forNonPreview)
-        {
+       
             GameObject Cameracontrol = GameObject.FindWithTag("CameraControl");
             GameObject previewCam = Cameracontrol.transform.Find("Preview Camera").gameObject;
             if (previewCam.GetComponent<PreviewCamera>().playerCam || !previewCam.activeSelf)
@@ -161,21 +160,8 @@ public class PlatformerMovement : MonoBehaviour
 
             }
           
-        }
-        if(forNonPreview)
-        {
-           
-            if (PauseMenuSystem.GetComponent<PauseMenu>().gameispaused)
-            {
-                enableMove = false;
-            }
-            else
-            {
-                enableMove = true;
-               
-            }
-            
-        }
+        
+        
         if (PlayerDie.playerDie)
         {
             enableMove = false;

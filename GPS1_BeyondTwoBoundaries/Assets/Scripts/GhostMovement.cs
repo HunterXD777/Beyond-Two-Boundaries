@@ -19,7 +19,7 @@ public class GhostMovement : MonoBehaviour
 
     public bool isTouchingDecoy = false;
     public bool isGrounded = false;
-    public bool forNonPreview = false;
+    
     public bool enableMove = true;
 
     public Transform isGroundedChecker;
@@ -181,8 +181,7 @@ public class GhostMovement : MonoBehaviour
     }
     void checkPause()//Kang Rui code
     {
-        if (!forNonPreview)
-        {
+        
             GameObject Cameracontrol = GameObject.FindWithTag("CameraControl");
             GameObject previewCam = Cameracontrol.transform.Find("Preview Camera").gameObject;
             if (previewCam.GetComponent<PreviewCamera>().playerCam || !previewCam.activeSelf)
@@ -196,24 +195,8 @@ public class GhostMovement : MonoBehaviour
                     enableMove = true;
                 }
 
-            }
-           
-        }
-        if (forNonPreview)
-        {
-           
-            if (pauseMenu.GetComponent<PauseMenu>().gameispaused)
-            {
-                enableMove = false;
-            }
-            else
-            {
-                enableMove = true;
-
-            }
-            
-
-        }
+            }        
+        
         if (PlayerDie.playerDie)
         {
             enableMove = false;
