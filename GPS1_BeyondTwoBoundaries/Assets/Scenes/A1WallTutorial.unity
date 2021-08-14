@@ -11488,9 +11488,9 @@ MonoBehaviour:
   DieScene: {fileID: 1155305127}
   TextAButton: {fileID: 472549358}
   ResetOnSceen: {fileID: 1821099214}
-  player: 0
-  Decoy: 0
-  GhostDie: 0
+  player: 1
+  Decoy: 1
+  GhostDie: 1
 --- !u!61 &879492847
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -16854,7 +16854,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7675637650464819677, guid: 802843e141ae8674ba85b608c01b3afb, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -248.16
+      value: -248.42
       objectReference: {fileID: 0}
     - target: {fileID: 7675637650464819677, guid: 802843e141ae8674ba85b608c01b3afb, type: 3}
       propertyPath: m_LocalPosition.z

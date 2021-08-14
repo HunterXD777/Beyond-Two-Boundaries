@@ -94,5 +94,6 @@ public class PlayerDie : MonoBehaviour
     {
         yield return new WaitForSeconds(1.3f);
         TextAButton.SetActive(true);
+        Time.timeScale = 0f;
     }
 }

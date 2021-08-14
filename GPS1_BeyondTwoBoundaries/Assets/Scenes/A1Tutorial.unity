@@ -2757,8 +2757,8 @@ MonoBehaviour:
   DieScene: {fileID: 1155305127}
   TextAButton: {fileID: 472549358}
   ResetOnSceen: {fileID: 1678151444}
-  player: 0
-  Decoy: 0
+  player: 1
+  Decoy: 1
   GhostDie: 1
 --- !u!61 &550131274
 BoxCollider2D:
@@ -10840,7 +10840,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1216583947}
   m_Layer: 0
-  m_Name: GroundGroup
+  m_Name: DieGroup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11445,8 +11445,8 @@ MonoBehaviour:
   DieScene: {fileID: 1155305127}
   TextAButton: {fileID: 472549358}
   ResetOnSceen: {fileID: 1678151444}
-  player: 0
-  Decoy: 0
+  player: 1
+  Decoy: 1
   GhostDie: 1
 --- !u!61 &1407271796
 BoxCollider2D:
@@ -14011,7 +14011,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7675637650464819677, guid: 802843e141ae8674ba85b608c01b3afb, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -256.16
+      value: -256.42
       objectReference: {fileID: 0}
     - target: {fileID: 7675637650464819677, guid: 802843e141ae8674ba85b608c01b3afb, type: 3}
       propertyPath: m_LocalPosition.z
