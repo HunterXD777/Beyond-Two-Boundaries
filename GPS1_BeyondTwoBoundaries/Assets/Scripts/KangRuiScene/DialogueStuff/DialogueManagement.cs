@@ -25,7 +25,7 @@ public class DialogueManagement : MonoBehaviour
     public GameObject dialogueTrigger;
 
     public bool stopTrigger = false;//set one time trigger for dialogue
-
+    public bool endDialogue;
    
     public bool DialogueEnd;
 
@@ -104,7 +104,11 @@ public class DialogueManagement : MonoBehaviour
         }
         if (sentences.Count == 0)
         {
-            EndDialogue();
+
+            if (endDialogue)
+            {
+                EndDialogue();
+            }
             return;
         }
         Color color = textColor.Dequeue();

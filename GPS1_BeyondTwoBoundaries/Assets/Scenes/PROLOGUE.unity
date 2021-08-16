@@ -11612,6 +11612,7 @@ MonoBehaviour:
   animator: {fileID: 627908190}
   dialogueTrigger: {fileID: 828250413}
   stopTrigger: 0
+  endDialogue: 1
   DialogueEnd: 0
 --- !u!4 &1297419111
 Transform:
@@ -12904,6 +12905,7 @@ MonoBehaviour:
   animator: {fileID: 627908190}
   dialogueTrigger: {fileID: 1695551273}
   stopTrigger: 0
+  endDialogue: 1
   DialogueEnd: 0
 --- !u!4 &1724217658
 Transform:
@@ -23608,7 +23610,6 @@ MonoBehaviour:
   fallMultiplier: 2.5
   enableMove: 1
   isGrounded: 0
-  forNonPreview: 0
   isGroundedChecker: {fileID: 5149422671771202120}
   checkGroundRadius: 0.05
   groundLayer:
@@ -38766,7 +38767,6 @@ MonoBehaviour:
   fallMultiplier: 3
   isTouchingDecoy: 0
   isGrounded: 0
-  forNonPreview: 0
   enableMove: 1
   isGroundedChecker: {fileID: 2918872782670922163}
   checkGroundRadius: 0.05
