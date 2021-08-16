@@ -4156,7 +4156,7 @@ PrefabInstance:
     - target: {fileID: 6243189576839071427, guid: ea94072153d01c245b994370d58d0588, type: 3}
       propertyPath: SoulBar
       value: 
-      objectReference: {fileID: 878708042}
+      objectReference: {fileID: 1685247940}
     - target: {fileID: 6243189576839071427, guid: ea94072153d01c245b994370d58d0588, type: 3}
       propertyPath: textBox
       value: 
@@ -8206,6 +8206,10 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 0.5803922
       objectReference: {fileID: 0}
+    - target: {fileID: 6910941136207242489, guid: 78f90be45a0df78429c730eb3cfb119a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 78f90be45a0df78429c730eb3cfb119a, type: 3}
 --- !u!4 &1138406507 stripped
@@ -10544,6 +10548,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 463ef15fc416f6243b011da13840ee79, type: 3}
+--- !u!114 &1685247940 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6910941136207242491, guid: 78f90be45a0df78429c730eb3cfb119a, type: 3}
+  m_PrefabInstance: {fileID: 1138406506}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1695551273
 GameObject:
   m_ObjectHideFlags: 0
