@@ -7856,9 +7856,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 751a9b247294c0847a82adaa3bd1e081, type: 3}
     m_FontSize: 20
-    m_FontStyle: 0
+    m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 2
     m_MaxSize: 68
@@ -9870,22 +9870,22 @@ MonoBehaviour:
     - "SEEK THE SOUL ORBS \u2026 "
     - "\u2026 I should probably just focus on getting out of here."
     rightname:
-    - PLAYER SOUL
+    - Your Soul
     - 
-    - PLAYER SOUL
-    - PLAYER SOUL
-    - PLAYER SOUL
+    - Your Soul
+    - Your Soul
+    - Your Soul
     - 
-    - PLAYER SOUL
-    - PLAYER SOUL
+    - Your Soul
+    - Your Soul
     - 
     leftname:
     - 
-    - PLAYER
+    - You
     - 
     - 
     - 
-    - PLAYER
+    - You
     - 
     - 
     - PLAYER
@@ -12778,9 +12778,9 @@ MonoBehaviour:
     - 
     - 
     leftname:
-    - PLAYER
-    - PLAYER
-    - PLAYER
+    - You
+    - You
+    - You
     textColor:
     - {r: 1, g: 1, b: 1, a: 1}
     - {r: 1, g: 1, b: 1, a: 1}

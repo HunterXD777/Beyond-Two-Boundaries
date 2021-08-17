@@ -2398,6 +2398,95 @@ Transform:
   m_Father: {fileID: 908929204}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &505861795
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 221102952083118080, guid: 8399ec2307c9d4d4c9055638f5cd2052, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -3.41
+      objectReference: {fileID: 0}
+    - target: {fileID: 221102952083118080, guid: 8399ec2307c9d4d4c9055638f5cd2052, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.44
+      objectReference: {fileID: 0}
+    - target: {fileID: 221102952083118095, guid: 8399ec2307c9d4d4c9055638f5cd2052, type: 3}
+      propertyPath: m_SortingLayer
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 221102952083118095, guid: 8399ec2307c9d4d4c9055638f5cd2052, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 661294741
+      objectReference: {fileID: 0}
+    - target: {fileID: 221102952440571816, guid: 8399ec2307c9d4d4c9055638f5cd2052, type: 3}
+      propertyPath: m_Size.x
+      value: 3.6174812
+      objectReference: {fileID: 0}
+    - target: {fileID: 221102952440571816, guid: 8399ec2307c9d4d4c9055638f5cd2052, type: 3}
+      propertyPath: m_Size.y
+      value: 2.297453
+      objectReference: {fileID: 0}
+    - target: {fileID: 221102952440571816, guid: 8399ec2307c9d4d4c9055638f5cd2052, type: 3}
+      propertyPath: m_Offset.x
+      value: -3.9318829
+      objectReference: {fileID: 0}
+    - target: {fileID: 221102952440571816, guid: 8399ec2307c9d4d4c9055638f5cd2052, type: 3}
+      propertyPath: m_Offset.y
+      value: -3.5677023
+      objectReference: {fileID: 0}
+    - target: {fileID: 221102952440571829, guid: 8399ec2307c9d4d4c9055638f5cd2052, type: 3}
+      propertyPath: m_Name
+      value: Start Help
+      objectReference: {fileID: 0}
+    - target: {fileID: 221102952440571831, guid: 8399ec2307c9d4d4c9055638f5cd2052, type: 3}
+      propertyPath: m_RootOrder
+      value: 21
+      objectReference: {fileID: 0}
+    - target: {fileID: 221102952440571831, guid: 8399ec2307c9d4d4c9055638f5cd2052, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -61.43
+      objectReference: {fileID: 0}
+    - target: {fileID: 221102952440571831, guid: 8399ec2307c9d4d4c9055638f5cd2052, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -25.42
+      objectReference: {fileID: 0}
+    - target: {fileID: 221102952440571831, guid: 8399ec2307c9d4d4c9055638f5cd2052, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2.5385454
+      objectReference: {fileID: 0}
+    - target: {fileID: 221102952440571831, guid: 8399ec2307c9d4d4c9055638f5cd2052, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 221102952440571831, guid: 8399ec2307c9d4d4c9055638f5cd2052, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 221102952440571831, guid: 8399ec2307c9d4d4c9055638f5cd2052, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 221102952440571831, guid: 8399ec2307c9d4d4c9055638f5cd2052, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 221102952440571831, guid: 8399ec2307c9d4d4c9055638f5cd2052, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 221102952440571831, guid: 8399ec2307c9d4d4c9055638f5cd2052, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 221102952440571831, guid: 8399ec2307c9d4d4c9055638f5cd2052, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8399ec2307c9d4d4c9055638f5cd2052, type: 3}
 --- !u!1 &523623927
 GameObject:
   m_ObjectHideFlags: 0
